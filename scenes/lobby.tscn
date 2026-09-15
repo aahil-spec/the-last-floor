@@ -4,22 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://cqlhoheyj6wkb" path="res://assets/backroom_this_model_will_give_you_nightmare_2.png" id="3_07nfq"]
 [ext_resource type="PackedScene" uid="uid://bqlo2echfwcxm" path="res://assets/reception_desk.glb" id="3_apkv3"]
 [ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_q60fs"]
+[ext_resource type="Texture2D" uid="uid://dr2aq5utgltp3" path="res://assets/backroom_this_model_will_give_you_nightmare_1.png" id="4_dyhay"]
 [ext_resource type="Texture2D" uid="uid://kvak3cofi7qd" path="res://assets/backroom_this_model_will_give_you_nightmare_0.png" id="4_oipnb"]
 [ext_resource type="PackedScene" uid="uid://drqcmh5pwt6c5" path="res://assets/wooden_chair.glb" id="4_omrgh"]
 [ext_resource type="PackedScene" uid="uid://b8v7auefcvd78" path="res://assets/table_small_table_an_old_little_table.glb" id="5_ncsg4"]
 [ext_resource type="Texture2D" uid="uid://byas5ry3xk4sh" path="res://assets/backroom_this_model_will_give_you_nightmare_4.png" id="5_yad6j"]
 [ext_resource type="PackedScene" uid="uid://we5jqw0ahook" path="res://assets/old_telephone.glb" id="6_07nfq"]
+[ext_resource type="PackedScene" uid="uid://trlnxn0ypb30" path="res://assets/wooden_floor.glb" id="11_q6qq2"]
+[ext_resource type="PackedScene" uid="uid://bh2ul8hmday1n" path="res://assets/wall_picture (1).glb" id="12_rgcd7"]
+[ext_resource type="PackedScene" uid="uid://hmi7irco621t" path="res://assets/painting_of_a_clown.glb" id="13_lqo1b"]
 
 [sub_resource type="Environment" id="Environment_5gu6x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1sns"]
-albedo_texture = ExtResource("3_07nfq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyhay"]
 albedo_texture = ExtResource("4_oipnb")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6qq2"]
-albedo_texture = ExtResource("5_yad6j")
+albedo_texture = ExtResource("4_dyhay")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgcd7"]
 albedo_texture = ExtResource("3_07nfq")
@@ -60,7 +63,7 @@ environment = SubResource("Environment_5gu6x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9282248, 12.199827)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_q60fs")]
-transform = Transform3D(-0.095758796, 0, -0.99540454, 0, 1, 0, 0.99540454, 0, -0.095758796, -12.002283, 2.229126, 1.7255944)
+transform = Transform3D(-0.095758796, 0, -0.99540454, 0, 1, 0, 0.99540454, 0, -0.095758796, -12.002283, 2.4233909, 1.7255944)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=714174748]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.865839, 0)
@@ -92,7 +95,7 @@ omni_attenuation = 2.0
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1442562124]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8251886, 2.6203218, 9.013059)
 light_color = Color(1, 1, 0.654902, 1)
-light_energy = 1.659
+light_energy = 5.614
 shadow_enabled = true
 omni_range = 6.590434
 omni_attenuation = 2.0
@@ -194,3 +197,12 @@ transform = Transform3D(0.16917822, 0, -0.0897114, 0, 0.19149257, 0, 0.0897114, 
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=575225765]
 environment = SubResource("Environment_apkv3")
+
+[node name="Sketchfab_Scene6" parent="." unique_id=2020438793 instance=ExtResource("11_q6qq2")]
+transform = Transform3D(4.2998757, 0, 0, 0, -0.0046528396, -4.2998734, 0, 4.2998734, -0.0046528396, -13.394754, 0.511804, -13.354267)
+
+[node name="Sketchfab_Scene7" parent="." unique_id=702541267 instance=ExtResource("12_rgcd7")]
+transform = Transform3D(1.2157879, 0, 0, 0, 1.2157879, 0, 0, 0, 1.2157879, 1.1586729, 3.5097778, -11.93822)
+
+[node name="Sketchfab_Scene8" parent="." unique_id=702842868 instance=ExtResource("13_lqo1b")]
+transform = Transform3D(1.4915993, 0, 0, 0, 1.4915993, 0, 0, 0, 1.4915993, 11.9781065, 3.8706372, -2.2734594)
