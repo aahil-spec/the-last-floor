@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dctlyxic3fc5u"]
+
+[ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="1_px5mv"]
+[ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_k883f"]
+
+[sub_resource type="Environment" id="Environment_5gu6x"]
+
+[node name="Lobby" type="Node3D" unique_id=1528537454]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=693558114]
+use_collision = true
+size = Vector3(20, 0.5, 20)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1693086920]
+environment = SubResource("Environment_5gu6x")
+
+[node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_px5mv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6229823, 0)
+
+[node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_k883f")]
+transform = Transform3D(-0.9992582, 0, -0.03851001, 0, 1, 0, 0.03851001, 0, -0.9992582, 0, 1.864047, -7.2920136)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1055397546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1359092, 2.9494286, -6.589191)
+text = "FLOOR 2"

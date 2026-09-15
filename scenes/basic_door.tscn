@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ci1mnb3j0s6uq"]
+
+[ext_resource type="Script" uid="uid://blig57epc8i2k" path="res://scripts/basic_door.gd" id="1_xixr0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtp06"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xixr0"]
+size = Vector3(0.90075684, 1.9553223, 0.4066162)
+
+[node name="BasicDoor" type="StaticBody3D" unique_id=1841622639]
+script = ExtResource("1_xixr0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=897822521]
+transform = Transform3D(0.9, 0, 0, 0, 1.9481635, 0, 0, 0, 0.39999998, 0, 0, 0)
+mesh = SubResource("BoxMesh_qtp06")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=433159196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026245117, 0.0076904297, -0.002746582)
+shape = SubResource("BoxShape3D_xixr0")

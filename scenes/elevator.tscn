@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dawpmarouyu7m"]
+
+[ext_resource type="Script" uid="uid://db3fbynqy24ef" path="res://scripts/elevator_panel.gd" id="1_8o2wm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_phsah"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_phsah"]
+
+[node name="Elevator" type="Node3D" unique_id=991641716]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=597932239]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=554084761]
+size = Vector3(3, 3, 3)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2032547359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.31085873)
+operation = 2
+size = Vector3(2.8, 2.8, 2.8)
+
+[node name="ElevatorPanel" type="StaticBody3D" parent="." unique_id=395203883]
+script = ExtResource("1_8o2wm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ElevatorPanel" unique_id=1332988984]
+mesh = SubResource("BoxMesh_phsah")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorPanel" unique_id=1894432965]
+shape = SubResource("BoxShape3D_phsah")
