@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0gc3si4x3mom"]
+
+[ext_resource type="PackedScene" uid="uid://r74i4h166bd1" path="res://scenes/lobby.scn" id="1_tt5ry"]
+[ext_resource type="PackedScene" uid="uid://dctlyxic3fc5u" path="res://scenes/floor2.tscn" id="2_wjoj8"]
+[ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_wjoj8"]
+
+[node name="MainWorld" type="Node3D" unique_id=983484244]
+
+[node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
+
+[node name="Floor2" parent="." unique_id=1776839832 instance=ExtResource("2_wjoj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93946743, 20.215588, -7.05925)
+
+[node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.4925, 0.98193336, -10.392528)

@@ -1,21 +1,23 @@
 [gd_scene format=3 uid="uid://c235t5qua0eru"]
 
 [ext_resource type="Script" uid="uid://dtpk7phdskblv" path="res://scripts/breaker_box.gd" id="1_ld34x"]
+[ext_resource type="PackedScene" uid="uid://bwi6h3m5fvbrl" path="res://assets/Models/electrical_panel.glb" id="2_rxq1m"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ld34x"]
-albedo_color = Color(0.57254905, 1, 1, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_qprma"]
+size = Vector3(0.019735634, 0.48706275, 0.33188096)
 
-[sub_resource type="BoxMesh" id="BoxMesh_3plyo"]
-material = SubResource("StandardMaterial3D_ld34x")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_3plyo"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3m8o"]
+size = Vector3(0.3455065, 0.5031428, 0.09450643)
 
 [node name="BreakerBox" type="StaticBody3D" unique_id=301640312]
 script = ExtResource("1_ld34x")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=903064561]
-mesh = SubResource("BoxMesh_3plyo")
+[node name="Sketchfab_Scene" parent="." unique_id=1741133519 instance=ExtResource("2_rxq1m")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1153721950]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0033708513, 0.006083727, -0.006093744)
-shape = SubResource("BoxShape3D_3plyo")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1715748414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17223948, 0, 0.20488748)
+shape = SubResource("BoxShape3D_qprma")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=331209205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0014754832, 0, -0.00113938)
+shape = SubResource("BoxShape3D_i3m8o")

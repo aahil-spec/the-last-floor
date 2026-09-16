@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="The Last Floor"
-run/main_scene="uid://r74i4h166bd1"
+run/main_scene="uid://c0gc3si4x3mom"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 

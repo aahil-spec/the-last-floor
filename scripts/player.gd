@@ -9,6 +9,10 @@ extends CharacterBody3D
 @onready var flashlight=$Head/Camera3D/FlashLight
 @onready var interact_ray=$Head/Camera3D/InteractRay
 
+
+@onready var interact_label=$HUD/InteractPrompt
+
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -31,6 +35,18 @@ func _unhandled_input(event):
 				target.interact(self)
 		
 func _physics_process(delta):
+	interact_label.visible=false
+	
+	if interact_ray.is_colliding():
+		var target=interact_ray.get_collider()
+		
+		if target is Interactable:
+			interact_label.visible=true
+			
+			if "prompt_text" in target:
+				interact_label.text=target.prompt_text
+			else:
+				interact_label.text="Press E to interact"
 	if not is_on_floor():
 		velocity.y-=ProjectSettings.get_setting("physics/3d/default_gravity")*delta
 	elif Input.is_action_just_pressed("jump"):
