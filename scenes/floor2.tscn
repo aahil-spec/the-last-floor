@@ -2,14 +2,35 @@
 
 [ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="1_px5mv"]
 [ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_k883f"]
+[ext_resource type="PackedScene" uid="uid://c235t5qua0eru" path="res://scenes/breaker_box.tscn" id="3_px5mv"]
 
 [sub_resource type="Environment" id="Environment_5gu6x"]
 
-[node name="Lobby" type="Node3D" unique_id=1528537454]
+[node name="Floor2" type="Node3D" unique_id=1528537454]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=693558114]
 use_collision = true
 size = Vector3(20, 0.5, 20)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1555795486]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 10.572084, 4.8398438, 0)
+use_collision = true
+size = Vector3(10.3203125, 0.5, 20)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=704966349]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -10.11665, 4.7631836, 0)
+use_collision = true
+size = Vector3(10.473633, 0.5, 20)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1036312456]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.61761475, 4.6643066, 9.308679)
+use_collision = true
+size = Vector3(21.23523, 0.5, 10.671387)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1296406165]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 4.9172363, -10.112155)
+use_collision = true
+size = Vector3(20, 0.5, 10.165527)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1693086920]
 environment = SubResource("Environment_5gu6x")
@@ -23,3 +44,13 @@ transform = Transform3D(-0.9992582, 0, -0.03851001, 0, 1, 0, 0.03851001, 0, -0.9
 [node name="Label3D" type="Label3D" parent="." unique_id=1055397546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1359092, 2.9494286, -6.589191)
 text = "FLOOR 2"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=680979915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6322846, 0)
+visible = false
+light_energy = 3.878
+omni_range = 15.863
+
+[node name="BreakerBox" parent="." unique_id=482499585 node_paths=PackedStringArray("connected_light") instance=ExtResource("3_px5mv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.732092, 0.62837505, 2.9111562)
+connected_light = NodePath("../OmniLight3D")

@@ -1,9 +1,10 @@
 extends Interactable
 
+
+@export var connected_ui:CanvasLayer
+
 @warning_ignore("unused_parameter")
 func interact(player_node):
-	if ElevatorManager.current_floor=="lobby":
-		ElevatorManager.change_floor("floor_2")
-	else:
-		print("Returning to Lobby...")
-		ElevatorManager.change_floor("lobby")
+	if connected_ui:
+		connected_ui.visible=true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

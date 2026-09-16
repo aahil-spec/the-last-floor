@@ -1,12 +1,13 @@
 extends CharacterBody3D
 
 @export var walk_speed=3.0
+@export var jump_velocity=4.5
 @export var mouse_sensitivity=0.002
 
 @onready var head=$Head
 @onready var camera=$Head/Camera3D
-@onready var flashlight=$Head/FlashLight
-@onready var interact_ray=$Head/InteractRay
+@onready var flashlight=$Head/Camera3D/FlashLight
+@onready var interact_ray=$Head/Camera3D/InteractRay
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -32,6 +33,8 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y-=ProjectSettings.get_setting("physics/3d/default_gravity")*delta
+	elif Input.is_action_just_pressed("jump"):
+		velocity.y=jump_velocity
 	var input_dir=Input.get_vector("move_left","move_right","move_up","move_down")
 	var direction=(head.transform.basis*Vector3(input_dir.x,0,input_dir.y)).normalized()
 	

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c235t5qua0eru"]
+
+[ext_resource type="Script" uid="uid://dtpk7phdskblv" path="res://scripts/breaker_box.gd" id="1_ld34x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ld34x"]
+albedo_color = Color(0.57254905, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3plyo"]
+material = SubResource("StandardMaterial3D_ld34x")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3plyo"]
+
+[node name="BreakerBox" type="StaticBody3D" unique_id=301640312]
+script = ExtResource("1_ld34x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=903064561]
+mesh = SubResource("BoxMesh_3plyo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1153721950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0033708513, 0.006083727, -0.006093744)
+shape = SubResource("BoxShape3D_3plyo")
