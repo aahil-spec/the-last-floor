@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_k883f"]
 [ext_resource type="PackedScene" uid="uid://c235t5qua0eru" path="res://scenes/breaker_box.tscn" id="3_px5mv"]
 [ext_resource type="PackedScene" uid="uid://c8y5eiwbxv5eg" path="res://assets/Models/floor.glb" id="4_bgae2"]
-[ext_resource type="Texture2D" uid="uid://c264dt1031nwu" path="res://assets/old_locker_9.png" id="4_jrene"]
+[ext_resource type="Texture2D" uid="uid://d3nv78pfoq0ho" path="res://assets/Models/wooden_floor_0.png" id="4_jrene"]
 [ext_resource type="Texture2D" uid="uid://dqr80wftv64h" path="res://assets/images/tileable_subway_wall_0.png" id="5_cedng"]
 [ext_resource type="PackedScene" uid="uid://dq80yaqnxim8k" path="res://assets/Models/low_poly_electrical_panel.glb" id="5_qxbyx"]
 [ext_resource type="PackedScene" uid="uid://bjq2qd4t1r0ho" path="res://assets/Models/network_server_rack.glb" id="6_f0v6e"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://drqcmh5pwt6c5" path="res://assets/Models/wooden_chair.glb" id="7_5cr2f"]
 [ext_resource type="PackedScene" uid="uid://dajjv27yf1cww" path="res://assets/images/tileable_subway_wall.glb" id="7_87jca"]
 [ext_resource type="PackedScene" uid="uid://drhkekwavv8pq" path="res://assets/electrical_panel_-_14mb.glb" id="8_61oy1"]
+[ext_resource type="Texture2D" uid="uid://byas5ry3xk4sh" path="res://assets/Models/backroom_this_model_will_give_you_nightmare_4.png" id="8_cedng"]
 [ext_resource type="PackedScene" uid="uid://boxfa88dhkul5" path="res://assets/electrical_panel_c.glb" id="9_6lj5i"]
 [ext_resource type="PackedScene" uid="uid://cnhbd2e5cn5jt" path="res://assets/electrical_transformer.glb" id="10_1tspd"]
 [ext_resource type="PackedScene" uid="uid://c5rrusstne3sm" path="res://assets/old_locker.glb" id="11_gtfh5"]
@@ -29,11 +30,11 @@
 [sub_resource type="Environment" id="Environment_5gu6x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b5fyn"]
-albedo_color = Color(0.24660897, 0.46834916, 1, 1)
+albedo_texture = ExtResource("4_jrene")
+albedo_texture_force_srgb = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8b7oi"]
-albedo_color = Color(0.19921005, 0.42818522, 1, 1)
-albedo_texture = ExtResource("4_jrene")
+albedo_texture = ExtResource("5_cedng")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4wv5"]
 albedo_color = Color(1, 0.99215686, 0.8156863, 1)
@@ -41,6 +42,18 @@ albedo_color = Color(1, 0.99215686, 0.8156863, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0muf6"]
 albedo_texture = ExtResource("5_cedng")
 albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogqmm"]
+albedo_texture = ExtResource("8_cedng")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87jca"]
+albedo_texture = ExtResource("8_cedng")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1j1m"]
+albedo_texture = ExtResource("8_cedng")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbe5o"]
+albedo_texture = ExtResource("8_cedng")
 
 [node name="Floor2" type="Node3D" unique_id=1528537454]
 
@@ -53,6 +66,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37892628, 3.7076132, -0.15
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_k883f")]
 transform = Transform3D(0.07008709, 0, 0.99754095, 0, 1, 0, -0.99754095, 0, 0.07008709, 11.328683, 1.6256979, -2.138784)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Elevator" unique_id=777280223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22840697, 2.2345724, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 7.179
+shadow_enabled = true
+
 [node name="Label3D" type="Label3D" parent="." unique_id=1055397546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37857628, 3.6342955, -6.521037)
 text = "FLOOR 2"
@@ -64,7 +83,7 @@ light_energy = 3.878
 omni_range = 15.863
 
 [node name="BreakerBox" parent="." unique_id=482499585 node_paths=PackedStringArray("connected_light") instance=ExtResource("3_px5mv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.732092, 10.216235, 2.9111562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.296465, 2.0813026, 4.086516)
 connected_light = NodePath("../OmniLight3D")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=582196201]
@@ -123,16 +142,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.618946, -0.56714106, 5.3863
 transform = Transform3D(1.0723448, 0, 0, 0, 1, 0, 0, 0, 1, -6.6461735, -4.0511327, 4.7464666)
 
 [node name="Sketchfab_Scene5" parent="CSGCombiner3D" unique_id=739480784 instance=ExtResource("7_87jca")]
-transform = Transform3D(0.0036225067, 0, -0.9999939, 0, 1, 0, 1.0377573, 0, 0.0034906939, -5.3417068, -4.0511327, 7.781929)
+transform = Transform3D(0.0036791796, 0, -0.9999939, 0, 1, 0, 1.0539926, 0, 0.0034906939, -5.3486834, -4.0511327, 7.7819533)
 
 [node name="Sketchfab_Scene7" parent="CSGCombiner3D" unique_id=1818745169 instance=ExtResource("7_87jca")]
-transform = Transform3D(-0.0056423508, 0, 0.99999326, 0, 1, 0, -1.539422, 0, -0.0036652228, -6.4658904, -4.0511327, 7.6983366)
+transform = Transform3D(-0.0056423508, 0, 0.99999326, 0, 1, 0, -1.539422, 0, -0.0036652228, -6.432655, -4.0511327, 7.9787)
 
 [node name="Sketchfab_Scene6" parent="CSGCombiner3D" unique_id=1966405407 instance=ExtResource("7_87jca")]
-transform = Transform3D(0.000987187, 0, -0.9999939, 0, 1, 0, 0.28280428, 0, 0.0034906939, -5.3668423, -4.0511327, 0.5811856)
+transform = Transform3D(0.00089299027, 0, -0.9999939, 0, 1, 0, 0.2558193, 0, 0.0034906939, -5.3252764, -4.0511327, 0.60813123)
 
 [node name="Sketchfab_Scene4" parent="CSGCombiner3D" unique_id=972608966 instance=ExtResource("7_87jca")]
 transform = Transform3D(-1.0904305, 0, 0.03425417, 0, 1, 0, -0.03737372, 0, -0.99941325, -4.950813, -4.0511327, 8.708235)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=59307208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9958496, -4.386364)
+material_override = SubResource("StandardMaterial3D_ogqmm")
+radius = 0.25
+height = 5.186035
+material = SubResource("StandardMaterial3D_87jca")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=635235909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.126028, 0.22772217, 2.020865)
+material_override = SubResource("StandardMaterial3D_a1j1m")
+radius = 0.3
+height = 3.4229736
+material = SubResource("StandardMaterial3D_lbe5o")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1367548011]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24230063, 3.0800812, 0)
