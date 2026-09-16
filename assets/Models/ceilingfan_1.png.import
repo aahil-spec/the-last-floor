@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0m6x0t13ky32"
-path.s3tc="res://.godot/imported/Panel.png-7e8e1773b73fe2dda9dab4743a871514.s3tc.ctex"
+uid="uid://coo5w0fdlrsnx"
+path.s3tc="res://.godot/imported/ceilingfan_1.png-019e56de744ab40254b4e664bb4c0d4e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "fda9c881d75fcb783e2d78a06b62bd75"
+}
 
 [deps]
 
-source_file="res://assets/images/Panel.png"
-dest_files=["res://.godot/imported/Panel.png-7e8e1773b73fe2dda9dab4743a871514.s3tc.ctex"]
+source_file="res://assets/Models/ceilingfan_1.png"
+dest_files=["res://.godot/imported/ceilingfan_1.png-019e56de744ab40254b4e664bb4c0d4e.s3tc.ctex"]
 
 [params]
 
@@ -26,8 +29,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=8
+roughness/src_normal="res://assets/Models/ceilingfan_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

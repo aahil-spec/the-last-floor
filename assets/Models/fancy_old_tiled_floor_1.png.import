@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0m6x0t13ky32"
-path.s3tc="res://.godot/imported/Panel.png-7e8e1773b73fe2dda9dab4743a871514.s3tc.ctex"
+uid="uid://caar1y6p2qsjx"
+path.s3tc="res://.godot/imported/fancy_old_tiled_floor_1.png-1932a461ce507a81945525976edf288c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "0a6b309a0650911950aff9b3ef0145aa"
+}
 
 [deps]
 
-source_file="res://assets/images/Panel.png"
-dest_files=["res://.godot/imported/Panel.png-7e8e1773b73fe2dda9dab4743a871514.s3tc.ctex"]
+source_file="res://assets/Models/fancy_old_tiled_floor_1.png"
+dest_files=["res://.godot/imported/fancy_old_tiled_floor_1.png-1932a461ce507a81945525976edf288c.s3tc.ctex"]
 
 [params]
 

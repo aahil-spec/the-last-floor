@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0m6x0t13ky32"
-path.s3tc="res://.godot/imported/Panel.png-7e8e1773b73fe2dda9dab4743a871514.s3tc.ctex"
+uid="uid://cmec0rceaoj7v"
+path.s3tc="res://.godot/imported/old_filing_cabinet_0.jpg-d0a3492df48c551f18d9b1737df0a8d1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "807be20f3cdc4169fe60b0bc1f6b474a"
+}
 
 [deps]
 
-source_file="res://assets/images/Panel.png"
-dest_files=["res://.godot/imported/Panel.png-7e8e1773b73fe2dda9dab4743a871514.s3tc.ctex"]
+source_file="res://assets/Models/old_filing_cabinet_0.jpg"
+dest_files=["res://.godot/imported/old_filing_cabinet_0.jpg-d0a3492df48c551f18d9b1737df0a8d1.s3tc.ctex"]
 
 [params]
 
