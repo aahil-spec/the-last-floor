@@ -12,4 +12,16 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93946743, 20.215588, -7.05925)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.4925, 0.98193336, -10.392528)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.988373, 0.7764292, -10.5722065)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1014470391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.781205, 6.190948, -10.641199)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=532042233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2887497, 7.557408, 0.61481476)
+operation = 2
+size = Vector3(3.8918, 16.114815, 4.723568)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=820529026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2562151, 7.557408, 0.9085083)
+size = Vector3(5.03039, 16.114815, 5.8676596)

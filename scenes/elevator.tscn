@@ -72,7 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0019946098, 0.05706203, 0)
 script = ExtResource("3_pr5mj")
 prompt_text = "Press E to go to Floor 2"
 target_floor = "floor_2"
-target_height = 25.0
+target_height = 21.88
 elevator_door = NodePath("../../ElevatorDoor")
 elevator_root = NodePath("../..")
 

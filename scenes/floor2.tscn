@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://hmi7irco621t" path="res://assets/Models/painting_of_a_clown.glb" id="23_l1u4w"]
 [ext_resource type="PackedScene" uid="uid://bswi1fb3d3vqr" path="res://assets/Models/book_shelf.glb" id="24_cuo3i"]
 [ext_resource type="PackedScene" uid="uid://bh2ul8hmday1n" path="res://assets/Models/wall_picture (1).glb" id="25_pf4q8"]
+[ext_resource type="Script" uid="uid://b75l3bf0oh6fa" path="res://scripts/maintenance_door.gd" id="26_cedng"]
 
 [sub_resource type="Environment" id="Environment_5gu6x"]
 
@@ -291,6 +292,18 @@ size = Vector3(310.52423, 125.49368, 275.1229)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gwqjf"]
 size = Vector3(310.52423, 125.49368, 275.1229)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ih2e5"]
+points = PackedVector3Array(-0.1142984, 0.32223493, 0.048596695, -0.2962349, 0.28907785, 0.023806602, -0.2962349, 0.28907785, 0.05686006, -0.13086075, -0.20703489, 0.07338679, -0.22179338, -0.20703489, -0.04235374, -0.23832011, -0.20703489, 0.11475704, -0.18873993, 0.32223493, 0.13130158, -0.18047656, 0.32223493, -0.05063492, -0.13914192, -0.20703489, -0.009282477, -0.28795373, -0.20703489, 0.032069966, -0.25486466, 0.32223493, -0.04235374, -0.28795373, 0.32223493, 0.08994914, -0.15566866, -0.20703489, 0.10647587, -0.13086075, 0.32223493, 0.0982125, -0.13086075, 0.32223493, -0.017545842, -0.27967256, -0.20703489, -0.0010013022, -0.27967256, -0.20703489, 0.08165015, -0.26314583, 0.28907785, 0.11475704, -0.1722132, -0.20703489, -0.034090377, -0.2962349, 0.32223493, 0.0072620623, -0.13086075, -0.20703489, 0.0072620623, -0.1722132, -0.20703489, 0.11475704, -0.24658348, -0.20703489, -0.034090377, -0.14738747, 0.28907785, -0.034090377, -0.1142984, 0.30560458, 0.023806602, -0.21353002, 0.30560458, 0.13130158, -0.23005675, 0.28907785, -0.05063492, -0.16394983, 0.30560458, 0.1230204, -0.28795373, 0.30560458, -0.009282477, -0.28795373, -0.20703489, 0.05686006, -0.19700329, -0.20703489, -0.04235374, -0.24658348, 0.32223493, 0.1230204)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hu68a"]
+points = PackedVector3Array(-0.25628036, -0.20464945, -0.07339556, 0.949411, -0.2232295, 0.116742596, -0.6563713, -0.25242087, -1.0072993, -0.24734896, -0.31553426, 0.11161118, -0.87539226, -0.2232295, 0.9925093, 0.9347353, -0.25242087, 0.13133542, -0.7145168, -0.2232295, -1.0072993, -0.94839925, -0.25242087, 0.9195452, -0.26005122, -0.3155837, -0.024824452, 0.949411, -0.23782519, -0.029185649, -0.8168752, -0.23782519, -0.9487308, -0.94839925, -0.2232295, 0.8903595, -0.2873041, -0.20339325, 0.11260498, -0.8023853, -0.2232295, 1.0072993, -0.21176659, -0.31279483, -0.058963288, -0.6563713, -0.2232295, -1.0072993, -0.77303386, -0.2232295, -0.9779165, -0.70021266, -0.25242087, -1.0072993, 0.9347353, -0.25242087, 0.08755695, -0.2214107, -0.3152065, 0.1232843, -0.275064, -0.31610143, 0, -0.91904783, -0.25242087, 0.9195452, -0.20804799, -0.20443204, 0.15965158, -0.29869696, -0.20361632, -0.024924213, -0.94839925, -0.25242087, 0.8903595, -0.22953747, -0.20522973, -0.08472574, -0.27558506, -0.31620803, 0.075305566, -0.93372357, -0.2232295, 0.9487308, -0.30048263, -0.20328154, 0.087755375, -0.84604084, -0.2232295, 1.0072993, -0.24684052, -0.20400481, 0.14850964)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6afh0"]
+points = PackedVector3Array(-0.1142984, 0.32223493, 0.048596695, -0.2962349, 0.28907785, 0.023806602, -0.2962349, 0.28907785, 0.05686006, -0.13086075, -0.20703489, 0.07338679, -0.22179338, -0.20703489, -0.04235374, -0.23832011, -0.20703489, 0.11475704, -0.18873993, 0.32223493, 0.13130158, -0.18047656, 0.32223493, -0.05063492, -0.13914192, -0.20703489, -0.009282477, -0.28795373, -0.20703489, 0.032069966, -0.25486466, 0.32223493, -0.04235374, -0.28795373, 0.32223493, 0.08994914, -0.15566866, -0.20703489, 0.10647587, -0.13086075, 0.32223493, 0.0982125, -0.13086075, 0.32223493, -0.017545842, -0.27967256, -0.20703489, -0.0010013022, -0.27967256, -0.20703489, 0.08165015, -0.26314583, 0.28907785, 0.11475704, -0.1722132, -0.20703489, -0.034090377, -0.2962349, 0.32223493, 0.0072620623, -0.13086075, -0.20703489, 0.0072620623, -0.1722132, -0.20703489, 0.11475704, -0.24658348, -0.20703489, -0.034090377, -0.14738747, 0.28907785, -0.034090377, -0.1142984, 0.30560458, 0.023806602, -0.21353002, 0.30560458, 0.13130158, -0.23005675, 0.28907785, -0.05063492, -0.16394983, 0.30560458, 0.1230204, -0.28795373, 0.30560458, -0.009282477, -0.28795373, -0.20703489, 0.05686006, -0.19700329, -0.20703489, -0.04235374, -0.24658348, 0.32223493, 0.1230204)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8i1lx"]
+points = PackedVector3Array(-0.25628036, -0.20464945, -0.07339556, 0.949411, -0.2232295, 0.116742596, -0.6563713, -0.25242087, -1.0072993, -0.24734896, -0.31553426, 0.11161118, -0.87539226, -0.2232295, 0.9925093, 0.9347353, -0.25242087, 0.13133542, -0.7145168, -0.2232295, -1.0072993, -0.94839925, -0.25242087, 0.9195452, -0.26005122, -0.3155837, -0.024824452, 0.949411, -0.23782519, -0.029185649, -0.8168752, -0.23782519, -0.9487308, -0.94839925, -0.2232295, 0.8903595, -0.2873041, -0.20339325, 0.11260498, -0.8023853, -0.2232295, 1.0072993, -0.21176659, -0.31279483, -0.058963288, -0.6563713, -0.2232295, -1.0072993, -0.77303386, -0.2232295, -0.9779165, -0.70021266, -0.25242087, -1.0072993, 0.9347353, -0.25242087, 0.08755695, -0.2214107, -0.3152065, 0.1232843, -0.275064, -0.31610143, 0, -0.91904783, -0.25242087, 0.9195452, -0.20804799, -0.20443204, 0.15965158, -0.29869696, -0.20361632, -0.024924213, -0.94839925, -0.25242087, 0.8903595, -0.22953747, -0.20522973, -0.08472574, -0.27558506, -0.31620803, 0.075305566, -0.93372357, -0.2232295, 0.9487308, -0.30048263, -0.20328154, 0.087755375, -0.84604084, -0.2232295, 1.0072993, -0.24684052, -0.20400481, 0.14850964)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_1j16w"]
 size = Vector3(0.9401267, 0.001, 1.9401267)
 
@@ -366,6 +379,9 @@ size = Vector3(76.202614, 24.836414, 338.79443)
 [sub_resource type="BoxShape3D" id="BoxShape3D_yk1uv"]
 size = Vector3(9.866631, 75.57764, 99.150024)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jrene"]
+size = Vector3(0.54411316, 2.1467133, 1.178894)
+
 [node name="Floor2" type="Node3D" unique_id=1528537454]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1693086920]
@@ -384,9 +400,10 @@ visible = false
 light_energy = 3.878
 omni_range = 15.863
 
-[node name="BreakerBox" parent="." unique_id=482499585 node_paths=PackedStringArray("connected_light") instance=ExtResource("3_px5mv")]
+[node name="BreakerBox" parent="." unique_id=482499585 node_paths=PackedStringArray("connected_light", "maintenance_door") instance=ExtResource("3_px5mv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.070375, 3.3508196, 7.5911226)
 connected_light = NodePath("../OmniLight3D")
+maintenance_door = NodePath("../MaintenanceDoor")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=582196201]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1003914, 0)
@@ -430,9 +447,14 @@ size = Vector3(10.558735, 3.4277954, 14.064392)
 material = SubResource("StandardMaterial3D_0muf6")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D" unique_id=939235263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13696289, -0.38623047, 2.711032)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13696289, -0.3518505, 2.6785078)
 operation = 2
 size = Vector3(1.2739258, 2.2392578, 1.5385742)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1452775458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.944079, -2.0624654, -2.5309353)
+operation = 2
+size = Vector3(4.0319977, 2.2392578, 3.5342407)
 
 [node name="Sketchfab_Scene" parent="CSGCombiner3D" unique_id=1773900251 instance=ExtResource("6_ogqmm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8527184, -0.56714106, 5.386391)
@@ -897,8 +919,26 @@ shape = SubResource("BoxShape3D_gwqjf")
 [node name="Sketchfab_Scene26" parent="Models" unique_id=1703309547 instance=ExtResource("22_7ivve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.378018, 4.1731906, 9.076655)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Models/Sketchfab_Scene26" unique_id=918313339]
+transform = Transform3D(1, 0, 0, 0, 1, -4.3711392e-08, 0, 4.3711392e-08, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Models/Sketchfab_Scene26/StaticBody3D" unique_id=614459807]
+shape = SubResource("ConvexPolygonShape3D_ih2e5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Models/Sketchfab_Scene26/StaticBody3D" unique_id=17633723]
+shape = SubResource("ConvexPolygonShape3D_hu68a")
+
 [node name="Sketchfab_Scene27" parent="Models" unique_id=603145762 instance=ExtResource("22_7ivve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.390148, 4.719558, 7.342642)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Models/Sketchfab_Scene27" unique_id=384678764]
+transform = Transform3D(1, 0, 0, 0, 1, -4.3711392e-08, 0, 4.3711392e-08, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Models/Sketchfab_Scene27/StaticBody3D" unique_id=635709195]
+shape = SubResource("ConvexPolygonShape3D_6afh0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Models/Sketchfab_Scene27/StaticBody3D" unique_id=394820711]
+shape = SubResource("ConvexPolygonShape3D_8i1lx")
 
 [node name="Sketchfab_Scene28" parent="Models" unique_id=1101002396 instance=ExtResource("5_qxbyx")]
 transform = Transform3D(-0.62911874, 0, 0.01351865, 0, 0.629264, 0, -0.01351865, 0, -0.62911874, 5.951517, 1.5684878, 12.914607)
@@ -1040,3 +1080,11 @@ shape = SubResource("BoxShape3D_yk1uv")
 
 [node name="Sketchfab_Scene34" parent="Models" unique_id=324983522 instance=ExtResource("25_pf4q8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.526143, 3.4462345, 0.9613946)
+
+[node name="MaintenanceDoor" type="AnimatableBody3D" parent="." unique_id=1785846744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6044366, 3.3031301, 1.7898513)
+script = ExtResource("26_cedng")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MaintenanceDoor" unique_id=193744310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3766723, -0.56275034, 8.541922)
+shape = SubResource("BoxShape3D_jrene")
