@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cowg7o7h8cvq3" path="res://assets/Models/elevator.glb" id="3_jmdsd"]
 [ext_resource type="Script" uid="uid://cvwkemoh3apy1" path="res://scripts/elevator_ui.gd" id="4_gisge"]
 [ext_resource type="Script" uid="uid://i2jsyy827mtl" path="res://scripts/player_detector.gd" id="5_pr5mj"]
+[ext_resource type="Texture2D" uid="uid://d0m6x0t13ky32" path="res://assets/images/Panel.png" id="5_xslfi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jmdsd"]
 size = Vector3(0.21679688, 0.53515625, 0.109451294)
@@ -49,27 +50,44 @@ shape = SubResource("ConcavePolygonShape3D_jmdsd")
 [node name="ElevatorUI" type="CanvasLayer" parent="." unique_id=1761944057]
 script = ExtResource("4_gisge")
 
-[node name="MainPanel" type="PanelContainer" parent="ElevatorUI" unique_id=849634549]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PanelArt" type="TextureRect" parent="ElevatorUI" unique_id=1976324582]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.5
+offset_top = -176.75
+offset_right = 92.5
+offset_bottom = 176.75
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_xslfi")
+expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="ElevatorUI/MainPanel" unique_id=32815332]
-layout_mode = 2
+[node name="LobbyBtn" type="Button" parent="ElevatorUI/PanelArt" unique_id=1744956677]
+layout_mode = 0
+offset_left = 20.5
+offset_top = 253.75
+offset_right = 42.5
+offset_bottom = 276.75
+flat = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ElevatorUI/MainPanel/MarginContainer" unique_id=1387861130]
-layout_mode = 2
+[node name="Floor2Btn" type="Button" parent="ElevatorUI/PanelArt" unique_id=1502858987]
+layout_mode = 0
+offset_left = 146.5
+offset_top = 255.75
+offset_right = 166.0
+offset_bottom = 277.5
+flat = true
 
-[node name="TitleLabel" type="Label" parent="ElevatorUI/MainPanel/MarginContainer/VBoxContainer" unique_id=132334977]
-layout_mode = 2
-
-[node name="LobbyBtn" type="Button" parent="ElevatorUI/MainPanel/MarginContainer/VBoxContainer" unique_id=362867056]
-layout_mode = 2
-
-[node name="Floor2Btn" type="Button" parent="ElevatorUI/MainPanel/MarginContainer/VBoxContainer" unique_id=1565624975]
-layout_mode = 2
-
-[node name="CloseBtn" type="Button" parent="ElevatorUI/MainPanel/MarginContainer/VBoxContainer" unique_id=1253595262]
-layout_mode = 2
+[node name="CloseBtn" type="Button" parent="ElevatorUI/PanelArt" unique_id=31008875]
+layout_mode = 0
+offset_left = 148.5
+offset_top = 311.75
+offset_right = 169.5
+offset_bottom = 330.75
+flat = true
 
 [node name="ElevatorDoor" type="AnimatableBody3D" parent="." unique_id=1653603293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516, 4.87037, -1.566)

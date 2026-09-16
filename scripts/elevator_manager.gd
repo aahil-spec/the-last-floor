@@ -2,7 +2,7 @@ extends Node
 
 
 var floors={
-	"lobby":"res://scenes/lobby.tscn",
+	"lobby":"res://scenes/lobby.scn",
 	"floor_2":"res://scenes/floor2.tscn"
 }
 var current_floor="lobby"

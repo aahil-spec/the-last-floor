@@ -39,10 +39,10 @@ environment = SubResource("Environment_5gu6x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6229823, 0)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_k883f")]
-transform = Transform3D(-0.9992582, 0, -0.03851001, 0, 1, 0, 0.03851001, 0, -0.9992582, 0, 1.864047, -7.2920136)
+transform = Transform3D(-0.9992582, 0, -0.03851001, 0, 1, 0, 0.03851001, 0, -0.9992582, 0, 0.2881198, -8.22754)
 
 [node name="Label3D" type="Label3D" parent="." unique_id=1055397546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1359092, 2.9494286, -6.589191)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37857628, 3.6342955, -6.521037)
 text = "FLOOR 2"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=680979915]

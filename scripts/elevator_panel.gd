@@ -5,6 +5,4 @@ extends Interactable
 
 @warning_ignore("unused_parameter")
 func interact(player_node):
-	if connected_ui:
-		connected_ui.visible=true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	connected_ui.open_ui()
