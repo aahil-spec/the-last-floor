@@ -8,38 +8,14 @@
 
 [node name="Floor2" type="Node3D" unique_id=1528537454]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=693558114]
-use_collision = true
-size = Vector3(20, 0.5, 20)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1555795486]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 10.572084, 4.8398438, 0)
-use_collision = true
-size = Vector3(10.3203125, 0.5, 20)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=704966349]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -10.11665, 4.7631836, 0)
-use_collision = true
-size = Vector3(10.473633, 0.5, 20)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1036312456]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.61761475, 4.6643066, 9.308679)
-use_collision = true
-size = Vector3(21.23523, 0.5, 10.671387)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1296406165]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 4.9172363, -10.112155)
-use_collision = true
-size = Vector3(20, 0.5, 10.165527)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1693086920]
 environment = SubResource("Environment_5gu6x")
 
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_px5mv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6229823, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37892628, 3.7076132, -0.15554142)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_k883f")]
-transform = Transform3D(-0.9992582, 0, -0.03851001, 0, 1, 0, 0.03851001, 0, -0.9992582, 0, 0.2881198, -8.22754)
+transform = Transform3D(0.07008709, 0, 0.99754095, 0, 1, 0, -0.99754095, 0, 0.07008709, 11.328683, 1.6256979, -2.138784)
 
 [node name="Label3D" type="Label3D" parent="." unique_id=1055397546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37857628, 3.6342955, -6.521037)
@@ -52,5 +28,52 @@ light_energy = 3.878
 omni_range = 15.863
 
 [node name="BreakerBox" parent="." unique_id=482499585 node_paths=PackedStringArray("connected_light") instance=ExtResource("3_px5mv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.732092, 0.62837505, 2.9111562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.732092, 10.216235, 2.9111562)
 connected_light = NodePath("../OmniLight3D")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=582196201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1003914, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=231142645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0224915, 0)
+size = Vector3(30, 6.044983, 30)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=327257620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31958, 1.0480347, -2.7920227)
+operation = 2
+size = Vector3(18.63916, 5.0960693, 4.4159546)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1999282152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6047363, -0.0025911331, 6.4202952)
+operation = 2
+size = Vector3(1.7905273, 2.9955902, 14.023407)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=988315064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7740874, -0.07050753, 6.9381704)
+operation = 2
+size = Vector3(11.205488, 2.9227905, 11.981995)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1331321035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0412354, -0.37983203, 10.337349)
+operation = 2
+size = Vector3(2.171753, 2.1882477, 1.2145996)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1724276100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.37707, -0.11397982, 4.8506136)
+size = Vector3(8.458588, 3.008545, 0.47180176)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=412181671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.892461, 0.22335815, 6.532196)
+operation = 2
+size = Vector3(10.558735, 3.4277954, 14.064392)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D" unique_id=939235263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13696289, -0.38623047, 2.711032)
+operation = 2
+size = Vector3(1.2739258, 2.2392578, 1.5385742)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1367548011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24230063, 3.0800812, 0)
+light_energy = 2.967
+omni_range = 100.0
