@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://s637dmu5lwgd"
+path.s3tc="res://.godot/imported/rotomola_pajer_key_and_keycard_2.png-d6d7f14cd9c03f7b4a2115a3325358d6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "fe7250699092d983a74955870b044f5f"
+}
+
+[deps]
+
+source_file="res://assets/Models/rotomola_pajer_key_and_keycard_2.png"
+dest_files=["res://.godot/imported/rotomola_pajer_key_and_keycard_2.png-d6d7f14cd9c03f7b4a2115a3325358d6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/Models/rotomola_pajer_key_and_keycard_2.png"
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

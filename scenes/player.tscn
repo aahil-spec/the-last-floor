@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djny2g421fve" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://dbemp8lll5cnn" path="res://assets/Images/Note.png" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -58,5 +59,84 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 24
 text = "Test Text"
+
+[node name="NoteOverlay" type="ColorRect" parent="HUD" unique_id=545032549]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49411765)
+metadata/_edit_use_anchors_ = true
+
+[node name="NotePaper" type="TextureRect" parent="HUD/NoteOverlay" unique_id=922247610]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -176.0
+offset_right = 164.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qhqgy")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="NoteText" type="Label" parent="HUD/NoteOverlay/NotePaper" unique_id=703312703]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="HUD" unique_id=1266501279]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.80240905, 0, 0.12018416, 1)
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+
+[node name="PhotoOverlay" type="ColorRect" parent="HUD" unique_id=1573733047]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0.007843138, 0.007843138, 0.48235294)
+
+[node name="PhotoImage" type="TextureRect" parent="HUD/PhotoOverlay" unique_id=727032516]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [editable path="Head/Camera3D/FlashLight"]

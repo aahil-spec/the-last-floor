@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://db3fbynqy24ef" path="res://scripts/elevator_panel.gd" id="1_8o2wm"]
 [ext_resource type="PackedScene" uid="uid://bg680o01lck8h" path="res://assets/Models/elevator___elevator_key_7_mb.glb" id="2_jmdsd"]
 [ext_resource type="PackedScene" uid="uid://cowg7o7h8cvq3" path="res://assets/Models/elevator.glb" id="3_jmdsd"]
-[ext_resource type="Script" uid="uid://8jieaqjynw1m" path="res://scripts/button_lobby.gd" id="3_pr5mj"]
+[ext_resource type="Script" uid="uid://8jieaqjynw1m" path="res://scripts/elevator_button.gd" id="3_pr5mj"]
 [ext_resource type="Script" uid="uid://dr0enlsqgtkv5" path="res://scripts/door_button.gd" id="4_xslfi"]
 [ext_resource type="Script" uid="uid://bfhc0dcw0o7lc" path="res://scripts/elevator_door.gd" id="5_pr5mj"]
 

@@ -9,8 +9,13 @@ extends Interactable
 @export var elevator_root:Node3D
 @warning_ignore("unused_parameter")
 func interact(player_node):
-	if elevator_door and not elevator_door.is_door_closed:
+	if not player_node.has_keycard:
+		player_node.show_message("Access Denied: Security Keycard Required")
 		return
+	if elevator_door and not elevator_door.is_door_closed:
+		player_node.show_message("Safety Lock: Close the doors first")
+		return
+	player_node.show_message("Access Granted:Traveling...")
 	var tween=create_tween()
 	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	tween.tween_property(elevator_root,"global_position:y",target_height,5.0)

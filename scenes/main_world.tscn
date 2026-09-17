@@ -6,11 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://17j5ie8vtpsr" path="res://scenes/floor_3.tscn" id="4_bdp8l"]
 [ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="5_jj0au"]
 [ext_resource type="PackedScene" uid="uid://bedhq536rkr6d" path="res://scenes/note.tscn" id="6_wy0bs"]
+[ext_resource type="PackedScene" uid="uid://cywjoh73q2t4e" path="res://scenes/key_card.tscn" id="7_emumq"]
+[ext_resource type="Script" uid="uid://bp86xyklyj2tw" path="res://scripts/photograph.gd" id="8_5irk3"]
+[ext_resource type="Texture2D" uid="uid://l5rjc3xuobex" path="res://assets/Images/Photo.png" id="9_wj2hs"]
 
 [sub_resource type="Environment" id="Environment_bdp8l"]
 background_mode = 1
 fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_emumq"]
+size = Vector3(5.750763, 6.2025604, 0.2163086)
 
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
@@ -33,3 +39,19 @@ transform = Transform3D(-1.3113416e-07, 0, -2.9999998, 0, 3, 0, 2.9999998, 0, -1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595332259]
 environment = SubResource("Environment_bdp8l")
+
+[node name="KeyCard" parent="." unique_id=2076653954 instance=ExtResource("7_emumq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3303223, 0.76069736, -9.759053)
+
+[node name="Photograph" type="StaticBody3D" parent="." unique_id=177266959]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 10.197245, 2.2628152, -7.7632074)
+script = ExtResource("8_5irk3")
+photo_texture = ExtResource("9_wj2hs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Photograph" unique_id=1515721500]
+transform = Transform3D(0.99902594, -0.044125054, -1.9287674e-09, 0.044125054, 0.99902594, -4.2568615e-11, 1.9287671e-09, -4.2579273e-11, 1, 10.358124, -0.0708313, -16.742817)
+shape = SubResource("BoxShape3D_emumq")
+
+[node name="Sprite3D" type="Sprite3D" parent="Photograph" unique_id=1635772299]
+transform = Transform3D(0.55346894, -0.017439824, -0.033982206, 0.015508974, 0.6181944, -0.006837273, 0.018369418, 0.003529457, 1.0296538, 10.322418, 0, -16.619736)
+texture = ExtResource("9_wj2hs")
