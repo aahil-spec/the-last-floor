@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://osjsb1l5oseo" path="res://assets/Models/ceilingfan.glb" id="14_jk527"]
 [ext_resource type="PackedScene" uid="uid://df8kaypw4jm75" path="res://assets/Models/carpet.glb" id="15_evpyk"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_muq15"]
+albedo_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hoct1"]
 albedo_color = Color(0.28280938, 0.04912246, 0.04959307, 1)
 
@@ -38,6 +41,7 @@ size = Vector3(20, 5, 138.9668)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4754376, -0.0042231083, 69.421814)
 operation = 2
 size = Vector3(9.906372, 3, 10)
+material = SubResource("StandardMaterial3D_muq15")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1595976474]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0244942, 0, 0.565773)
@@ -368,13 +372,27 @@ transform = Transform3D(0.030413987, 0, 0, 0, -0.020641541, 0, 0, 0, 0.08091873,
 environment = SubResource("Environment_muq15")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1935740144]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.078727, 4.9742746, 68.55652)
-light_energy = 0.5
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.078727, 5.8275414, 68.55652)
+light_energy = 0.4
 shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 30.0
+omni_range = 9.495
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1484941828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3972443, 5.0470786, 0)
+light_color = Color(0.5609549, 0.5609549, 0.5609549, 1)
 light_energy = 0.5
+distance_fade_begin = 50.0
 omni_range = 1000.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1631009416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1980281, 3.9939566, -63.286)
+light_color = Color(1, 0, 0, 1)
+light_energy = 1.131
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+distance_fade_shadow = 30.0
+distance_fade_length = 5.0
+omni_range = 3.0
