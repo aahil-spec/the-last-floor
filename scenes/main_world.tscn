@@ -26,7 +26,7 @@ size = Vector3(5.750763, 6.2025604, 0.2163086)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3429193, 20.215588, 6.2063885)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
-transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, -13.168, 0.7146791, 3.316)
+transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, -13.168, 0.84861624, 3.316)
 
 [node name="Floor3" parent="." unique_id=1479673412 instance=ExtResource("4_bdp8l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 61.25077, 46.09236, 5.313696)
