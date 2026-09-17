@@ -20,7 +20,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.701615, 0)
 target_position = Vector3(0, 0, -2)
 
 [node name="FlashLight" parent="Head/Camera3D" unique_id=1308081947 instance=ExtResource("2_g2els")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0.021766543, -0.5078223, -0.37565887)
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0.45904535, -0.35956627, -0.62933934)
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="SpotLight3D" parent="Head/Camera3D/FlashLight" index="1" unique_id=1012138715]
+spot_angle = 180.0
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=946111541]
 
@@ -52,3 +58,5 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 24
 text = "Test Text"
+
+[editable path="Head/Camera3D/FlashLight"]

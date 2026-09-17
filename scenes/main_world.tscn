@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_wjoj8"]
 [ext_resource type="PackedScene" uid="uid://17j5ie8vtpsr" path="res://scenes/floor_3.tscn" id="4_bdp8l"]
 [ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="5_jj0au"]
+[ext_resource type="PackedScene" uid="uid://bedhq536rkr6d" path="res://scenes/note.tscn" id="6_wy0bs"]
 
 [sub_resource type="Environment" id="Environment_bdp8l"]
 background_mode = 1
@@ -24,8 +25,11 @@ transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.
 [node name="Floor3" parent="." unique_id=1479673412 instance=ExtResource("4_bdp8l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 61.25077, 46.09236, 5.313696)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1621172654]
-environment = SubResource("Environment_bdp8l")
-
 [node name="FlashLight" parent="." unique_id=1308081947 instance=ExtResource("5_jj0au")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.350311, 0.995666, 0)
+
+[node name="Note" parent="." unique_id=1765621486 instance=ExtResource("6_wy0bs")]
+transform = Transform3D(-1.3113416e-07, 0, -2.9999998, 0, 3, 0, 2.9999998, 0, -1.3113416e-07, 9.980944, 1.9834509, -7.1259336)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595332259]
+environment = SubResource("Environment_bdp8l")

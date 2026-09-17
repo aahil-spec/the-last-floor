@@ -4,6 +4,7 @@ extends Interactable
 var is_locked:bool=true
 var is_open:bool=false
 
+@warning_ignore("unused_parameter")
 func interact(player_node):
 	if is_locked:
 		return

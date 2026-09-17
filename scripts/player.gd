@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var walk_speed=3.0
-@export var jump_velocity=4.5
+@export var jump_velocity=3.5
 @export var mouse_sensitivity=0.002
 
 @onready var head=$Head
