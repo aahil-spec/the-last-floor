@@ -27,8 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://bh2ul8hmday1n" path="res://assets/Models/wall_picture (1).glb" id="25_pf4q8"]
 [ext_resource type="Script" uid="uid://b75l3bf0oh6fa" path="res://scripts/maintenance_door.gd" id="26_cedng"]
 
-[sub_resource type="Environment" id="Environment_5gu6x"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b5fyn"]
 albedo_texture = ExtResource("4_jrene")
 albedo_texture_force_srgb = true
@@ -384,9 +382,6 @@ size = Vector3(0.54411316, 2.1467133, 1.178894)
 
 [node name="Floor2" type="Node3D" unique_id=1528537454]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1693086920]
-environment = SubResource("Environment_5gu6x")
-
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_px5mv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37892628, 3.7076132, -0.15554142)
 
@@ -451,11 +446,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13696289, -0.3518505, 2.67
 operation = 2
 size = Vector3(1.2739258, 2.2392578, 1.5385742)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1452775458]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.944079, -2.0624654, -2.5309353)
-operation = 2
-size = Vector3(4.0319977, 2.2392578, 3.5342407)
-
 [node name="Sketchfab_Scene" parent="CSGCombiner3D" unique_id=1773900251 instance=ExtResource("6_ogqmm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8527184, -0.56714106, 5.386391)
 
@@ -502,6 +492,11 @@ material_override = SubResource("StandardMaterial3D_a1j1m")
 radius = 0.3
 height = 3.4229736
 material = SubResource("StandardMaterial3D_lbe5o")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1511469034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.339241, 0.8394623, -2.363703)
+operation = 2
+size = Vector3(1.9472656, 7.024811, 3.540039)
 
 [node name="Models" type="Node3D" parent="." unique_id=1945860108]
 

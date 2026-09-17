@@ -22,11 +22,6 @@ albedo_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hoct1"]
 albedo_color = Color(0.28280938, 0.04912246, 0.04959307, 1)
 
-[sub_resource type="Environment" id="Environment_muq15"]
-background_mode = 1
-fog_enabled = true
-fog_light_color = Color(0, 0, 0, 1)
-
 [node name="Floor3" type="Node3D" unique_id=1479673412]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=634625507]
@@ -59,11 +54,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5453153, -0.4102478, -19.4
 operation = 2
 size = Vector3(1, 2.0769653, 1.1733398)
 
+[node name="Sketchfab_Scene" parent="CSGCombiner3D" unique_id=51365077 instance=ExtResource("2_l5xn4")]
+transform = Transform3D(-0.008576204, 0, -0.85200757, 0, 1, 0, 0.7653581, 0, -0.009547153, -1.0746971, -1.4812267, 74.16476)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=461149872]
+transform = Transform3D(0.017504709, 0, -0.99984676, 0, 1, 0, 0.99984676, 0, 0.017504709, -1.2975272, 0.19068599, 73.89165)
+operation = 2
+size = Vector3(2.2841103, 5.6526613, 3.54)
+
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_6q04j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9083667, 73.07787)
-
-[node name="Sketchfab_Scene" parent="." unique_id=51365077 instance=ExtResource("2_l5xn4")]
-transform = Transform3D(-0.008576204, 0, -0.85200757, 0, 1, 0, 0.7653581, 0, -0.009547153, -1.0746971, 2.2999432, 74.16476)
 
 [node name="Sketchfab_Scene2" parent="." unique_id=2064270509 instance=ExtResource("3_lh5pq")]
 transform = Transform3D(0.4974616, 0, 0, 0, 0.0028971047, -0.9999994, 0, 2.6772027, 0.001082138, -2.5078905, 2.260831, 48.239452)
@@ -367,9 +367,6 @@ transform = Transform3D(0.70794874, 0, 0, 0, 0.70794874, 0, 0, 0, 0.70794874, -4
 
 [node name="Sketchfab_Scene102" parent="." unique_id=549469282 instance=ExtResource("15_evpyk")]
 transform = Transform3D(0.030413987, 0, 0, 0, -0.020641541, 0, 0, 0, 0.08091873, -6.1842465, 2.305121, -24.036863)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2085576771]
-environment = SubResource("Environment_muq15")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1935740144]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.078727, 5.8275414, 68.55652)

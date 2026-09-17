@@ -39,6 +39,7 @@ script = ExtResource("1_8o2wm")
 [node name="ButtonLobby" type="StaticBody3D" parent="ElevatorPanel" unique_id=1047453665 node_paths=PackedStringArray("elevator_door", "elevator_root")]
 script = ExtResource("3_pr5mj")
 prompt_text = "Press E to go to Lobby"
+target_height = 0.715
 elevator_door = NodePath("../../ElevatorDoor")
 elevator_root = NodePath("../..")
 
@@ -72,11 +73,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0019946098, 0.05706203, 0)
 script = ExtResource("3_pr5mj")
 prompt_text = "Press E to go to Floor 2"
 target_floor = "floor_2"
-target_height = 21.88
+target_height = 21.857
 elevator_door = NodePath("../../ElevatorDoor")
 elevator_root = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorPanel/ButtonFloor2" unique_id=1367376256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025493562, 0.14873499, 0.0927614)
+shape = SubResource("BoxShape3D_xslfi")
+
+[node name="ButtonFloor3" type="StaticBody3D" parent="ElevatorPanel" unique_id=101626255 node_paths=PackedStringArray("elevator_door", "elevator_root")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0019946098, 0.114599824, 0)
+script = ExtResource("3_pr5mj")
+prompt_text = "Press E to go to Floor 3"
+target_floor = "floor_3"
+target_height = 48.403
+elevator_door = NodePath("../../ElevatorDoor")
+elevator_root = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorPanel/ButtonFloor3" unique_id=1978798241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025493562, 0.14873499, 0.0927614)
 shape = SubResource("BoxShape3D_xslfi")
 

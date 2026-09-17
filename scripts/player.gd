@@ -12,7 +12,7 @@ extends CharacterBody3D
 
 @onready var interact_label=$HUD/InteractPrompt
 
-
+var has_flashlight=false
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -26,27 +26,28 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x*mouse_sensitivity)
 		camera.rotate_x(-event.relative.y*mouse_sensitivity)
 		camera.rotation.x=clamp(camera.rotation.x,deg_to_rad(-80),deg_to_rad(80))
-	if event.is_action_pressed("toggle_flashlight"):
-		flashlight.visible=!flashlight.visible
 	if event.is_action_pressed("interact"):
-		if interact_ray.is_colliding():
+		if interact_ray.is_colliding() and interact_ray.get_collider() is Interactable:
 			var target=interact_ray.get_collider()
-			if target is Interactable:
-				target.interact(self)
+			target.interact(self)
+		elif has_flashlight:
+			var light_beam=flashlight.get_node_or_null("SpotLight3D")
+			if light_beam:
+				light_beam.visible=not light_beam.visible
 		
 func _physics_process(delta):
 	interact_label.visible=false
 	
-	if interact_ray.is_colliding():
+	if interact_ray.is_colliding() and interact_ray.get_collider() is Interactable:
 		var target=interact_ray.get_collider()
-		
-		if target is Interactable:
-			interact_label.visible=true
-			
-			if "prompt_text" in target:
-				interact_label.text=target.prompt_text
-			else:
-				interact_label.text="Press E to interact"
+		interact_label.visible=true
+		if "prompt_text" in target:
+			interact_label.text=target.prompt_text
+		else:
+			interact_label.text="Press E to interact"
+	elif has_flashlight:
+		interact_label.visible=true
+		interact_label.text="Press E to turn on and off"
 	if not is_on_floor():
 		velocity.y-=ProjectSettings.get_setting("physics/3d/default_gravity")*delta
 	elif Input.is_action_just_pressed("jump"):

@@ -3,25 +3,29 @@
 [ext_resource type="PackedScene" uid="uid://r74i4h166bd1" path="res://scenes/lobby.scn" id="1_tt5ry"]
 [ext_resource type="PackedScene" uid="uid://dctlyxic3fc5u" path="res://scenes/floor2.tscn" id="2_wjoj8"]
 [ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_wjoj8"]
+[ext_resource type="PackedScene" uid="uid://17j5ie8vtpsr" path="res://scenes/floor_3.tscn" id="4_bdp8l"]
+[ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="5_jj0au"]
+
+[sub_resource type="Environment" id="Environment_bdp8l"]
+background_mode = 1
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
 
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
 [node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
 
 [node name="Floor2" parent="." unique_id=1776839832 instance=ExtResource("2_wjoj8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93946743, 20.215588, -7.05925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3429193, 20.215588, 6.2063885)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.988373, 0.7764292, -10.5722065)
+transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, -13.168, 0.7146791, 3.316)
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1014470391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.781205, 6.190948, -10.641199)
+[node name="Floor3" parent="." unique_id=1479673412 instance=ExtResource("4_bdp8l")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 61.25077, 46.09236, 5.313696)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=532042233]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2887497, 7.557408, 0.61481476)
-operation = 2
-size = Vector3(3.8918, 16.114815, 4.723568)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1621172654]
+environment = SubResource("Environment_bdp8l")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=820529026]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2562151, 7.557408, 0.9085083)
-size = Vector3(5.03039, 16.114815, 5.8676596)
+[node name="FlashLight" parent="." unique_id=1308081947 instance=ExtResource("5_jj0au")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.350311, 0.995666, 0)

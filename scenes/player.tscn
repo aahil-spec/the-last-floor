@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bmvjassiyvewi"]
 
 [ext_resource type="Script" uid="uid://djny2g421fve" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="2_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -18,7 +19,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.701615, 0)
 [node name="InteractRay" type="RayCast3D" parent="Head/Camera3D" unique_id=519158838]
 target_position = Vector3(0, 0, -2)
 
-[node name="FlashLight" type="SpotLight3D" parent="Head/Camera3D" unique_id=1317818143]
+[node name="FlashLight" parent="Head/Camera3D" unique_id=1308081947 instance=ExtResource("2_g2els")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0.021766543, -0.5078223, -0.37565887)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=946111541]
 
