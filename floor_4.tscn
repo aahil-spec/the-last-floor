@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://0u7y2smhtsh2"]
+
+[ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="1_lsd4w"]
+[ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="2_1a6sl"]
+
+[node name="Floor4" type="Node3D" unique_id=990422488]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1770451419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0298262, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2107072530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3607483, 0, 0.12988281)
+size = Vector3(50.381042, 4, 31.691406)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=102602910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9575195, 0, 0)
+operation = 2
+size = Vector3(33.655273, 3, 4)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1196494764]
+transform = Transform3D(0.00020940701, 0, 1, 0, 1, 0, -1, 0, 0.00020940701, 0, 0, 0)
+operation = 2
+size = Vector3(15, 3, 4)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2055222465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.422381)
+operation = 2
+size = Vector3(12, 3, 8)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1043679582]
+transform = Transform3D(0.0026179552, 0, 0.99999654, 0, 1, 0, -0.99999654, 0, 0.0026179552, 17.506315, 0, 1.2060642)
+operation = 2
+size = Vector3(15.016602, 3, 8)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=417486097]
+transform = Transform3D(0.0051312977, 0, 0.9999868, 0, 1, 0, -0.9999868, 0, 0.0051312977, -23.539566, 0, -0.5479145)
+operation = 2
+size = Vector3(19.871582, 3, 8)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=943132465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.345646)
+operation = 2
+size = Vector3(12, 3, 8)
+
+[node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_lsd4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.028082, 2.4368746, 0)
+
+[node name="FlashLight" parent="." unique_id=1308081947 instance=ExtResource("2_1a6sl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0210032, 0.61854076, 0)
