@@ -23,4 +23,12 @@ you can also download the zip file here in godot and then import this project in
 
 credits
 created by Aahil and Afan
+
+
+<img width="1912" height="1071" alt="Screenshot 2026-09-20 020019" src="https://github.com/user-attachments/assets/2bd32353-6a5b-42a7-9789-f9ad653653ac" />
+<img width="1917" height="1078" alt="Screenshot 2026-09-20 020001" src="https://github.com/user-attachments/assets/1bbadd7f-9e3c-453f-ab19-fef845307a8a" />
+<img width="1917" height="1078" alt="Screenshot 2026-09-20 015951" src="https://github.com/user-attachments/assets/7283708a-9354-4e4b-a00a-d0425801113f" />
+<img width="1917" height="1078" alt="Screenshot 2026-09-20 015942" src="https://github.com/user-attachments/assets/e1712eb5-b406-4a1d-869f-f87e7a9926ec" />
+<img width="1917" height="1075" alt="Screenshot 2026-09-20 015931" src="https://github.com/user-attachments/assets/572f7a3f-290c-43c1-83ec-70d9d73d253b" />
+
 developed using the Godot Engine
