@@ -15,9 +15,11 @@ E to press buttons open doors pick up items and play tapes
 esc is used to uncapture your mouse cursor
 
 how to play
-download the game zip file
+download the game zip file in itch.io : https://aahil1.itch.io/the-last-floor
 extract the folder onto your computer
 double click the game exe file to start playing
+
+you can also download the zip file here in godot and then import this project in godot 
 
 credits
 created by Aahil and Afan
