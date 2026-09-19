@@ -13,7 +13,6 @@ func interact(player_node):
 	if not power_restored:
 		power_restored=true
 		prompt_text="Power restored"
-		player_node.max_unlocked_floor=3
 		if connected_light:
 			connected_light.visible=true
 		if maintenance_door:
