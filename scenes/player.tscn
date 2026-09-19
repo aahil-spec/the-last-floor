@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://djny2g421fve" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://dbemp8lll5cnn" path="res://assets/Images/Note.png" id="3_qhqgy"]
+[ext_resource type="FontFile" uid="uid://c7cb0i6v6gefx" path="res://assets/fonts/cmuntb.ttf" id="3_qlg0r"]
+[ext_resource type="FontFile" uid="uid://dg05jkc1sg8sm" path="res://assets/fonts/ArchitectsDaughter.ttf" id="4_dqkch"]
+[ext_resource type="FontFile" uid="uid://kkwa80isqdqb" path="res://assets/fonts/LinLibertine_DR.otf" id="5_tuyoq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -57,6 +60,7 @@ offset_top = -23.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_qlg0r")
 theme_override_font_sizes/font_size = 24
 text = "Test Text"
 
@@ -101,6 +105,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_tuyoq")
 horizontal_alignment = 1
 
 [node name="MessageLabel" type="Label" parent="HUD" unique_id=1266501279]
@@ -112,8 +117,9 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 36.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.80240905, 0, 0.12018416, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_dqkch")
+theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [node name="PhotoOverlay" type="ColorRect" parent="HUD" unique_id=1573733047]
@@ -140,3 +146,4 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [editable path="Head/Camera3D/FlashLight"]
+[editable path="Head/Camera3D/FlashLight/Sketchfab_Scene"]

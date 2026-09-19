@@ -14,3 +14,4 @@ func interact(player_node):
 			connected_light.visible=true
 		if maintenance_door:
 			maintenance_door.unlock_door()
+		player_node.max_unlocked_floor=3

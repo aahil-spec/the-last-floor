@@ -25,6 +25,7 @@ var is_reading=false
 var has_keycard=false
 var is_viewing_photo=false
 
+var max_unlocked_floor:int=2
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	await get_tree().create_timer(1.0).timeout

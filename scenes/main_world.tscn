@@ -37,8 +37,12 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.350311, 0.995666, 0)
 [node name="Note" parent="." unique_id=1765621486 instance=ExtResource("6_wy0bs")]
 transform = Transform3D(-1.3113416e-07, 0, -2.9999998, 0, 3, 0, 2.9999998, 0, -1.3113416e-07, 9.980944, 1.9834509, -7.1259336)
 
+[node name="Note2" parent="." unique_id=287473 instance=ExtResource("6_wy0bs")]
+transform = Transform3D(-1.3106296e-07, 0.098837554, 2.9983711, 4.320327e-09, 2.9983716, -0.09883756, -2.9999998, 0, -1.3113416e-07, 5.768993, 1.9716296, -21.823668)
+note_content = "When it stops between floors, do not look outside."
+
 [node name="KeyCard" parent="." unique_id=2076653954 instance=ExtResource("7_emumq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3303223, 0.76069736, -9.759053)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.2271566, 0.89422977, -26.221907)
 
 [node name="Photograph" type="StaticBody3D" parent="." unique_id=177266959]
 transform = Transform3D(0.04330127, 0.025, 1.0927848e-09, 0, -2.1855695e-09, 0.05, 0.025, -0.04330127, -1.8927586e-09, 4.655024, 2.761977, -14.828536)
@@ -53,5 +57,5 @@ shape = SubResource("BoxShape3D_emumq")
 transform = Transform3D(0.55346894, -0.017439824, -0.033982206, 0.015508974, 0.6181944, -0.006837273, 0.018369418, 0.003529457, 1.0296538, 10.322418, 0, -16.619736)
 texture = ExtResource("9_wj2hs")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1767104564]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=853805623]
 environment = SubResource("Environment_wj2hs")
