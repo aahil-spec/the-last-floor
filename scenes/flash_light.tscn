@@ -18,3 +18,5 @@ transform = Transform3D(-0.018499436, 0, -0.9998289, 0, 1, 0, 0.9998289, 0, -0.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=33007456]
 transform = Transform3D(0.01, 0, 0, 0, -4.3711387e-10, 0.01, 0, -0.01, -4.3711387e-10, -0.11709991, -0.056816228, 0.056816228)
 shape = SubResource("ConcavePolygonShape3D_v7dw0")
+
+[editable path="Sketchfab_Scene"]

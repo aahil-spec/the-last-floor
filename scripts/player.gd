@@ -27,6 +27,8 @@ var is_viewing_photo=false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	await get_tree().create_timer(1.0).timeout
+	show_message("I need to find Alex. Their last signal came from this building...")
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):

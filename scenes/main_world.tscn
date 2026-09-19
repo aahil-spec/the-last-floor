@@ -10,26 +10,26 @@
 [ext_resource type="Script" uid="uid://bp86xyklyj2tw" path="res://scripts/photograph.gd" id="8_5irk3"]
 [ext_resource type="Texture2D" uid="uid://l5rjc3xuobex" path="res://assets/Images/Photo.png" id="9_wj2hs"]
 
-[sub_resource type="Environment" id="Environment_bdp8l"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_emumq"]
+size = Vector3(5.750763, 6.2025604, 0.2163086)
+
+[sub_resource type="Environment" id="Environment_wj2hs"]
 background_mode = 1
 fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_emumq"]
-size = Vector3(5.750763, 6.2025604, 0.2163086)
 
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
 [node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
 
 [node name="Floor2" parent="." unique_id=1776839832 instance=ExtResource("2_wjoj8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3429193, 20.215588, 6.2063885)
-
-[node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
-transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, -13.168, 0.84861624, 3.316)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7434857, 20.215588, -14.903767)
 
 [node name="Floor3" parent="." unique_id=1479673412 instance=ExtResource("4_bdp8l")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 61.25077, 46.09236, 5.313696)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.7827892, 46.09236, 45.41535)
+
+[node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
+transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.9044514, 0.8719578, -29.384642)
 
 [node name="FlashLight" parent="." unique_id=1308081947 instance=ExtResource("5_jj0au")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.350311, 0.995666, 0)
@@ -37,14 +37,11 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.350311, 0.995666, 0)
 [node name="Note" parent="." unique_id=1765621486 instance=ExtResource("6_wy0bs")]
 transform = Transform3D(-1.3113416e-07, 0, -2.9999998, 0, 3, 0, 2.9999998, 0, -1.3113416e-07, 9.980944, 1.9834509, -7.1259336)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595332259]
-environment = SubResource("Environment_bdp8l")
-
 [node name="KeyCard" parent="." unique_id=2076653954 instance=ExtResource("7_emumq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3303223, 0.76069736, -9.759053)
 
 [node name="Photograph" type="StaticBody3D" parent="." unique_id=177266959]
-transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 10.197245, 2.2628152, -7.7632074)
+transform = Transform3D(0.04330127, 0.025, 1.0927848e-09, 0, -2.1855695e-09, 0.05, 0.025, -0.04330127, -1.8927586e-09, 4.655024, 2.761977, -14.828536)
 script = ExtResource("8_5irk3")
 photo_texture = ExtResource("9_wj2hs")
 
@@ -55,3 +52,6 @@ shape = SubResource("BoxShape3D_emumq")
 [node name="Sprite3D" type="Sprite3D" parent="Photograph" unique_id=1635772299]
 transform = Transform3D(0.55346894, -0.017439824, -0.033982206, 0.015508974, 0.6181944, -0.006837273, 0.018369418, 0.003529457, 1.0296538, 10.322418, 0, -16.619736)
 texture = ExtResource("9_wj2hs")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1767104564]
+environment = SubResource("Environment_wj2hs")
