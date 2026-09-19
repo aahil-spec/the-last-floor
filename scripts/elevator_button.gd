@@ -9,16 +9,17 @@ extends Interactable
 @export var elevator_root:Node3D
 
 @export var floor_number:int=2
-var is_moving:bool=false
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	if not player_node.has_keycard:
 		player_node.show_message("Access Denied: Security Keycard Required")
 		return
+		
 	if floor_number>player_node.max_unlocked_floor:
-		player_node.show_message("Error:Floor"+str(floor_number)+"is locked.")
-	if player_node.has_method("show_message"):
-		player_node.show_message("Safety Lock: Elevator is in motion")
+		player_node.show_message("Error: Floor " + str(floor_number) + " is locked.")
+		return
+	if elevator_door and elevator_door.is_moving:
+		player_node.show_message("Safety Lock: Elevator is in motion.")
 		return
 	if elevator_door and not elevator_door.is_door_closed:
 		player_node.show_message("Safety Lock: Close the doors first")

@@ -25,7 +25,7 @@ var is_reading=false
 var has_keycard=false
 var is_viewing_photo=false
 
-var max_unlocked_floor:int=2
+@export var max_unlocked_floor:int=2
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	await get_tree().create_timer(1.0).timeout
@@ -91,11 +91,11 @@ func show_note(content:String):
 	note_overlay.visible=true
 	is_reading=true
 	
-func show_message(text_to_show:String):
+func show_message(text_to_show:String,duration:float=3.0):
 	message_label.text=text_to_show
 	message_label.visible=true
 	
-	await get_tree().create_timer(2.5).timeout
+	await get_tree().create_timer(duration).timeout
 	message_label.visible=false
 	
 func show_photo(image_texture:Texture2D):

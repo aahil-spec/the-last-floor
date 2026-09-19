@@ -9,8 +9,10 @@ size = Vector3(0.019735634, 0.48706275, 0.33188096)
 [sub_resource type="BoxShape3D" id="BoxShape3D_i3m8o"]
 size = Vector3(0.3455065, 0.5031428, 0.09450643)
 
-[node name="BreakerBox" type="StaticBody3D" unique_id=301640312]
+[node name="BreakerBox" type="StaticBody3D" unique_id=301640312 node_paths=PackedStringArray("scare_audio", "creepy_prop")]
 script = ExtResource("1_ld34x")
+scare_audio = NodePath("")
+creepy_prop = NodePath("")
 
 [node name="Sketchfab_Scene" parent="." unique_id=1741133519 instance=ExtResource("2_rxq1m")]
 

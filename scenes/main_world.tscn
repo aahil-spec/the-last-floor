@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c0gc3si4x3mom"]
 
 [ext_resource type="PackedScene" uid="uid://r74i4h166bd1" path="res://scenes/lobby.scn" id="1_tt5ry"]
-[ext_resource type="PackedScene" uid="uid://dctlyxic3fc5u" path="res://scenes/floor2.tscn" id="2_wjoj8"]
 [ext_resource type="PackedScene" uid="uid://dawpmarouyu7m" path="res://scenes/elevator.tscn" id="3_wjoj8"]
-[ext_resource type="PackedScene" uid="uid://17j5ie8vtpsr" path="res://scenes/floor_3.tscn" id="4_bdp8l"]
 [ext_resource type="PackedScene" uid="uid://dqtmf0oe4lk8g" path="res://scenes/flash_light.tscn" id="5_jj0au"]
 [ext_resource type="PackedScene" uid="uid://bedhq536rkr6d" path="res://scenes/note.tscn" id="6_wy0bs"]
 [ext_resource type="PackedScene" uid="uid://cywjoh73q2t4e" path="res://scenes/key_card.tscn" id="7_emumq"]
 [ext_resource type="Script" uid="uid://bp86xyklyj2tw" path="res://scripts/photograph.gd" id="8_5irk3"]
+[ext_resource type="PackedScene" uid="uid://clwn2a1toepi5" path="res://scenes/floor_2.scn" id="9_bokwj"]
+[ext_resource type="PackedScene" uid="uid://4c8qgdfehkkl" path="res://scenes/floor_3.scn" id="9_oa7qk"]
 [ext_resource type="Texture2D" uid="uid://l5rjc3xuobex" path="res://assets/Images/Photo.png" id="9_wj2hs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_emumq"]
@@ -22,11 +22,11 @@ fog_light_color = Color(0, 0, 0, 1)
 
 [node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
 
-[node name="Floor2" parent="." unique_id=1776839832 instance=ExtResource("2_wjoj8")]
+[node name="Floor2" parent="." unique_id=240541320 instance=ExtResource("9_bokwj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7434857, 20.215588, -14.903767)
 
-[node name="Floor3" parent="." unique_id=1479673412 instance=ExtResource("4_bdp8l")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.7827892, 46.09236, 45.41535)
+[node name="Floor3" parent="." unique_id=1479673412 instance=ExtResource("9_oa7qk")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.783, 38.460445, 45.415)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
 transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.9044514, 0.8719578, -29.384642)

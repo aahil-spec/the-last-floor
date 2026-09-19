@@ -14,6 +14,6 @@ func interact(player_node):
 		audio_player.play()
 		
 		if player_node.has_method("show_message"):
-			player_node.show_message(subtitle)
+			player_node.show_message(subtitle,voice_audio.get_length())
 	else:
 		audio_player.stop()
