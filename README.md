@@ -14,23 +14,23 @@ finally on floor 3 you will step out into a massive hallway where you have to fi
 we generated a photograph of alex using gemini as well as a voice recording of him using elevenlabs
 
 
-controls
+# controls
 W A S D to walk around
 mouse to look around the environment
 E to press buttons open doors pick up items and play tapes
 esc is used to uncapture your mouse cursor
 
-how to play
+# how to play
 download the game zip file in itch.io : https://aahil1.itch.io/the-last-floor
 extract the folder onto your computer
 double click the game exe file to start playing
 
 you can also download the zip file here in godot and then import this project in godot 
 
-credits
+# credits
 created by Aahil and Afan
 
-
+# screenshots
 <img width="1912" height="1071" alt="Screenshot 2026-09-20 020019" src="https://github.com/user-attachments/assets/2bd32353-6a5b-42a7-9789-f9ad653653ac" />
 <img width="1917" height="1078" alt="Screenshot 2026-09-20 020001" src="https://github.com/user-attachments/assets/1bbadd7f-9e3c-453f-ab19-fef845307a8a" />
 <img width="1917" height="1078" alt="Screenshot 2026-09-20 015951" src="https://github.com/user-attachments/assets/7283708a-9354-4e4b-a00a-d0425801113f" />
