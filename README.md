@@ -8,6 +8,12 @@ after that on floor 2 you must locate and fix the breaker box to restore the lig
 
 finally on floor 3 you will step out into a massive hallway where you have to find and enter a very specific door that has a joker painting hanging right outside of it that is the end of the current gameplay but we will try our best to complete the rest of the game by week 2
 
+
+# Ai usage
+
+we generated a photograph of alex using gemini as well as a voice recording of him using elevenlabs
+
+
 controls
 W A S D to walk around
 mouse to look around the environment
