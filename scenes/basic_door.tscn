@@ -164,22 +164,22 @@ size = Vector3(115.11376, 215.00002, 9)
 [node name="BasicDoor" type="AnimatableBody3D" unique_id=129403763]
 script = ExtResource("1_xixr0")
 
-[node name="pasted__pCube9" type="Node3D" parent="." unique_id=24174831]
-transform = Transform3D(0.009, 0, 0, 0, 0.01, -3.4969116e-10, 0, 4.371139e-10, 0.008, 0.57212067, 0, 0)
+[node name="pasted__pCube9" type="Node3D" parent="." unique_id=1432006631]
+transform = Transform3D(0.009, 0, 0, 0, 0.01, -3.4969116e-10, 0, 4.371139e-10, 0.008, 0.6352639, 0, 0)
 
-[node name="defaultMaterial" type="MeshInstance3D" parent="pasted__pCube9" unique_id=495363086]
+[node name="defaultMaterial" type="MeshInstance3D" parent="pasted__pCube9" unique_id=861588797]
 mesh = SubResource("ArrayMesh_8mnqc")
 
-[node name="defaultMaterial2" type="MeshInstance3D" parent="pasted__pCube9" unique_id=1949672232]
+[node name="defaultMaterial2" type="MeshInstance3D" parent="pasted__pCube9" unique_id=1415299126]
 mesh = SubResource("ArrayMesh_efttc")
 
-[node name="defaultMaterial3" type="MeshInstance3D" parent="pasted__pCube9" unique_id=2113368074]
+[node name="defaultMaterial3" type="MeshInstance3D" parent="pasted__pCube9" unique_id=1616234757]
 mesh = SubResource("ArrayMesh_axapy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1787297344]
-transform = Transform3D(0.009, 0, 0, 0, 0.01, -3.4969116e-10, 0, 4.371139e-10, 0.008, 0.57212067, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1611128707]
+transform = Transform3D(0.009, 0, 0, 0, 0.01, -3.4969116e-10, 0, 4.371139e-10, 0.008, 0.6352639, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_oophw")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=523780283]
-transform = Transform3D(0.009, 0, 0, 0, 0.01, -3.4969116e-10, 0, 4.371139e-10, 0.008, 0.57212067, 7.6896217e-10, -0.017591802)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1178328048]
+transform = Transform3D(0.009, 0, 0, 0, 0.01, -3.4969116e-10, 0, 4.371139e-10, 0.008, 0.6352639, 7.6896217e-10, -0.017591802)
 shape = SubResource("BoxShape3D_oophw")
