@@ -3,13 +3,15 @@ extends Interactable
 @export var prompt_text:String="Press E to interact"
 @export var is_sacrifice_panel:bool=false
 @export var clown_manager:Node3D
-
 @export var hand_animator:AnimationPlayer
 @export var animaton_name:String="Anim01"
 @export var freeze_time:float=1.23
+@export var hand_flashlight_prop:StaticBody3D
 
 func interact(player_node):
 	$CollisionShape3D.disabled=true
+	if hand_flashlight_prop:
+		hand_flashlight_prop.visible=true
 	if hand_animator:
 		hand_animator.play(animaton_name)
 		await get_tree().create_timer(freeze_time).timeout

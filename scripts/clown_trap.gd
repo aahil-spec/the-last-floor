@@ -51,11 +51,13 @@ func fix_anomaly(anomaly_node:Node3D):
 	tween.tween_property(anomaly_node,"position:y",anomaly_node.position.y-1.595,0.2)
 	anomalies_fixed+=1
 	if anomalies_fixed>=3:
+		await tween.finished
 		escape_room()
 func escape_room():
 	if room_door:
 		var tween=create_tween()
 		tween.tween_property(room_door,"rotation_degrees:y",90.0,1.0)
+		await tween.finished
 	if red_emergency_light:
 		red_emergency_light.visible=false
 	queue_free()
