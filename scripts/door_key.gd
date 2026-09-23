@@ -1,6 +1,7 @@
 extends Interactable
 
 @export var prompt_text:String="Press E to Pick up Key"
+
 @export var connected_door:Interactable
 
 func interact(player_node):

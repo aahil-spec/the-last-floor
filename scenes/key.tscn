@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cgrt6xghnqxru"]
+
+[ext_resource type="Script" uid="uid://dauce5t0ilnqf" path="res://scripts/door_key.gd" id="1_fttkb"]
+[ext_resource type="PackedScene" uid="uid://b58yie4p3y2v5" path="res://assets/Models/door_key.glb" id="1_yk2u2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fttkb"]
+size = Vector3(0.8532535, 0.22941758, 1.8884115)
+
+[node name="Key" type="StaticBody3D" unique_id=955695541]
+script = ExtResource("1_fttkb")
+
+[node name="Key" parent="." unique_id=1888584749 instance=ExtResource("1_yk2u2")]
+transform = Transform3D(0.053023003, -0.08478538, 3.7060865e-09, -2.9527018e-19, -4.371138e-09, -0.099999994, 0.08478538, 0.053023003, -2.3177087e-09, 0, -0.019396544, 0.07625222)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=518716202]
+transform = Transform3D(0.053023, 1.0107204e-08, -0.08478538, -2.9527018e-19, 0.099999994, 1.1920928e-08, 0.08478538, -6.3208345e-09, 0.053023, -0.01920271, -0.013972998, 0.087530375)
+shape = SubResource("BoxShape3D_fttkb")
