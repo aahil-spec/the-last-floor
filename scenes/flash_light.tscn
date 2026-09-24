@@ -12,9 +12,17 @@ script = ExtResource("1_wt4or")
 [node name="Sketchfab_Scene" parent="." unique_id=2101435349 instance=ExtResource("1_v7dw0")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 
+[node name="Object_3" parent="Sketchfab_Scene/Sketchfab_model/newer_obj_cleaner_gles/Object_2" parent_id_path=PackedInt32Array(2101435349, 1859657252) index="0" unique_id=760027006]
+cast_shadow = 0
+
+[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/newer_obj_cleaner_gles/Object_2" parent_id_path=PackedInt32Array(2101435349, 1859657252) index="1" unique_id=1172281089]
+cast_shadow = 0
+
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1012138715]
 transform = Transform3D(-0.018499436, 0, -0.9998289, 0, 1, 0, 0.9998289, 0, -0.018499436, 0.114222035, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=33007456]
 transform = Transform3D(0.01, 0, 0, 0, -4.3711387e-10, 0.01, 0, -0.01, -4.3711387e-10, -0.11709991, -0.056816228, 0.056816228)
 shape = SubResource("ConcavePolygonShape3D_v7dw0")
+
+[editable path="Sketchfab_Scene"]

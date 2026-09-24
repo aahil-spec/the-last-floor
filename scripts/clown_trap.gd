@@ -3,6 +3,7 @@ extends StaticBody3D
 @export var red_emergency_light:OmniLight3D
 @export var clown_audio:AudioStreamPlayer
 @export var footstep_audio:AudioStreamPlayer
+@export var door_slam:AudioStreamPlayer3D
 @export var room_door:Node3D
 @export var closed_rotation_y:float=0.0
 @export var floating_anomalies:Array[Node3D]
@@ -28,10 +29,12 @@ func spring_trap():
 			clown_audio.play()
 		if footstep_audio:
 			footstep_audio.play()
+		if door_slam:
+			door_slam.play()
 		if room_door:
 			var tween=create_tween()
 			tween.tween_property(room_door,"rotation_degrees:y",closed_rotation_y,0.15)
-	
+		
 func trigger_sacrifice(player_node):
 	trapped_player=player_node
 	if red_emergency_light:

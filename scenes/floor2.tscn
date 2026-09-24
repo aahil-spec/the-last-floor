@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://bswi1fb3d3vqr" path="res://assets/Models/book_shelf.glb" id="24_cuo3i"]
 [ext_resource type="PackedScene" uid="uid://bh2ul8hmday1n" path="res://assets/Models/wall_picture (1).glb" id="25_pf4q8"]
 [ext_resource type="Script" uid="uid://b75l3bf0oh6fa" path="res://scripts/maintenance_door.gd" id="26_cedng"]
-[ext_resource type="AudioStream" uid="uid://bg85p6gc7pqbt" path="res://assets/voice/Doorslam.mp3" id="27_ogqmm"]
+[ext_resource type="AudioStream" uid="uid://bg85p6gc7pqbt" path="res://assets/audio/Doorslam.mp3" id="27_ogqmm"]
 [ext_resource type="Script" uid="uid://djhl5lf2dsc20" path="res://scripts/look_away_anomaly.gd" id="28_87jca"]
 [ext_resource type="PackedScene" uid="uid://c8j4isdepgomh" path="res://assets/Models/Creepy+doll.glb" id="28_a1j1m"]
 [ext_resource type="PackedScene" uid="uid://b8v7auefcvd78" path="res://assets/Models/table_small_table_an_old_little_table.glb" id="30_lbe5o"]

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dmtk3uvxn56a6" path="res://assets/Models/tape_recorder_with_cassettes_0.png" id="1_eha12"]
 [ext_resource type="Script" uid="uid://dt2qhwwewrgfj" path="res://scripts/voice_recorder.gd" id="1_m77fo"]
 [ext_resource type="Texture2D" uid="uid://dnmbpskb2m7wp" path="res://assets/Models/tape_recorder_with_cassettes_1.png" id="2_m77fo"]
-[ext_resource type="AudioStream" uid="uid://d2nd3d4ep35hh" path="res://assets/voice/Alex.mp3" id="2_w1hr0"]
+[ext_resource type="AudioStream" uid="uid://d2nd3d4ep35hh" path="res://assets/audio/Alex.mp3" id="2_w1hr0"]
 [ext_resource type="Texture2D" uid="uid://bdgotvj5vqa8" path="res://assets/Models/tape_recorder_with_cassettes_2.png" id="3_w1hr0"]
 [ext_resource type="Texture2D" uid="uid://cyu2q5g4i75f6" path="res://assets/Models/tape_recorder_with_cassettes_3.png" id="4_ynier"]
 [ext_resource type="Texture2D" uid="uid://b5x22fvc0wqmq" path="res://assets/Models/tape_recorder_with_cassettes_4.png" id="5_8bt0y"]
