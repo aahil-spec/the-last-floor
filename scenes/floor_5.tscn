@@ -148,10 +148,10 @@ transform = Transform3D(-0.0108779995, 0, 1.006172, 0, 1, 0, -2.316964, 0, -0.00
 transform = Transform3D(-0.0108779995, 0, 1.006172, 0, 1, 0, -2.316964, 0, -0.004723914, -22.405598, 3.729398, -10.052498)
 
 [node name="Sketchfab_Scene" parent="Models" unique_id=365279988 instance=ExtResource("3_m4g8k")]
-transform = Transform3D(0.0001644639, 0, -0.0029612235, 0, 0.0032864935, 0, 0.01163262, 0, 4.1866275e-05, 21.49569, 0.13397169, -16.304962)
+transform = Transform3D(0.0001644639, 0, -0.0029612235, 0, 0.0032864935, 0, 0.01163262, 0, 4.1866275e-05, 21.49569, 0.15457153, -16.304962)
 
 [node name="Sketchfab_Scene7" parent="Models" unique_id=45202330 instance=ExtResource("3_m4g8k")]
-transform = Transform3D(6.2104475e-05, 0, -0.003216108, 0, 0.003286494, 0, 0.011628276, 0, 1.7176648e-05, -22.738312, 0.13397169, -16.304962)
+transform = Transform3D(6.2104475e-05, 0, -0.003216108, 0, 0.003286494, 0, 0.011628276, 0, 1.7176648e-05, -22.745358, 0.21700001, -16.301073)
 
 [node name="Sketchfab_Scene5" parent="Models" unique_id=1271404299 instance=ExtResource("3_m4g8k")]
 transform = Transform3D(-4.0754887e-05, 0, -0.0030948003, 0, 0.0032864935, 0, -0.002882615, 0, 4.37548e-05, 0.117733, 0.13397169, 7.756464)
@@ -226,10 +226,10 @@ transform = Transform3D(-0.012990036, 0, 0.00048790267, 0, 0.012999193, 0, -0.00
 transform = Transform3D(-0.012990036, 0, 0.00048790267, 0, 0.012999193, 0, -0.00048790267, 0, -0.012990036, 12.388271, 1.79214, 12.402706)
 
 [node name="Sketchfab_Scene32" parent="Models" unique_id=325014209 instance=ExtResource("6_shkms")]
-transform = Transform3D(0.010069246, 0, -0.00016468535, 0, 0.010070589, 0, 0.00016468535, 0, 0.010069246, 2.1126642, 1.5021102, -18.885126)
+transform = Transform3D(0.010069246, 0, -0.00016468535, 0, 0.010070589, 0, 0.00016468535, 0, 0.010069246, 2.1126642, 1.5021102, -18.97423)
 
 [node name="Sketchfab_Scene33" parent="Models" unique_id=245250924 instance=ExtResource("6_shkms")]
-transform = Transform3D(0.010647775, 0, -0.00017414732, 0, 0.010649194, 0, 0.00017414732, 0, 0.010647775, -7.309044, 1.5697613, -18.865559)
+transform = Transform3D(0.010647775, 0, -0.00017414732, 0, 0.010649194, 0, 0.00017414732, 0, 0.010647775, -7.309044, 1.5697613, -19.009964)
 
 [node name="Sketchfab_Scene21" parent="Models" unique_id=1823495625 instance=ExtResource("6_shkms")]
 transform = Transform3D(-3.2216543e-05, 0, 0.012999155, 0, 0.012999193, 0, -0.012999155, 0, -3.2216543e-05, -24.256525, 1.79214, 6.8983603)
@@ -348,7 +348,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.000539, 1.474413, -18.9831
 [node name="NamePlate" parent="BasicDoor" unique_id=1325632691 instance=ExtResource("13_tff4p")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.65203476, 0.6423322, 0.020418167)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1325632691, 66174318) index="0" unique_id=1069035026]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1325632691, 236949699) index="0" unique_id=1069035026]
 transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
 mesh = SubResource("BoxMesh_mxq0r")
 
@@ -358,8 +358,376 @@ text = "Room No. : 503"
 font_size = 15
 outline_size = 4
 
+[node name="NamePlate23" parent="BasicDoor" unique_id=1166415846 instance=ExtResource("13_tff4p")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.9123688, 0.94544303, 13.998916)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate23/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1166415846, 236949699) index="0" unique_id=1067345619]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate23" unique_id=694308908]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 407"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate24" parent="BasicDoor" unique_id=1294561767 instance=ExtResource("13_tff4p")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -14.722144, 0.94544303, 13.998916)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate24/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1294561767, 236949699) index="0" unique_id=623287646]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate24" unique_id=896422106]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 405"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate25" parent="BasicDoor" unique_id=609030118 instance=ExtResource("13_tff4p")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -23.326332, 0.94544303, 13.998916)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate25/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(609030118, 236949699) index="0" unique_id=649577879]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate25" unique_id=2001323630]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 403"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate3" parent="BasicDoor" unique_id=1824551839 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, -35.213722, 1.0951885, 34.69615)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate3/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1824551839, 236949699) index="0" unique_id=939839664]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate3" unique_id=2109203779]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 400
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate14" parent="BasicDoor" unique_id=832381829 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, 9.054275, 0.6303059, 37.753494)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate14/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(832381829, 236949699) index="0" unique_id=1064604113]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate14" unique_id=443996160]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 305
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate16" parent="BasicDoor" unique_id=1653664168 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, 8.839103, 0.6303059, 23.481138)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate16/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1653664168, 236949699) index="0" unique_id=1552141754]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate16" unique_id=46898458]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 307
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate17" parent="BasicDoor" unique_id=1379968749 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, 8.685246, 0.6303059, 9.254387)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate17/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1379968749, 236949699) index="0" unique_id=810904784]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate17" unique_id=898148092]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 309
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate18" parent="BasicDoor" unique_id=888556659 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, 8.447467, 0.6303059, -1.0873756)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate18/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(888556659, 236949699) index="0" unique_id=197400959]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate18" unique_id=1879905032]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "STORE ROOM
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate15" parent="BasicDoor" unique_id=1793195092 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.1811026, 0, -3.9958982, 0, 4, 0, 3.9958982, 0, 0.1811026, 12.528014, 0.6303059, 34.16027)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate15/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1793195092, 236949699) index="0" unique_id=33013496]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate15" unique_id=1200909531]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 306
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate19" parent="BasicDoor" unique_id=1983520056 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.1811026, 0, -3.9958982, 0, 4, 0, 3.9958982, 0, 0.1811026, 12.3248625, 0.64648354, 19.610666)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate19/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1983520056, 236949699) index="0" unique_id=183448152]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate19" unique_id=259676820]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 308
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate20" parent="BasicDoor" unique_id=449197251 instance=ExtResource("13_tff4p")]
+transform = Transform3D(-0.0903312, 0, -3.99898, 0, 4, 0, 3.99898, 0, -0.0903312, 12.105208, 0.64648354, 5.4988146)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate20/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(449197251, 236949699) index="0" unique_id=822933289]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate20" unique_id=56954107]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 310
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate9" parent="BasicDoor" unique_id=1569530812 instance=ExtResource("13_tff4p")]
+transform = Transform3D(-3.9877517, 0, 0.31279254, 0, 4, 0, -0.31279254, 0, -3.9877517, -25.988136, 1.0951885, 31.335466)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate9/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1569530812, 236949699) index="0" unique_id=760855260]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate9" unique_id=1503441945]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 300
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate21" parent="BasicDoor" unique_id=89425620 instance=ExtResource("13_tff4p")]
+transform = Transform3D(-3.9971821, 0, 0.15013297, 0, 4, 0, -0.15013297, 0, -3.9971821, -18.810219, 1.0544661, 16.31606)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate21/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(89425620, 236949699) index="0" unique_id=460173156]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate21" unique_id=98883964]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 404
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate22" parent="BasicDoor" unique_id=21499382 instance=ExtResource("13_tff4p")]
+transform = Transform3D(-3.9971821, 0, 0.15013297, 0, 4, 0, -0.15013297, 0, -3.9971821, -1.3959808, 1.0544661, 16.448385)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate22/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(21499382, 236949699) index="0" unique_id=1674503584]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate22" unique_id=1033847384]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 406
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate11" parent="BasicDoor" unique_id=665079993 instance=ExtResource("13_tff4p")]
+transform = Transform3D(-3.9877517, 0, 0.31279254, 0, 4, 0, -0.31279254, 0, -3.9877517, -10.67722, 1.0951885, 31.335466)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate11/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(665079993, 236949699) index="0" unique_id=1271213485]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate11" unique_id=954838612]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 302
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate12" parent="BasicDoor" unique_id=460767154 instance=ExtResource("13_tff4p")]
+transform = Transform3D(-3.9877517, 0, 0.31279254, 0, 4, 0, -0.31279254, 0, -3.9877517, 1.4365244, 1.0951885, 31.346586)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate12/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(460767154, 236949699) index="0" unique_id=988799662]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate12" unique_id=1031726738]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 304
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate10" parent="BasicDoor" unique_id=867024379 instance=ExtResource("13_tff4p")]
+transform = Transform3D(3.99999, 0, -0.009006351, 0, 4, 0, 0.009006351, 0, 3.99999, -23.315376, 1.0951885, 28.86081)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate10/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(867024379, 236949699) index="0" unique_id=1553999285]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate10" unique_id=400600923]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 301
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate13" parent="BasicDoor" unique_id=225122053 instance=ExtResource("13_tff4p")]
+transform = Transform3D(3.99999, 0, -0.009006351, 0, 4, 0, 0.009006351, 0, 3.99999, -0.5045595, 1.0951885, 28.987642)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate13/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(225122053, 236949699) index="0" unique_id=1524141598]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate13" unique_id=2033788514]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 303
+
+
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate7" parent="BasicDoor" unique_id=1747835063 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.011379525, 0, -3.999984, 0, 4, 0, 3.999984, 0, 0.011379525, -31.730064, 1.0951885, 34.69615)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate7/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1747835063, 236949699) index="0" unique_id=1125363817]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate7" unique_id=2074115886]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "WASHROOM
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate4" parent="BasicDoor" unique_id=1288709883 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, -35.213722, 1.0951885, 25.872477)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate4/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1288709883, 236949699) index="0" unique_id=750949759]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate4" unique_id=571780311]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 401
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate5" parent="BasicDoor" unique_id=556074593 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, -35.213722, 0.7621995, 14.675978)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate5/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(556074593, 236949699) index="0" unique_id=1718031324]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate5" unique_id=74284032]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 402
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate6" parent="BasicDoor" unique_id=1461427304 instance=ExtResource("13_tff4p")]
+transform = Transform3D(0.07106628, 0, 3.9993687, 0, 4, 0, -3.9993687, 0, 0.07106628, -35.213722, 0.6887044, 1.1142845)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate6/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1461427304, 236949699) index="0" unique_id=120112636]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate6" unique_id=2144622079]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 500"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate2" parent="BasicDoor" unique_id=1469193612 instance=ExtResource("13_tff4p")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -8.919397, 0.6423322, 0.04501152)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate2/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1469193612, 236949699) index="0" unique_id=1398269340]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate2" unique_id=818687037]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 502
+"
+font_size = 15
+outline_size = 4
+
+[node name="NamePlate8" parent="BasicDoor" unique_id=1494505099 instance=ExtResource("13_tff4p")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -18.316303, 0.6423322, 0.04501152)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate8/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1494505099, 236949699) index="0" unique_id=1389173287]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate8" unique_id=79180586]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 501
+
+"
+font_size = 15
+outline_size = 4
+
 [node name="Note" parent="." unique_id=287473 instance=ExtResource("9_034ul")]
 transform = Transform3D(0.5559385, 0, -4.061086, 0, 4.098962, 0, 4.061086, 0, 0.5559385, -20.9055, 2.0138052, 14.087971)
 note_content = "Investigate Room 503."
 
 [editable path="BasicDoor/NamePlate"]
+[editable path="BasicDoor/NamePlate23"]
+[editable path="BasicDoor/NamePlate24"]
+[editable path="BasicDoor/NamePlate25"]
+[editable path="BasicDoor/NamePlate3"]
+[editable path="BasicDoor/NamePlate14"]
+[editable path="BasicDoor/NamePlate16"]
+[editable path="BasicDoor/NamePlate17"]
+[editable path="BasicDoor/NamePlate18"]
+[editable path="BasicDoor/NamePlate15"]
+[editable path="BasicDoor/NamePlate19"]
+[editable path="BasicDoor/NamePlate20"]
+[editable path="BasicDoor/NamePlate9"]
+[editable path="BasicDoor/NamePlate21"]
+[editable path="BasicDoor/NamePlate22"]
+[editable path="BasicDoor/NamePlate11"]
+[editable path="BasicDoor/NamePlate12"]
+[editable path="BasicDoor/NamePlate10"]
+[editable path="BasicDoor/NamePlate13"]
+[editable path="BasicDoor/NamePlate7"]
+[editable path="BasicDoor/NamePlate4"]
+[editable path="BasicDoor/NamePlate5"]
+[editable path="BasicDoor/NamePlate6"]
+[editable path="BasicDoor/NamePlate2"]
+[editable path="BasicDoor/NamePlate8"]
