@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dthn8oxrmv4e3" path="res://assets/Models/bloody_and_clean_wooden_floor_tiles.glb" id="9_mlxui"]
 [ext_resource type="PackedScene" uid="uid://cbb7mmq4qqg36" path="res://assets/Models/demoncircle.glb" id="9_o2k4k"]
 [ext_resource type="PackedScene" uid="uid://dttp0oryfhokm" path="res://assets/Models/horror_night_stand.glb" id="10_myt6j"]
+[ext_resource type="PackedScene" uid="uid://chiy47sjqdku1" path="res://assets/Models/name_plate.glb" id="13_tff4p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4g8k"]
 albedo_texture = ExtResource("1_7gok6")
@@ -37,6 +38,13 @@ albedo_texture = ExtResource("1_7gok6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwpb6"]
 albedo_texture = ExtResource("2_yim34")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4u0sh"]
+albedo_color = Color(0.6534281, 0.5581063, 0.46847832, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mxq0r"]
+material = SubResource("StandardMaterial3D_4u0sh")
+size = Vector3(5, 1, 0.1)
 
 [node name="floor_5" type="Node3D" unique_id=1515535038]
 
@@ -337,6 +345,21 @@ omni_range = 1000.0
 [node name="BasicDoor" parent="." unique_id=129403763 instance=ExtResource("8_mlxui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.000539, 1.474413, -18.983181)
 
+[node name="NamePlate" parent="BasicDoor" unique_id=1325632691 instance=ExtResource("13_tff4p")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.65203476, 0.6423322, 0.020418167)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BasicDoor/NamePlate/Sketchfab_model/caf72a9d72c642e9bf638b78bf433162_fbx/RootNode/NamePlate/NamePlate_lambert1_0" parent_id_path=PackedInt32Array(1325632691, 66174318) index="0" unique_id=1069035026]
+transform = Transform3D(3.3315854, 0, 0, 0, 2.9575222, 0, 0, 0, 0.9999991, 0, 2.126587, -0.045166016)
+mesh = SubResource("BoxMesh_mxq0r")
+
+[node name="Label3D" type="Label3D" parent="BasicDoor/NamePlate" unique_id=1880614996]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00024223328, 0.021537304, 0.00019741058)
+text = "Room No. : 503"
+font_size = 15
+outline_size = 4
+
 [node name="Note" parent="." unique_id=287473 instance=ExtResource("9_034ul")]
 transform = Transform3D(0.5559385, 0, -4.061086, 0, 4.098962, 0, 4.061086, 0, 0.5559385, -20.9055, 2.0138052, 14.087971)
 note_content = "Investigate Room 503."
+
+[editable path="BasicDoor/NamePlate"]

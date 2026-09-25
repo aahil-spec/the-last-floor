@@ -22,6 +22,10 @@ ElevatorManager="*uid://d35ca1wggfsas"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+washing_machines=""
+
 [input]
 
 move_up={
