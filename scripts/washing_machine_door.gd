@@ -13,4 +13,4 @@ func interact(player_node):
 	$CollisionShape3D.disabled=true
 	
 	var tween=create_tween()
-	tween.tween_property(hinge,"rotation_degrees:y",90.0,0.5)
+	tween.tween_property(hinge,"rotation_degrees:y",100.0,0.5)
