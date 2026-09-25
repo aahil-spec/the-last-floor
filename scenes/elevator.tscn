@@ -141,6 +141,20 @@ floor_number = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025493562, 0.14873499, 0.0927614)
 shape = SubResource("BoxShape3D_xslfi")
 
+[node name="ButtonFloor4" type="StaticBody3D" parent="ElevatorPanel" unique_id=1681432533 node_paths=PackedStringArray("elevator_door", "elevator_root")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0019946098, 0.17542028, 0)
+script = ExtResource("3_pr5mj")
+prompt_text = "Press E to go to Floor 4"
+target_floor = "floor_4"
+target_height = 60.238
+elevator_door = NodePath("../../ElevatorDoor")
+elevator_root = NodePath("../..")
+floor_number = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorPanel/ButtonFloor4" unique_id=1311484132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02565372, 0.14214033, 0.0927614)
+shape = SubResource("BoxShape3D_xslfi")
+
 [node name="Sketchfab_Scene" parent="." unique_id=515391735 instance=ExtResource("3_jmdsd")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
 
