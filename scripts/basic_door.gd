@@ -6,7 +6,6 @@ var door_tween:Tween
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	is_open=!is_open
-	
 	if door_tween:
 		door_tween.kill()
 	door_tween=create_tween()
