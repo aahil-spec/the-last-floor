@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://rdq6vnvs6e86"]
+
+[ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="1_mv4jp"]
+
+[node name="floor_6" type="Node3D" unique_id=1591077235]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=445409531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.419629, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1886086948]
+size = Vector3(50, 4, 60)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1725242666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044483, -0.0057373047, 27.924402)
+operation = 2
+size = Vector3(52.369385, 3.585205, 2.8155518)
+
+[node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_mv4jp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.400246, 2.9832325, 28.43177)
