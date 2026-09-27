@@ -14,7 +14,7 @@ background_mode = 1
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("7_emumq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0759883, 60.634834, -22.459915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0759883, 2.9088511, 10.736179)
 
 [node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
 
@@ -28,6 +28,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.78
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 4.4824257, 59.717052, -7.0069084)
 
 [node name="Area3D" parent="Floor4" index="9" unique_id=1888469481 node_paths=PackedStringArray("elevator_root", "elevator_door")]
+transform = Transform3D(0.9999999, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 0.9999999, 22.302143, 2.1957588, 0.10745525)
 elevator_root = NodePath("../../Elevator")
 elevator_door = NodePath("../../Elevator/ElevatorDoor")
 floor_5_target_height = 77.599
@@ -36,7 +37,7 @@ floor_5_target_height = 77.599
 transform = Transform3D(-0.9999998, 0, 8.742276e-08, 0, 1, 0, -8.742276e-08, 0, -0.9999998, -17.995525, 77.181786, -4.9907613)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
-transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.904, 60.234673, -29.385)
+transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.904, 0.857764, -29.385)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1940187235]
 environment = SubResource("Environment_jj0au")
