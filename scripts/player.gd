@@ -25,6 +25,8 @@ var is_reading=false
 var has_keycard=false
 var is_viewing_photo=false
 
+var has_cell_key:bool=false
+
 @export var max_unlocked_floor:int=2
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
