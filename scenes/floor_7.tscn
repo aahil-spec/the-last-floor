@@ -283,3 +283,12 @@ shape = SubResource("ConcavePolygonShape3D_pus1r")
 [node name="Note" parent="." unique_id=287473 instance=ExtResource("23_5xovp")]
 transform = Transform3D(0.46841002, 0, -3.4216979, 0, 3.4536104, 0, 3.4216979, 0, 0.46841002, -1.308145, 4.811592, 19.509232)
 note_content = "Find 3 Clenks! and restore the short circuit"
+
+[node name="Light" type="Node3D" parent="." unique_id=1357254897]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light" unique_id=735147739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4068274, 4.858721, 21.759123)
+light_color = Color(1, 0, 0, 1)
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.0
