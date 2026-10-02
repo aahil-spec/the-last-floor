@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dyf6vpskih6lm"]
+
+[ext_resource type="Script" uid="uid://c4d62rqlyo6yt" path="res://scripts/universal_key.gd" id="1_4mp85"]
+[ext_resource type="PackedScene" uid="uid://dgx6d0ej8qxae" path="res://assets/Models/old_rusty_key.glb" id="2_1kx36"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_40ocp"]
+radius = 0.17999317
+
+[node name="UniversalKey" type="StaticBody3D" unique_id=1305133355]
+script = ExtResource("1_4mp85")
+
+[node name="Sketchfab_Scene" parent="." unique_id=270991670 instance=ExtResource("2_1kx36")]
+transform = Transform3D(0.01, 0, 0, 0, -4.3711387e-10, 0.01, 0, -0.01, -4.3711387e-10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=644020903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.21185614)
+shape = SubResource("SphereShape3D_40ocp")
