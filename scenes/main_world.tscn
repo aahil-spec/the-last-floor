@@ -33,16 +33,16 @@ transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 
 transform = Transform3D(-0.9999998, 0, 8.742276e-08, 0, 1, 0, -8.742276e-08, 0, -0.9999998, -17.995525, 77.181786, -4.9907613)
 
 [node name="Floor6" parent="." unique_id=1591077235 instance=ExtResource("7_5irk3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 107.060524, -22.402328)
-
-[node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
-transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.904, 0.84882367, -29.385)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1940187235]
-environment = SubResource("Environment_jj0au")
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.383644, 107.060524, -4.1520195)
 
 [node name="Floor7" parent="." unique_id=1589619459 instance=ExtResource("9_wj2hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 143.35658, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7887464, 143.35658, -29.379576)
+
+[node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
+transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.904, 0.853, -29.727)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1794920670]
+environment = SubResource("Environment_jj0au")
 
 [editable path="Elevator"]
 [editable path="Elevator/ElevatorPanel/Panel"]
