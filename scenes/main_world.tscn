@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dq7kredectky1" path="res://scenes/floor_5.scn" id="5_wy0bs"]
 [ext_resource type="PackedScene" uid="uid://m31fii20yusa" path="res://scenes/floor_6.scn" id="7_5irk3"]
 [ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="7_emumq"]
+[ext_resource type="PackedScene" uid="uid://lnjv1b3upq0" path="res://scenes/floor_7.scn" id="8_wj2hs"]
 [ext_resource type="PackedScene" uid="uid://clwn2a1toepi5" path="res://scenes/floor_2.scn" id="9_bokwj"]
 [ext_resource type="PackedScene" uid="uid://4c8qgdfehkkl" path="res://scenes/floor_3.scn" id="9_oa7qk"]
-[ext_resource type="PackedScene" uid="uid://c4jvdbu04dgo4" path="res://scenes/floor_7.tscn" id="9_wj2hs"]
 
 [sub_resource type="Environment" id="Environment_jj0au"]
 background_mode = 1
@@ -16,7 +16,7 @@ background_mode = 1
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("7_emumq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5040615, 3.3731635, 7.973879)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1849165, 148.52834, -24.82752)
 
 [node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
 
@@ -35,11 +35,11 @@ transform = Transform3D(-0.9999998, 0, 8.742276e-08, 0, 1, 0, -8.742276e-08, 0, 
 [node name="Floor6" parent="." unique_id=1591077235 instance=ExtResource("7_5irk3")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.383644, 107.060524, -4.1520195)
 
-[node name="Floor7" parent="." unique_id=1589619459 instance=ExtResource("9_wj2hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7887464, 143.35658, -29.379576)
+[node name="Floor7" parent="." unique_id=1589619459 instance=ExtResource("8_wj2hs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8860836, 140.6085, -29.462032)
 
-[node name="FloodedWater" parent="Floor7" index="5" unique_id=1177546372 node_paths=PackedStringArray("player_node")]
-player_node = NodePath("../../Player")
+[node name="FloodedWater" parent="Floor7" index="5" unique_id=1177546372]
+visible = false
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
 transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.904, 0.853, -29.727)
@@ -48,5 +48,7 @@ transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, 
 environment = SubResource("Environment_jj0au")
 
 [editable path="Floor7"]
+[editable path="Floor7/Models/Sketchfab_Scene17"]
+[editable path="Floor7/Models/Sketchfab_Scene3"]
 [editable path="Elevator"]
 [editable path="Elevator/ElevatorPanel/Panel"]

@@ -4,7 +4,7 @@ extends Interactable
 
 @export var water_mesh:MeshInstance3D
 @export var water_trigger:Area3D
-@export var connected_elevator_door:Interactable
+@export var connected_elevator_door:AnimatableBody3D
 
 
 var hold_time:float=0.0
@@ -38,4 +38,5 @@ func finish_draining(player_node):
 	player_node.walk_speed=3.0
 	if player_node.has_method("show_message"):
 		player_node.show_message("The water drained. The elevator should open now.")
-	
+	if connected_elevator_door and connected_elevator_door.has_method("open_door"):
+		connected_elevator_door.open_door()

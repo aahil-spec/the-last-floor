@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Last Floor"
-run/main_scene="uid://c4jvdbu04dgo4"
+run/main_scene="uid://c0gc3si4x3mom"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]

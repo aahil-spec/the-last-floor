@@ -30,11 +30,10 @@ var has_cell_key:bool=false
 
 @export var max_unlocked_floor:int=2
 
-@onready var water_splashes=get_node_or_null("WaterSplashes")
+
 var is_in_water:bool=false
-@onready var phantom_splash=$PhantomSplash
+
 var was_moving:bool=false
-var splash_timer:float=0.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -97,23 +96,8 @@ func _physics_process(delta):
 		velocity.x=move_toward(velocity.x,0,walk_speed)
 		velocity.z=move_toward(velocity.z,0,walk_speed)
 	move_and_slide()
-	if water_splashes:
-		if is_in_water and is_on_floor() and velocity.length()>0.05:
-			water_splashes.emitting=true
-		else:
-			water_splashes.emitting=false
 	if is_in_water and has_flashlight:
 		break_flashlight()
-	if is_in_water:
-		var is_moving=velocity.length()>0.05
-		if was_moving and not is_moving:
-			splash_timer=0.8
-		if splash_timer>0:
-			splash_timer-=delta
-			if splash_timer<=0:
-				if phantom_splash and not phantom_splash.playing:
-					phantom_splash.play()
-		was_moving=is_moving
 func show_note(content:String):
 	note_text.text=content
 	note_overlay.visible=true
