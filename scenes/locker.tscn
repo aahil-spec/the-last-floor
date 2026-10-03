@@ -17,9 +17,11 @@ shape = SubResource("ConcavePolygonShape3D_46kxn")
 
 [node name="Sketchfab_Scene" parent="." unique_id=774157345 instance=ExtResource("1_46kxn")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1" parent_id_path=PackedInt32Array(774157345, 646386315) index="3" unique_id=2018325677]
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1" parent_id_path=PackedInt32Array(774157345, 646386315) index="3" unique_id=2018325677 node_paths=PackedStringArray("anim_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29540628, 0.014276266, -0.021261394)
 script = ExtResource("2_byg57")
+prompt_text = "Press E to open locker"
+anim_player = NodePath("../../../../../AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1/StaticBody3D" unique_id=810251744]
 shape = SubResource("BoxShape3D_ewwd3")
