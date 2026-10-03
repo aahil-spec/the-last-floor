@@ -12,10 +12,10 @@ script = ExtResource("1_wt4or")
 [node name="Sketchfab_Scene" parent="." unique_id=2101435349 instance=ExtResource("1_v7dw0")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 
-[node name="Object_3" parent="Sketchfab_Scene/Sketchfab_model/newer_obj_cleaner_gles/Object_2" parent_id_path=PackedInt32Array(2101435349, 1859657252) index="0" unique_id=760027006]
+[node name="Object_3" parent="Sketchfab_Scene/Sketchfab_model/newer_obj_cleaner_gles/Object_2" parent_id_path=PackedInt32Array(2101435349, 556352772) index="0" unique_id=2113154786]
 cast_shadow = 0
 
-[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/newer_obj_cleaner_gles/Object_2" parent_id_path=PackedInt32Array(2101435349, 1859657252) index="1" unique_id=1172281089]
+[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/newer_obj_cleaner_gles/Object_2" parent_id_path=PackedInt32Array(2101435349, 556352772) index="1" unique_id=1511818423]
 cast_shadow = 0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1012138715]
