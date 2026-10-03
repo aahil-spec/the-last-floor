@@ -6,8 +6,34 @@
 [ext_resource type="FontFile" uid="uid://c7cb0i6v6gefx" path="res://assets/fonts/cmuntb.ttf" id="3_qlg0r"]
 [ext_resource type="FontFile" uid="uid://dg05jkc1sg8sm" path="res://assets/fonts/ArchitectsDaughter.ttf" id="4_dqkch"]
 [ext_resource type="FontFile" uid="uid://kkwa80isqdqb" path="res://assets/fonts/LinLibertine_DR.otf" id="5_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://c2xdh4xrvnhql" path="res://assets/audio/universfield-water-splash-229315.mp3" id="7_fjrip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[sub_resource type="Curve" id="Curve_tuyoq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fjrip"]
+curve = SubResource("Curve_tuyoq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tuyoq"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 1, 1)
+spread = 80.0
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+scale_curve = SubResource("CurveTexture_fjrip")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tuyoq"]
+transparency = 1
+albedo_color = Color(0.6, 1, 1, 0.39215687)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fjrip"]
+material = SubResource("StandardMaterial3D_tuyoq")
+radius = 0.005
+height = 0.005
 
 [node name="Player" type="CharacterBody3D" unique_id=613655871]
 script = ExtResource("1_3vyb7")
@@ -144,6 +170,17 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="WaterSplashes" type="GPUParticles3D" parent="." unique_id=1157496575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49653924, 0.0032951236)
+amount = 30
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_tuyoq")
+draw_pass_1 = SubResource("SphereMesh_fjrip")
+
+[node name="PhantomSplash" type="AudioStreamPlayer3D" parent="." unique_id=82122655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032, 0, 3)
+stream = ExtResource("7_fjrip")
 
 [editable path="Head/Camera3D/FlashLight"]
 [editable path="Head/Camera3D/FlashLight/Sketchfab_Scene"]
