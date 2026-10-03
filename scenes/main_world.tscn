@@ -16,9 +16,9 @@ background_mode = 1
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("7_emumq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1849165, 148.52834, -24.82752)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1849165, 3.0104978, 9.348058)
 
-[node name="Lobby" parent="." unique_id=1528537454 instance=ExtResource("1_tt5ry")]
+[node name="Lobby" parent="." unique_id=1616047168 instance=ExtResource("1_tt5ry")]
 
 [node name="Floor2" parent="." unique_id=240541320 instance=ExtResource("9_bokwj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7434857, 20.215588, -14.903767)
@@ -38,7 +38,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.
 [node name="Floor7" parent="." unique_id=1589619459 instance=ExtResource("8_wj2hs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8860836, 140.6085, -29.462032)
 
-[node name="FloodedWater" parent="Floor7" index="5" unique_id=1177546372]
+[node name="FloodedWater" parent="Floor7" index="4" unique_id=1177546372]
 visible = false
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
