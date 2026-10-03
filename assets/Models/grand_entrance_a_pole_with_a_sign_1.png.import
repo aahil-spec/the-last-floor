@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c7pw4mdp1uyef"
+path.s3tc="res://.godot/imported/grand_entrance_a_pole_with_a_sign_1.png-68fe22a6c1ba868ac54faab4b85fcbbb.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "211d198f5eba906f069e7acf6dd595b1"
+}
+
+[deps]
+
+source_file="res://assets/Models/grand_entrance_a_pole_with_a_sign_1.png"
+dest_files=["res://.godot/imported/grand_entrance_a_pole_with_a_sign_1.png-68fe22a6c1ba868ac54faab4b85fcbbb.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://assets/Models/grand_entrance_a_pole_with_a_sign_3.png"
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
