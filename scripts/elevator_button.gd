@@ -9,6 +9,8 @@ extends Interactable
 @export var elevator_root:Node3D
 
 @export var floor_number:int=2
+
+@export var target_floor_group:Node3D
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	if not player_node.has_keycard:
@@ -27,6 +29,9 @@ func interact(player_node):
 	player_node.show_message("Access Granted:Traveling...")
 	if elevator_door:
 		elevator_door.is_moving=true
+	var world=get_tree().current_scene
+	if world.has_method("activate_floor") and target_floor_group:
+		world.activate_floor(target_floor_group)
 	var tween=create_tween()
 	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	tween.tween_property(elevator_root,"global_position:y",target_height,5.0)

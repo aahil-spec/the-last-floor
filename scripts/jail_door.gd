@@ -20,8 +20,6 @@ func interact(player_node):
 	prompt_text=""
 	if player_node.has_method("show_message"):
 		player_node.show_message("Cell unlocked.")
-	if open_sound != null:
-			open_sound.play()
 	if door_tween:
 			door_tween.kill()
 	door_tween=create_tween()
