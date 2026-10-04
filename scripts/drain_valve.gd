@@ -5,7 +5,7 @@ extends Interactable
 @export var water_mesh:MeshInstance3D
 @export var water_trigger:Area3D
 @export var connected_elevator_door:AnimatableBody3D
-
+@export var rotation_spped:float=3.0
 
 var hold_time:float=0.0
 var max_hold_time:float=10.0
@@ -25,6 +25,7 @@ func hold_interact(delta,player_node):
 	hold_time += delta
 	var progress=hold_time/max_hold_time
 	prompt_text="Turning Valve:"+str(int(progress*100))+"%"
+	rotation.x+=rotation_spped*delta
 	if water_mesh:
 		water_mesh.position.y=start_y-(1.5*progress)
 	if hold_time>=max_hold_time:

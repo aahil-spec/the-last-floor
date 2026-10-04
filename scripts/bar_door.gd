@@ -1,7 +1,7 @@
 extends Interactable
 
 
-@export var prompt_text:String="Press E to unlock cell"
+@export var prompt_text:String="Press E to unlock door"
 @export var slide_up_distance:float=3.5
 @export var requires_key:bool=true
 

@@ -8,10 +8,13 @@ func _ready():
 		activate_floor(all_floors[0])
 		
 func activate_floor(target_floor:Node3D):
-	for f in all_floors:
-		if f ==target_floor:
-			f.visible=true
-			f.process_mode=Node.PROCESS_MODE_INHERIT
+	var floor_index=all_floors.find(target_floor)
+	if floor_index==-1:
+		return
+	var batch_start=(floor_index/3)*3
+	var batch_end=batch_start+2
+	for i in range (all_floors.size()):
+		if i >=batch_start and i <= batch_end:
+			all_floors[i].visible=true
 		else:
-			f.visible=false
-			f.process_mode=Node.PROCESS_MODE_DISABLED
+			all_floors[i].visible=false

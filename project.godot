@@ -13,7 +13,7 @@ config_version=5
 config/name="The Last Floor"
 run/main_scene="uid://ddk737m24fsvk"
 config/features=PackedStringArray("4.6", "Forward Plus")
-run/max_fps=60
+run/scale=1.0
 
 [autoload]
 
@@ -74,4 +74,4 @@ jump={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-scaling_3d/scale=0.7
+scaling_3d/scale=0.75
