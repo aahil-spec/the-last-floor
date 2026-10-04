@@ -84,6 +84,18 @@ the player has to rotate the dial continuously until the tv becomes unstable and
 
 this is the current progress of the game and we will continue building the rest of the floors and tasks in the upcoming weeks
 
+# floor 6
+
+floor 6 is the floor where the player enters in a jail like  area which includes so many cells, a pub, and a security room, the player 
+first enters the pub and finds the key in the counter which is the key that unlocks several cells of the floor, the player investigates the cells and finds  the key to the security room, once the security key is equipped the player can now access the security room where he sees the monitor that shows the footage of the monitoring camera in the lobby of the floor that shows the future, the player notices a black shadow entering the room later introduces as the games antagonist "THE RESIDENT" .Then the player listens heavy foot sounds coming towards the security room and he finds the key to the next floor in the same room and escapes the floor
+
+# floor 7
+
+floor 7 is the floor where the player enters in a flood damages area where the walls are broken the apartment is almost filled with  water causing short circuit in the apartment and the flashlight, the water is filled upto knee height the player walks towards the red light area coming from the front and goes through a note that says to find a fuse to restore the power the player then walks to the other tunnel where he finds a utility room the player has to find the fuse in the room that is placed in a locker in the middle of the room, once the player equips the fuse he has to walk back to the electrical area to restore lights gone due to short circuit then magically another tunnel open the player walks in the tunnel deeper and deeper and finds 2 rooms, first is the "TORTURE ROOM", the player can interact with a torture equipment and when he presses "E",The water will turn red and the player will ask the resident to stop messing with his head as the player has started to hallucinate. Then the player has to enter the last room that has a valve, the player has to rotate the valve until all the water drains out and the countdown ends.now as all the water is gone so the player can now exit the floor and the flashlight fixes too.
+
+# floor 8
+when the  player enters floor 8, the player sees a small hallway with a door at the end with several statues in the way, the player naturally  ignores the hallway statues and tries to exit through the door but the player teleports back to the elivator and this continues until the player figures the actual puzzel, the player has to rotate the statues and  the paintings 4 in total in order to escape the floor successfully.this is the current progress of the game and we will continue building the rest of the floors and tasks in the upcoming weeks
+
 # Ai usage
 
 we generated a photograph of Alex using Gemini as well as a voice recording of him using ElevenLabs
