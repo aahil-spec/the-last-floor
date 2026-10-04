@@ -25,12 +25,12 @@ func _on_body_entered(body):
 			loop_count+=1
 			if warning_note:
 				var msg_index=min(loop_count,scary_messages.size()-1)
-				if "note_text" in warning_note: warning_note.note_text=scary_messages[msg_index]
-				elif "content" in warning_note: warning_note.content=scary_messages[msg_index]
+				warning_note.set("note_content",scary_messages[msg_index])
 			if hallway_lights.size()>0:
 				var light_to_kill=hallway_lights.pop_front()
 				if light_to_kill:
 					light_to_kill.visible=false
+					
 			body.global_position=start_marker.global_position
 			if body.has_method("show_message"):
 				body.show_message("I'm back at the start... Did they do this?")
@@ -40,3 +40,6 @@ func _on_body_entered(body):
 			if exit_door:
 				exit_door.is_locked=false
 			queue_free()
+			
+			
+			

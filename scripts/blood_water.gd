@@ -1,6 +1,6 @@
 extends Interactable
 
-@export var prompt_text:String="Press E to inspect bathtub"
+@export var prompt_text:String="Press E to inspect coffin"
 @export var water_mesh:MeshInstance3D
 @export var heartbeat_audio:AudioStreamPlayer3D
 @export var blood_color:Color=Color(0.3,0.0,0.0)
