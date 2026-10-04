@@ -41,6 +41,8 @@ func _process(delta):
 			if physical_button_mesh:
 				var pop_tween=create_tween()
 				pop_tween.tween_property(physical_button_mesh,"position",button_start_pos,0.1)
+			if hold_sound != null:
+					hold_sound.stop()
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	if is_finished or is_braking:
@@ -51,11 +53,14 @@ func interact(player_node):
 		var push_tween=create_tween()
 		var pressed_pos=button_start_pos+Vector3(0,-3.0,0)
 		push_tween.tween_property(physical_button_mesh,"position",pressed_pos,0.1)
-	
+	if hold_sound != null:
+			hold_sound.play()
 func finish_puzzle():
 	is_finished=true
 	current_speed=0.0
 	prompt_text=""
+	if hold_sound != null:
+			hold_sound.stop()
 	if flashlight_node and flashlight_node.has_node("SpotLight3D"):
 		flashlight_node.get_node("SpotLight3D").visible=true
 	if blade_node and flashlight_node:
