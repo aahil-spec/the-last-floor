@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c3rcbq32r0h02" path="res://scripts/note.gd" id="1_njo4t"]
 [ext_resource type="Texture2D" uid="uid://teq1pbx1hcgp" path="res://assets/Models/note_1.png" id="2_njo4t"]
 [ext_resource type="Texture2D" uid="uid://cx86230enjp7n" path="res://assets/Models/note_2.png" id="3_8ibmt"]
+[ext_resource type="AudioStream" uid="uid://cb0dfm7wika7x" path="res://assets/audio/freesound_community-effect_notify-84408.mp3" id="5_8ibmt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8iry"]
 resource_name = "Post_it_note"
@@ -64,3 +65,6 @@ mesh = SubResource("ArrayMesh_gp3am")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1776997816]
 transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 2.342042e-18, -0.010547619)
 shape = SubResource("BoxShape3D_43c4j")
+
+[node name="PaperSound" type="AudioStreamPlayer" parent="." unique_id=1700391395]
+stream = ExtResource("5_8ibmt")

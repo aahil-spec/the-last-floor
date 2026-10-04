@@ -3,7 +3,7 @@ extends Interactable
 @export var flashlight_node:Node3D
 @export var physical_button_mesh:Node3D
 @export var prompt_text:String="Hold E to brake the cutter"
-
+@onready var hold_sound = $HoldSound
 var is_braking:bool=false
 var hold_progress:float=0.0
 var required_time:float=8.0
