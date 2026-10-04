@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c3rcbq32r0h02" path="res://scripts/note.gd" id="1_njo4t"]
 [ext_resource type="Texture2D" uid="uid://teq1pbx1hcgp" path="res://assets/Models/note_1.png" id="2_njo4t"]
 [ext_resource type="Texture2D" uid="uid://cx86230enjp7n" path="res://assets/Models/note_2.png" id="3_8ibmt"]
-[ext_resource type="AudioStream" uid="uid://cb0dfm7wika7x" path="res://assets/audio/freesound_community-effect_notify-84408.mp3" id="5_8ibmt"]
+[ext_resource type="AudioStream" uid="uid://ihhc8sfrucv" path="res://assets/audio/note.wav" id="5_8ibmt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8iry"]
 resource_name = "Post_it_note"

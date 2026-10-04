@@ -7,17 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://m31fii20yusa" path="res://scenes/floor_6.scn" id="7_5irk3"]
 [ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="7_emumq"]
 [ext_resource type="PackedScene" uid="uid://lnjv1b3upq0" path="res://scenes/floor_7.scn" id="8_wj2hs"]
-[ext_resource type="PackedScene" uid="uid://bvvpxymkcb8lb" path="res://floor_8.tscn" id="9_avgj4"]
 [ext_resource type="PackedScene" uid="uid://clwn2a1toepi5" path="res://scenes/floor_2.scn" id="9_bokwj"]
 [ext_resource type="PackedScene" uid="uid://4c8qgdfehkkl" path="res://scenes/floor_3.scn" id="9_oa7qk"]
-
-[sub_resource type="Environment" id="Environment_jj0au"]
-background_mode = 1
+[ext_resource type="PackedScene" uid="uid://tumhjwxx4c7o" path="res://scenes/floor_8.scn" id="11_bokwj"]
 
 [node name="MainWorld" type="Node3D" unique_id=983484244]
 
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("7_emumq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1849165, 3.0104978, 9.348058)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.724794, 2.4258428, 8.804427)
 
 [node name="Lobby" parent="." unique_id=1616047168 instance=ExtResource("1_tt5ry")]
 
@@ -42,19 +39,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8860836, 140.6085, -29.4620
 [node name="FloodedWater" parent="Floor7" index="4" unique_id=1177546372]
 visible = false
 
-[node name="Floor8" parent="." unique_id=1409639897 instance=ExtResource("9_avgj4")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.8203678, 194.05966, -2.4434166)
+[node name="Floor8" parent="." unique_id=1671158003 instance=ExtResource("11_bokwj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.82, 194.06, -2.443)
 
 [node name="Elevator" parent="." unique_id=991641716 instance=ExtResource("3_wjoj8")]
 transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, 4.904, 0.853, -29.727)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1794920670]
-environment = SubResource("Environment_jj0au")
+[node name="Elevator2" parent="." unique_id=586561066 instance=ExtResource("3_wjoj8")]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 3.7794929, 194.69386, 24.485695)
 
 [editable path="Floor7"]
 [editable path="Floor7/Models/Sketchfab_Scene17"]
 [editable path="Floor7/Models/Sketchfab_Scene3"]
-[editable path="Floor8"]
-[editable path="Floor8/Sketchfab_Scene11"]
 [editable path="Elevator"]
 [editable path="Elevator/ElevatorPanel/Panel"]
+[editable path="Elevator2"]
+[editable path="Elevator2/ElevatorPanel/Panel"]
