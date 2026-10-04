@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwe7eshb21lw6" path="res://assets/Models/rotomola_pajer_key_and_keycard_0.png" id="1_wuhej"]
 [ext_resource type="Texture2D" uid="uid://mx4sub3evhjb" path="res://assets/Models/rotomola_pajer_key_and_keycard_1.png" id="2_v50aq"]
 [ext_resource type="Texture2D" uid="uid://s637dmu5lwgd" path="res://assets/Models/rotomola_pajer_key_and_keycard_2.png" id="3_58ka4"]
+[ext_resource type="AudioStream" uid="uid://hxovecqgfyfe" path="res://assets/audio/xpmonster-jingling-keys-419578.mp3" id="5_58ka4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43p35"]
 resource_name = "keys"
@@ -142,3 +143,7 @@ mesh = SubResource("ArrayMesh_fp6q1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=777420288]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051165134, 0, 0.047082692)
 shape = SubResource("BoxShape3D_v50aq")
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="." unique_id=1592021180]
+stream = ExtResource("5_58ka4")
+volume_db = 10.0
