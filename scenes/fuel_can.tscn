@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c2lqp5ijh54e1"]
+
+[ext_resource type="Script" uid="uid://cgokrmx03o0v3" path="res://scripts/fuel_can.gd" id="1_eom3d"]
+[ext_resource type="PackedScene" uid="uid://bjb70mc7x8x3a" path="res://assets/Models/fuel_tank.glb" id="2_shfy4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfl5d"]
+size = Vector3(53.86862, 74.03029, 44.753876)
+
+[node name="FuelCan" type="StaticBody3D" unique_id=2028502766]
+script = ExtResource("1_eom3d")
+
+[node name="Sketchfab_Scene48" parent="." unique_id=1837519530 instance=ExtResource("2_shfy4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1538648877]
+transform = Transform3D(0.00667563, 0, -0.000159811, 0, 0.0066775377, 0, 0.00015981751, 0, 0.006675626, 0.02775749, 0.24806814, 0.006848878)
+shape = SubResource("BoxShape3D_kfl5d")
+
+[editable path="Sketchfab_Scene48"]

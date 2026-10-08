@@ -35,7 +35,8 @@ var is_in_water:bool=false
 
 var was_moving:bool=false
 
-var has_fuse:bool=false
+var fuel_count:int=0
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	await get_tree().create_timer(1.0).timeout
