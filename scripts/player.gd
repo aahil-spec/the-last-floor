@@ -134,3 +134,7 @@ func break_flashlight():
 			tween.tween_callback(func():light_beam.visible=not light_beam.visible)
 			tween.tween_interval(0.1)
 		tween.tween_callback(func():light_beam.visible=false)
+
+
+func _on_floor_9_trigger_area_entered(area: Area3D) -> void:
+	pass # Replace with function body.

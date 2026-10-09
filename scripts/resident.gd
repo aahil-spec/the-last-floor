@@ -32,4 +32,3 @@ func _physics_process(delta):
 			visual_mesh.rotation.x=lerp(visual_mesh.rotation.x,0.0,delta*5.0)
 	move_and_slide()
 	
-	
