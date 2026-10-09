@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://dey3mqkvwo2qk" path="res://assets/Models/horizontal_fuel_tank.glb" id="29_kp0r0"]
 [ext_resource type="Script" uid="uid://bcerq223c6op" path="res://scripts/bar_door.gd" id="29_o4lmv"]
 [ext_resource type="Texture2D" uid="uid://cym2kt3yu5hy5" path="res://assets/Models/door_metal_door_window_0.png" id="30_a44sm"]
-[ext_resource type="PackedScene" uid="uid://bprgpnjomx8h0" path="res://assets/Models/floor_tile_material.glb" id="30_s4n3f"]
+[ext_resource type="PackedScene" uid="uid://bprgpnjomx8h0" path="res://scenes/floor_tile_material.glb" id="30_s4n3f"]
 [ext_resource type="Texture2D" uid="uid://yndirxe5tdh2" path="res://assets/Models/door_metal_door_window_1.png" id="31_kp0r0"]
 [ext_resource type="Texture2D" uid="uid://djm08ghvdhike" path="res://assets/Models/door_metal_door_window_2.png" id="32_s4n3f"]
 [ext_resource type="Texture2D" uid="uid://bytm7r8jsox4j" path="res://assets/Models/door_metal_door_window_3.png" id="33_21mgc"]

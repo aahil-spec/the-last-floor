@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://dagv6pwxjaw8q"]
+
+[ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="1_5brgp"]
+[ext_resource type="Texture2D" uid="uid://b7x7xjpsrq1cl" path="res://assets/Models/table_and_chair_0.png" id="1_pbt4g"]
+[ext_resource type="PackedScene" uid="uid://dthn8oxrmv4e3" path="res://assets/Models/bloody_and_clean_wooden_floor_tiles.glb" id="2_lsv1f"]
+[ext_resource type="PackedScene" uid="uid://bt373pmegy0db" path="res://assets/Models/red_carpet.glb" id="3_0m5gt"]
+[ext_resource type="PackedScene" uid="uid://b122hpve7pfkf" path="res://assets/Models/throne.glb" id="3_xt7lj"]
+[ext_resource type="PackedScene" uid="uid://b7blptisuv5xv" path="res://assets/Models/old_fashioned_clock_-_4096px2.glb" id="4_uve6s"]
+[ext_resource type="PackedScene" uid="uid://cshn8sxxxdjnp" path="res://assets/Models/antique_table.glb" id="5_pbt4g"]
+[ext_resource type="PackedScene" uid="uid://ca7c5yytbqtx1" path="res://assets/Models/wood_bench_old_3d_scan_-_retopo.glb" id="6_xt7lj"]
+[ext_resource type="PackedScene" uid="uid://drqcmh5pwt6c5" path="res://assets/Models/wooden_chair.glb" id="7_xjnt6"]
+[ext_resource type="PackedScene" uid="uid://b01sjo10vpeug" path="res://assets/Models/antique_ornate_chandelier_-_game_model.glb" id="8_jolrh"]
+[ext_resource type="PackedScene" uid="uid://di40cbl86kwab" path="res://assets/Models/wooden_cross.glb" id="9_b2nr1"]
+[ext_resource type="PackedScene" uid="uid://cdmv737ljv5xj" path="res://assets/Models/lowpoly_asset_-_hanging_bones.glb" id="10_wxj3m"]
+[ext_resource type="PackedScene" uid="uid://dyn211dyk1h0j" path="res://assets/Models/magic_book.glb" id="11_xtn8p"]
+[ext_resource type="PackedScene" uid="uid://cbb7mmq4qqg36" path="res://assets/Models/demoncircle.glb" id="12_xqtgl"]
+[ext_resource type="PackedScene" uid="uid://hmi7irco621t" path="res://assets/Models/painting_of_a_clown.glb" id="13_dfpai"]
+[ext_resource type="PackedScene" uid="uid://bedhq536rkr6d" path="res://scenes/note.tscn" id="16_xjnt6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jolrh"]
+albedo_texture = ExtResource("1_pbt4g")
+
+[node name="floor_10" type="Node3D" unique_id=900442358]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=680600319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.239323, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=576572410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.68335)
+size = Vector3(40, 33.400146, 57.3667)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2096389650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.760254)
+operation = 2
+size = Vector3(39, 29.676025, 56.520508)
+material = SubResource("StandardMaterial3D_jolrh")
+
+[node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_5brgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.373949, 7.221928, 0)
+
+[node name="Light" type="Node3D" parent="." unique_id=2058739217]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light" unique_id=1608694482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4814343, 0)
+light_color = Color(1, 1, 0.6156863, 1)
+light_energy = 2.0
+omni_range = 4096.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Light" unique_id=1394902987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.819916, 6.7654295, -9.086456)
+light_color = Color(0.627451, 0.1254902, 0.9411765, 1)
+light_energy = 5.0
+omni_range = 9.348068
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Light" unique_id=1556267752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.05284, -6.900426)
+light_color = Color(1, 1, 0.24705882, 1)
+light_energy = 10.0
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Light" unique_id=736346526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.027718, -21.900425)
+light_color = Color(1, 1, 0.24705882, 1)
+light_energy = 10.0
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="Sketchfab_Scene" parent="Light" unique_id=1324140645 instance=ExtResource("3_xt7lj")]
+transform = Transform3D(0.19045708, 0, -7.088868, 0, 7.091426, 0, 7.088868, 0, 0.19045708, 1.2088822, 2.4014554, -33.079086)
+
+[node name="Sketchfab_Scene" parent="." unique_id=1294887694 instance=ExtResource("2_lsv1f")]
+transform = Transform3D(4.0793643, 0, 0, 0, 2.7407074, 0, 0, 0, 5.484917, 18.040346, 2.5072677, -28.126656)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=581327835 instance=ExtResource("3_0m5gt")]
+transform = Transform3D(1.4557059, 0, 0, 0, 1, 0, 0, 0, 6.6429477, 1.0322952, 2.6753788, -8.597685)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1408116706 instance=ExtResource("4_uve6s")]
+transform = Transform3D(8.653306, 0, 0, 0, 8.653306, 0, 0, 0, 8.653306, -11.821662, 15.891289, -36.853516)
+
+[node name="Sketchfab_Scene4" parent="." unique_id=294745782 instance=ExtResource("5_pbt4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8484335, 5.000492, -27.872156)
+
+[node name="Sketchfab_Scene5" parent="." unique_id=498557105 instance=ExtResource("5_pbt4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8267326, 5.272723, -27.872156)
+
+[node name="Sketchfab_Scene6" parent="." unique_id=704873164 instance=ExtResource("6_xt7lj")]
+transform = Transform3D(0.20483764, 0, 5.851232, 0, 6.1415844, 0, -6.253812, 0, 0.19165152, -18.537737, 4.077876, 11.041796)
+
+[node name="Sketchfab_Scene7" parent="." unique_id=1823421981 instance=ExtResource("6_xt7lj")]
+transform = Transform3D(0.20483764, 0, 5.851232, 0, 6.1415844, 0, -6.253812, 0, 0.19165152, -18.16825, 4.107933, -0.23887157)
+
+[node name="Sketchfab_Scene8" parent="." unique_id=1117641543 instance=ExtResource("6_xt7lj")]
+transform = Transform3D(0.20483764, 0, 5.851232, 0, 6.1415844, 0, -6.253812, 0, 0.19165152, -17.573975, 4.107933, -18.382412)
+
+[node name="Sketchfab_Scene9" parent="." unique_id=137955530 instance=ExtResource("7_xjnt6")]
+transform = Transform3D(-0.30578703, 0, -2.9509785, 0, 2.9667795, 0, 2.9509785, 0, -0.30578703, -14.310797, 2.370716, 10.948219)
+
+[node name="Sketchfab_Scene10" parent="." unique_id=1708077027 instance=ExtResource("7_xjnt6")]
+transform = Transform3D(0.024340987, -0.3823095, -2.9419425, 2.9607844, 0.18850781, 0, 0.1869297, -2.935998, 0.38308352, -14.792283, 3.0712838, 7.25058)
+
+[node name="Sketchfab_Scene11" parent="." unique_id=1714099715 instance=ExtResource("7_xjnt6")]
+transform = Transform3D(0.38308358, 0, -2.9419427, 0, 2.9667795, 0, 2.9419427, 0, 0.38308358, -15.566272, 2.370716, 1.3066273)
+
+[node name="Sketchfab_Scene12" parent="." unique_id=1333853762 instance=ExtResource("7_xjnt6")]
+transform = Transform3D(0.023046322, 0.3823897, -2.9419427, -2.9614058, 0.17848174, 0, 0.17698744, 2.9366138, 0.38308355, -14.111244, 3.112322, -13.653264)
+
+[node name="Sketchfab_Scene13" parent="." unique_id=153079196 instance=ExtResource("7_xjnt6")]
+transform = Transform3D(0.38308358, 0, -2.9419427, 0, 2.9667795, 0, 2.9419427, 0, 0.38308358, -15.044968, 2.370716, -20.823921)
+
+[node name="Sketchfab_Scene14" parent="." unique_id=1087742264 instance=ExtResource("8_jolrh")]
+transform = Transform3D(2.1686735, 0, 0, 0, 2.1686735, 0, 0, 0, 2.1686735, -0.28976557, 22.98528, -6.9383297)
+
+[node name="Sketchfab_Scene15" parent="." unique_id=348052181 instance=ExtResource("9_b2nr1")]
+transform = Transform3D(-0.005500739, -0.004611089, -0.17328033, -0.111413024, 0.13290873, -3.5760284e-10, 0.13279486, 0.11131756, -0.0071777627, 18.763626, 11.916988, 9.719033)
+
+[node name="Sketchfab_Scene16" parent="." unique_id=1026086427 instance=ExtResource("9_b2nr1")]
+transform = Transform3D(0.0075077713, -0.00030469266, -0.18139634, -0.0073619843, -0.1814026, 0, -0.18124717, 0.0073556714, -0.0075139506, 19.168795, 11.893705, -0.06228304)
+
+[node name="Sketchfab_Scene17" parent="." unique_id=2128208324 instance=ExtResource("10_wxj3m")]
+transform = Transform3D(-0.0005236109, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -0.0005236109, 12.133276, 22.643984, -31.21149)
+
+[node name="Sketchfab_Scene18" parent="." unique_id=434557573 instance=ExtResource("10_wxj3m")]
+transform = Transform3D(0.5588311, 0, 0.8292815, 0, 1, 0, -0.8292815, 0, 0.5588311, 12.139165, 22.6392, -19.965454)
+
+[node name="Sketchfab_Scene19" parent="." unique_id=730666061 instance=ExtResource("11_xtn8p")]
+transform = Transform3D(-0.2352458, -0.0017425062, -0.053776637, -0.020306142, 0.22623257, 0.08149864, 0.049825933, 0.0839722, -0.22068436, 11.772458, -11.626596, -4.684391)
+
+[node name="Sketchfab_Scene20" parent="." unique_id=1909774237 instance=ExtResource("12_xqtgl")]
+transform = Transform3D(4.280016, 0, 0, 0, 4.280016, 0, 0, 0, 4.280016, 10.422229, 3.4135218, -9.027214)
+
+[node name="Sketchfab_Scene21" parent="." unique_id=1896899423 instance=ExtResource("13_dfpai")]
+transform = Transform3D(4.8866253, 0, 0, 0, 4.8866253, 0, 0, 0, 4.8866253, -19.470734, 14.866735, 15.162933)
+
+[node name="Sketchfab_Scene22" parent="." unique_id=612236118 instance=ExtResource("13_dfpai")]
+transform = Transform3D(4.8866253, 0, 0, 0, 4.8866253, 0, 0, 0, 4.8866253, -19.470734, 14.866735, -13.243647)
+
+[node name="Note" parent="." unique_id=287473 instance=ExtResource("16_xjnt6")]
+transform = Transform3D(-1.2106062, 0, 9.995133, 0, 10.06818, 0, -9.995133, 0, -1.2106062, 19.131947, 5.731325, 13.469525)
+note_content = "DATE: 9TH OCTOBER
+TIME :3:00 AM
+ Dear Dairy,
+Tonight  i killed my beestfriend,Alex,
+ during a terible arguement.In a painic, 
+I left his body  in woods and came home,
+hoping nobody would find out.
+ But the guilt is eating me alive.
+Every sound reminds me of him,
+and i cant escaape the truth.
+ I WISH I COULD UNDO EVERYTHING.
+---Me..."

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bprgpnjomx8h0"
-path="res://.godot/imported/floor_tile_material.glb-23d217770b5f66a7801179ac7364aa59.scn"
+uid="uid://di40cbl86kwab"
+path="res://.godot/imported/wooden_cross.glb-0380a4dc5166e81787c208085ddf290e.scn"
 
 [deps]
 
-source_file="res://assets/Models/floor_tile_material.glb"
-dest_files=["res://.godot/imported/floor_tile_material.glb-23d217770b5f66a7801179ac7364aa59.scn"]
+source_file="res://assets/Models/wooden_cross.glb"
+dest_files=["res://.godot/imported/wooden_cross.glb-0380a4dc5166e81787c208085ddf290e.scn"]
 
 [params]
 
