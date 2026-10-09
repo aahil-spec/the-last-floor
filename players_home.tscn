@@ -15,13 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://chivgdfhtlldi" path="res://assets/Models/sci-fi_chair.glb" id="13_q5iln"]
 [ext_resource type="PackedScene" uid="uid://buoytt8f1q488" path="res://assets/Models/cupboard.glb" id="14_j3juu"]
 [ext_resource type="PackedScene" uid="uid://cwhqbsf5e56m6" path="res://assets/Models/grey_carpet.glb" id="15_omu4n"]
-[ext_resource type="PackedScene" uid="uid://hmi7irco621t" path="res://assets/Models/painting_of_a_clown.glb" id="16_b28fa"]
 [ext_resource type="PackedScene" uid="uid://bi6sb5b734p21" path="res://assets/Models/mahogany_table (1).glb" id="17_76dyp"]
 [ext_resource type="PackedScene" uid="uid://dy3sokfcem440" path="res://assets/Models/scifi_light_04.glb" id="18_px1hp"]
+[ext_resource type="PackedScene" uid="uid://slmua22vngrd" path="res://assets/Models/window.glb" id="18_y4yco"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_th68v"]
 albedo_color = Color(0.2926202, 0.10330447, 0, 1)
 albedo_texture = ExtResource("1_y4yco")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmb0q"]
+albedo_color = Color(0, 0, 0, 1)
 
 [node name="Players_home" type="Node3D" unique_id=1399069611]
 
@@ -39,6 +42,16 @@ material = SubResource("StandardMaterial3D_th68v")
 
 [node name="Sketchfab_Scene" parent="CSGCombiner3D" unique_id=1203410240 instance=ExtResource("2_wmb0q")]
 transform = Transform3D(1, 0, 0, 0, 0.638133, 0, 0, 0, 1, -0.26453733, 1.1648965, 0.25397342)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1991473893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0943046, 0.4510255, 6.0647926)
+size = Vector3(1, 1.4451904, 0.2006836)
+material = SubResource("StandardMaterial3D_wmb0q")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=370593758]
+transform = Transform3D(-0.0006282766, 0, 0.9999998, 0, 1, 0, -0.9999998, 0, -0.0006282766, -6.072153, 0.4510255, -0.6427392)
+size = Vector3(2.2780762, 1.4451904, 0.2006836)
+material = SubResource("StandardMaterial3D_wmb0q")
 
 [node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_1xppm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.619802, 0)
@@ -107,9 +120,6 @@ transform = Transform3D(1.2306089, 0, 0, 0, 1.2306089, 0, 0, 0, 1.2306089, -2.87
 [node name="Sketchfab_Scene20" parent="." unique_id=1037302061 instance=ExtResource("15_omu4n")]
 transform = Transform3D(3.0942066, 0, 0.10518645, -0.0015383874, 3.095663, 0.045253813, -0.10517521, -0.045279954, 3.0938756, 3.9136758, 0.26859692, 0.15169093)
 
-[node name="Sketchfab_Scene21" parent="." unique_id=1896899423 instance=ExtResource("16_b28fa")]
-transform = Transform3D(-0.12738474, 0, -1.2841673, 0, 1.2904699, 0, 1.2841673, 0, -0.12738474, 4.1271186, 3.0819385, 5.950537)
-
 [node name="Sketchfab_Scene22" parent="." unique_id=824997848 instance=ExtResource("17_76dyp")]
 transform = Transform3D(-0.1385547, 0, -0.005964621, 0, 0.13868304, 0, 0.005964621, 0, -0.1385547, 4.1391973, 0.31072855, 5.471942)
 
@@ -140,3 +150,12 @@ light_energy = 5.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Light" unique_id=508705214]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2406368, 4.1327, 4.8437595)
+
+[node name="Sketchfab_Scene" parent="Light" unique_id=1768085498 instance=ExtResource("18_y4yco")]
+transform = Transform3D(0.026062336, 0, 0, 0, 0.026062336, 0, 0, 0, 0.026062336, -6.5267334, 1.5452316, -0.2824993)
+
+[node name="Sketchfab_Scene3" parent="Light" unique_id=28366240 instance=ExtResource("18_y4yco")]
+transform = Transform3D(-0.0012467881, 0, 0.026032494, 0, 0.026062336, 0, -0.026032494, 0, -0.0012467881, 2.0154917, 1.5452316, 6.494911)
+
+[node name="Sketchfab_Scene2" parent="Light" unique_id=1458066187 instance=ExtResource("18_y4yco")]
+transform = Transform3D(0.026062336, 0, 0, 0, 0.026062336, 0, 0, 0, 0.026062336, -6.5267334, 1.5452316, -1.516888)
