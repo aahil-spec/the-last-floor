@@ -38,6 +38,7 @@ var was_moving:bool=false
 
 var fuel_count:int=0
 
+@export var death_screen:ColorRect
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	await get_tree().create_timer(1.0).timeout
@@ -135,7 +136,22 @@ func break_flashlight():
 			tween.tween_callback(func():light_beam.visible=not light_beam.visible)
 			tween.tween_interval(0.1)
 		tween.tween_callback(func():light_beam.visible=false)
-
-
-func _on_floor_9_trigger_area_entered(area: Area3D) -> void:
-	pass # Replace with function body.
+func play_death_screen():
+	if death_screen:
+		death_screen.visible=true
+		death_screen.modulate.a=0.0
+		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+		get_tree().paused=true
+		var tween =get_tree().create_tween()
+		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		tween.tween_property(death_screen,"modulate:a",1.0,0.5)
+		
+func _on_retry_button_pressed():
+	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+	get_tree().paused=false
+	var tween=get_tree().create_tween()
+	tween.tween_callback(func():death_screen.visible=false)
+	var monsters=get_tree().get_nodes_in_group("monster")
+	for m in monsters:
+		if m.has_method("reset_position"):
+			m.reset_position()

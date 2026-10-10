@@ -1,14 +1,17 @@
 extends CharacterBody3D
 
-@export var speed:float=4.5
+@export var speed:float=2.5
 @onready var nav_agent=$NavigationAgent3D
 @export var visual_mesh:Node3D
 var player_node:Node3D
 var step_timer:float=0.0
+var is_resetting:bool=false
 func _ready():
 	player_node=get_tree().get_first_node_in_group("player")
+	set_physics_process(false)
+	add_to_group("monster")
 func _physics_process(delta):
-	if not player_node:
+	if is_resetting or not player_node:
 		return
 	if not is_on_floor():
 		velocity.y-=9.8*delta
@@ -31,4 +34,24 @@ func _physics_process(delta):
 			visual_mesh.rotation.z=lerp(visual_mesh.rotation.z,0.0,delta*5.0)
 			visual_mesh.rotation.x=lerp(visual_mesh.rotation.x,0.0,delta*5.0)
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision=get_slide_collision(i)
+		if collision.get_collider()==player_node:
+			catch_player()
+			break
 	
+func catch_player():
+	if is_resetting:
+		return
+	is_resetting=true
+	if player_node.has_method("play_death_screen"):
+		player_node.play_death_screen()
+func reset_position():
+	var push_dir=(global_position-player_node.global_position)
+	push_dir.y=0
+	push_dir=push_dir.normalized()
+	if push_dir==Vector3.ZERO:
+		push_dir=Vector3.BACK
+	global_position=player_node.global_position+(push_dir*4.0)
+	await get_tree().create_timer(3.0).timeout
+	is_resetting=false
