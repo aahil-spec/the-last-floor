@@ -4,7 +4,7 @@ extends Interactable
 @export var lights_parent:Node3D
 @export var secret_wall_hole:CSGBox3D
 var power_restored:bool=false
-
+@onready var power_sound = $PowerSound
 func interact(player_node):
 	if power_restored:
 		return
@@ -12,6 +12,8 @@ func interact(player_node):
 		power_restored=true
 		player_node.has_fuse=false
 		prompt_text="Power is online."
+		if power_sound != null:
+				power_sound.play()
 		if player_node.has_method("show_message"):
 			player_node.show_message("The fuse fit. The power is back online!")
 		if lights_parent:

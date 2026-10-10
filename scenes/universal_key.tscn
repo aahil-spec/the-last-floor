@@ -19,3 +19,4 @@ shape = SubResource("SphereShape3D_40ocp")
 
 [node name="PickupSound" type="AudioStreamPlayer" parent="." unique_id=926792641]
 stream = ExtResource("3_1kx36")
+volume_db = 10.0

@@ -3,6 +3,7 @@ extends Interactable
 @export var prompt_text="PRess E to open locker"
 @export var anim_player:AnimationPlayer
 @export var animation_name:String="Action"
+@onready var open_sound = $OpenSound
 var is_open:bool=false
 
 func _ready():
@@ -16,6 +17,8 @@ func interact(player_node):
 		return
 	is_open=true
 	prompt_text=""
+	if open_sound !=null:
+			open_sound.play()
 	if anim_player:
 		anim_player.speed_scale=1.0
 		anim_player.play(animation_name)

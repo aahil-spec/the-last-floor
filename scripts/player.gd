@@ -26,6 +26,7 @@ var has_keycard=false
 var is_viewing_photo=false
 
 var has_cell_key:bool=false
+var has_fuse:bool=false
 
 
 @export var max_unlocked_floor:int=2
