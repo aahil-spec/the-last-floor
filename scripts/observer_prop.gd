@@ -4,6 +4,7 @@ extends Interactable
 var is_watching:bool=true
 
 @export var turn_degrees:float=180.0
+@onready var turn_sound = $TurnSound
 func interact(player_node):
 	if not is_watching:
 		return
@@ -11,6 +12,8 @@ func interact(player_node):
 	prompt_text=""
 	if player_node.has_method("show_message"):
 		player_node.show_message("It feels safer with it facing the wall...")
+	if turn_sound != null:
+			turn_sound.play()
 	var target_rotation=rotation.y+deg_to_rad(turn_degrees)
 	var tween=create_tween()
 	tween.tween_property(self,"rotation:y",target_rotation,0.5)
