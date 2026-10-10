@@ -17,8 +17,9 @@ font_color = Color(0.5299875, 0, 0.06448232, 1)
 font_size = 100
 font_color = Color(0.5898064, 1.540184e-06, 3.85046e-07, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=613655871 node_paths=PackedStringArray("death_screen") groups=["player"]]
+[node name="Player" type="CharacterBody3D" unique_id=613655871 node_paths=PackedStringArray("fade_screen", "death_screen") groups=["player"]]
 script = ExtResource("1_3vyb7")
+fade_screen = NodePath("HUD/FadeScreen")
 death_screen = NodePath("HUD/DeathScreen")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1147837886]
@@ -214,6 +215,17 @@ grow_vertical = 2
 [node name="RetryButton" type="Button" parent="HUD/DeathScreen/VBoxContainer" unique_id=47143910]
 layout_mode = 2
 text = "TRY AGAIN"
+
+[node name="FadeScreen" type="ColorRect" parent="HUD" unique_id=1322764316]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="HUD/DeathScreen/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 

@@ -3,7 +3,7 @@ extends CharacterBody3D
 @export var walk_speed=3.0
 @export var jump_velocity=3.5
 @export var mouse_sensitivity=0.002
-
+@export var fade_screen:ColorRect
 @onready var head=$Head
 @onready var camera=$Head/Camera3D
 @onready var flashlight=$Head/Camera3D/FlashLight
@@ -144,9 +144,13 @@ func play_death_screen():
 		get_tree().paused=true
 		var tween =get_tree().create_tween()
 		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-		tween.tween_property(death_screen,"modulate:a",1.0,0.5)
+		tween.parallel().tween_property(camera,"position:y",-1.2,0.4).set_trans(Tween.TRANS_SINE)
+		tween.parallel().tween_property(camera, "rotation_degrees:z", 35.0, 0.4).set_trans(Tween.TRANS_SINE)
+		tween.parallel().tween_property(death_screen,"modulate:a",1.0,0.8)
 		
 func _on_retry_button_pressed():
+	camera.position.y=0.0
+	camera.rotation_degrees.z=0.0
 	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	get_tree().paused=false
 	var tween=get_tree().create_tween()
@@ -155,3 +159,10 @@ func _on_retry_button_pressed():
 	for m in monsters:
 		if m.has_method("reset_position"):
 			m.reset_position()
+func level_transition(next_scene_path:String):
+	if fade_screen:
+		fade_screen.visible=true
+		fade_screen.modulate.a=0.0
+		var tween=get_tree().create_tween()
+		tween.tween_property(fade_screen,"modulate:a",1.0,1.5)
+		tween.tween_callback(func(): get_tree().change_scene_to_file(next_scene_path))
