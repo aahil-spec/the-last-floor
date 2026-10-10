@@ -3,6 +3,7 @@ extends Interactable
 @export var prompt_text:String="Press E to open"
 var is_open:bool=false
 @onready var hinge=get_parent()
+@onready var open_sound = $OpenSound
 
 @warning_ignore("unused_parameter")
 func interact(player_node):
@@ -11,6 +12,7 @@ func interact(player_node):
 	is_open=true
 	prompt_text=""
 	$CollisionShape3D.disabled=true
-	
+	if open_sound != null:
+			open_sound.play()
 	var tween=create_tween()
 	tween.tween_property(hinge,"rotation_degrees:y",100.0,0.5)

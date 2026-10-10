@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ck5v1q6rs2w3g" path="res://scripts/cell_key.gd" id="1_4fs86"]
 [ext_resource type="PackedScene" uid="uid://bva8jp44n7dvb" path="res://assets/Models/key.glb" id="1_m503d"]
+[ext_resource type="AudioStream" uid="uid://hxovecqgfyfe" path="res://assets/audio/xpmonster-jingling-keys-419578.mp3" id="3_eifmb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m503d"]
 radius = 0.34105977
@@ -15,3 +16,6 @@ transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.3711
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2019236146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03074205, -0.0039281845, 0.20401219)
 shape = SubResource("SphereShape3D_m503d")
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="." unique_id=618467689]
+stream = ExtResource("3_eifmb")

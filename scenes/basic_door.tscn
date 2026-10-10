@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cwxc3qlftcwv3" path="res://assets/Models/wild_west_theme_basic_door_with_frame_6.jpg" id="7_3ogbj"]
 [ext_resource type="Texture2D" uid="uid://dqpbqk7am5h5m" path="res://assets/Models/wild_west_theme_basic_door_with_frame_7.png" id="8_bjsrh"]
 [ext_resource type="Texture2D" uid="uid://by81bkb6pyjt6" path="res://assets/Models/wild_west_theme_basic_door_with_frame_8.png" id="9_jsnqq"]
+[ext_resource type="AudioStream" uid="uid://cd2qn57086eda" path="res://assets/audio/soundreality-opening-door-411632.mp3" id="11_vtehr"]
+[ext_resource type="AudioStream" uid="uid://dwcs57iurppcv" path="res://assets/audio/dragon-studio-close-door-382723.mp3" id="12_h2ib3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12bmf"]
 resource_name = "BasicDoorFrame1"
@@ -184,3 +186,9 @@ mesh = SubResource("ArrayMesh_axapy")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=527190194]
 transform = Transform3D(1, 0, 0, 0, 1, -4.3711392e-08, 0, 4.3711392e-08, 1, 0.6352639, -0.033233643, -0.010206552)
 shape = SubResource("BoxShape3D_oophw")
+
+[node name="OpenSound" type="AudioStreamPlayer3D" parent="." unique_id=597565483]
+stream = ExtResource("11_vtehr")
+
+[node name="CloseSound" type="AudioStreamPlayer3D" parent="." unique_id=1676020833]
+stream = ExtResource("12_h2ib3")

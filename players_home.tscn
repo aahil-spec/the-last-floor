@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bi6sb5b734p21" path="res://assets/Models/mahogany_table (1).glb" id="17_76dyp"]
 [ext_resource type="PackedScene" uid="uid://dy3sokfcem440" path="res://assets/Models/scifi_light_04.glb" id="18_px1hp"]
 [ext_resource type="PackedScene" uid="uid://slmua22vngrd" path="res://assets/Models/window.glb" id="18_y4yco"]
+[ext_resource type="PackedScene" uid="uid://hmi7irco621t" path="res://assets/Models/painting_of_a_clown.glb" id="19_wmb0q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_th68v"]
 albedo_color = Color(0.2926202, 0.10330447, 0, 1)
@@ -159,3 +160,6 @@ transform = Transform3D(-0.0012467881, 0, 0.026032494, 0, 0.026062336, 0, -0.026
 
 [node name="Sketchfab_Scene2" parent="Light" unique_id=1458066187 instance=ExtResource("18_y4yco")]
 transform = Transform3D(0.026062336, 0, 0, 0, 0.026062336, 0, 0, 0, 0.026062336, -6.5267334, 1.5452316, -1.516888)
+
+[node name="Sketchfab_Scene21" parent="." unique_id=1896899423 instance=ExtResource("19_wmb0q")]
+transform = Transform3D(0.018045714, 0, -0.99983716, 0, 1, 0, 0.99983716, 0, 0.018045714, 4.3234015, 2.715057, 5.9526343)

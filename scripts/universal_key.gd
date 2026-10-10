@@ -5,7 +5,8 @@ extends Interactable
 @export var unlocks_elevator_floor:int=0
 @export var connected_door:Interactable
 @export var auto_open_door:bool=false
-
+@onready var pickup_sound = $PickupSound
+var is_picked_up = false
 func interact(player_node):
 	if player_node.has_method("show_message"):
 		player_node.show_message(pickup_message)
@@ -18,5 +19,9 @@ func interact(player_node):
 		if auto_open_door and "is_open" in connected_door:
 			if not connected_door.is_open:
 				connected_door.interact(player_node)
+	visible = false
+	if  pickup_sound != null:
+			pickup_sound.play()
+			await pickup_sound.finished
 	queue_free()
 	

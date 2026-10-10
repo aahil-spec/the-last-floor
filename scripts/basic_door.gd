@@ -5,7 +5,8 @@ var door_tween:Tween
 
 @export var is_locked:bool=false
 @export var requires_key:bool=false
-
+@onready var open_sound = $OpenSound
+@onready var close_sound = $CloseSound
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	if is_locked:
@@ -23,7 +24,11 @@ func interact(player_node):
 	door_tween=create_tween()
 	
 	if is_open:
+		if open_sound != null:
+				open_sound.play()
 		door_tween.tween_property(self,"rotation:y",deg_to_rad(90),0.5)
 		
 	else:
+		if close_sound != null:
+				close_sound.play()
 		door_tween.tween_property(self,"rotation:y",0.0,0.5)
