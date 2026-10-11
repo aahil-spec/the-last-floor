@@ -166,5 +166,11 @@ created by Aahil and Afan
 <img width="1366" height="768" alt="12" src="https://github.com/user-attachments/assets/1e90950e-a999-43cf-a9ec-ec3a75c98a72" />
 <img width="1366" height="768" alt="11" src="https://github.com/user-attachments/assets/bda45c4f-98fc-491a-aea2-f72685974e1d" />
 <img width="1366" height="768" alt="20" src="https://github.com/user-attachments/assets/3702aac5-0520-47e5-ba14-fe0ad19807c1" />
+<img width="1366" height="768" alt="6" src="https://github.com/user-attachments/assets/552c9831-1c98-40bf-b07c-546d0b1e12da" />
+<img width="1366" height="768" alt="4" src="https://github.com/user-attachments/assets/60bd5d0d-ced3-470d-af9d-d480b8a6e951" />
+<img width="1366" height="768" alt="3" src="https://github.com/user-attachments/assets/417c21e9-fb28-4380-bc64-a5c151ef0254" />
+<img width="1366" height="768" alt="2" src="https://github.com/user-attachments/assets/d4a88b1d-b06f-48ce-8f7e-5a6125f78128" />
+<img width="1362" height="768" alt="1" src="https://github.com/user-attachments/assets/8cc2682c-1615-4958-b26f-5d736bb1c1d4" />
+<img width="1366" height="768" alt="5" src="https://github.com/user-attachments/assets/1b9b012a-6735-467a-8d94-e9819396a007" />
 
 developed using the Godot Engine
