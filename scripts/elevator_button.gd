@@ -13,12 +13,15 @@ extends Interactable
 @export var target_floor_group:Node3D
 @export var load_chunk_path:String=""
 @export var unload_chunk_name:String=""
+
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	if not player_node.has_keycard:
 		player_node.show_message("Access Denied: Security Keycard Required")
 		return
-		
+	if floor_number < player_node.max_unlocked_floor:
+		player_node.show_message("The elevator refuses to go back to previous floors.")
+		return
 	if floor_number>player_node.max_unlocked_floor:
 		player_node.show_message("Error: Floor " + str(floor_number) + " is locked.")
 		return
