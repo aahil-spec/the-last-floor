@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dagv6pwxjaw8q"]
 
-[ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="1_5brgp"]
 [ext_resource type="Texture2D" uid="uid://b7x7xjpsrq1cl" path="res://assets/Models/table_and_chair_0.png" id="1_pbt4g"]
 [ext_resource type="PackedScene" uid="uid://dthn8oxrmv4e3" path="res://assets/Models/bloody_and_clean_wooden_floor_tiles.glb" id="2_lsv1f"]
 [ext_resource type="PackedScene" uid="uid://bt373pmegy0db" path="res://assets/Models/red_carpet.glb" id="3_0m5gt"]
@@ -36,9 +35,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.760254)
 operation = 2
 size = Vector3(39, 29.676025, 56.520508)
 material = SubResource("StandardMaterial3D_jolrh")
-
-[node name="Player" parent="." unique_id=613655871 instance=ExtResource("1_5brgp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.373949, 7.221928, 0)
 
 [node name="Light" type="Node3D" parent="." unique_id=2058739217]
 

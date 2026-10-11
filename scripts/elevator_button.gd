@@ -11,6 +11,8 @@ extends Interactable
 @export var floor_number:int=2
 
 @export var target_floor_group:Node3D
+@export var load_chunk_path:String=""
+@export var unload_chunk_name:String=""
 @warning_ignore("unused_parameter")
 func interact(player_node):
 	if not player_node.has_keycard:
@@ -30,6 +32,14 @@ func interact(player_node):
 	if elevator_door:
 		elevator_door.is_moving=true
 	var world=get_tree().current_scene
+	if load_chunk_path!="":
+		var new_chunk_scene=load(load_chunk_path)
+		if new_chunk_scene:
+			world.add_child(new_chunk_scene.instantiate())
+	if unload_chunk_name!="":
+		var old_chunk=world.get_node_or_null(unload_chunk_name)
+		if old_chunk:
+			old_chunk.queue_free()
 	if world.has_method("activate_floor") and target_floor_group:
 		world.activate_floor(target_floor_group)
 	var tween=create_tween()

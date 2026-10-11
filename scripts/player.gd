@@ -22,7 +22,7 @@ extends CharacterBody3D
 var has_flashlight=false
 var is_reading=false
 
-var has_keycard=false
+var has_keycard=true
 var is_viewing_photo=false
 
 var has_cell_key:bool=false
@@ -38,6 +38,7 @@ var was_moving:bool=false
 
 var fuel_count:int=0
 
+var has_seen_intro:bool=false
 @export var death_screen:ColorRect
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

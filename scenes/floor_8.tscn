@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://dvlgu8lpas6yi" path="res://assets/Models/hanging_light.glb" id="12_j2i2q"]
 [ext_resource type="PackedScene" uid="uid://hmi7irco621t" path="res://assets/Models/painting_of_a_clown.glb" id="13_15ugn"]
 [ext_resource type="PackedScene" uid="uid://ci1mnb3j0s6uq" path="res://scenes/basic_door.tscn" id="14_qvpow"]
-[ext_resource type="PackedScene" uid="uid://bmvjassiyvewi" path="res://scenes/player.tscn" id="16_486mh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq1gh"]
 albedo_texture = ExtResource("1_qm7aw")
@@ -364,9 +363,6 @@ shadow_enabled = true
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1687152026]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95706975, 1.4940722, 23.964357)
-
-[node name="Player" parent="." unique_id=613655871 instance=ExtResource("16_486mh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1364906, 2.7216353, 19.264212)
 
 [node name="LoopTeleporter" type="Area3D" parent="." unique_id=1473990149 node_paths=PackedStringArray("start_marker", "observers")]
 transform = Transform3D(0.029880518, 0, 0.13246092, 0, 0.13578932, 0, -0.13246092, 0, 0.029880518, -0.79198503, 1.5332572, -13.586589)
