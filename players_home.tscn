@@ -48,7 +48,7 @@ fog_light_energy = 2.0
 fog_density = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b28fa"]
-size = Vector3(0.41937256, 0.033203125, 0.34301758)
+size = Vector3(0.41937256, 0.033203125, 0.303833)
 
 [node name="Players_home" type="Node3D" unique_id=1399069611]
 
@@ -69,9 +69,9 @@ material = SubResource("StandardMaterial3D_th68v")
 transform = Transform3D(1, 0, 0, 0, 0.638133, 0, 0, 0, 1, -0.26453733, 1.1648965, 0.25397342)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1991473893]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5174625, 0.14483953, 6.3842397)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5778644, 0.15272069, 6.3842397)
 operation = 2
-size = Vector3(2.7421265, 2.0482788, 1.1210327)
+size = Vector3(2.8833466, 2.3670502, 1.1210327)
 material = SubResource("StandardMaterial3D_wmb0q")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1479148527]
@@ -258,7 +258,7 @@ environment = SubResource("Environment_j3juu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12375, 3.7956018, 8.857111)
 
 [node name="Sketchfab_Scene44" parent="." unique_id=1001683992 instance=ExtResource("27_mbjck")]
-transform = Transform3D(1.5927676, 0, 0, 0, 1.3309053, 0, 0, 0, 1, 2.4939475, 2.6355596, 6.0067425)
+transform = Transform3D(1.6792225, 0, 0, 0, 1.6257591, 0, 0, 0, 1, 2.6124148, 2.5744781, 6.0067425)
 
 [node name="Sketchfab_Scene21" parent="." unique_id=221164263 instance=ExtResource("28_q5iln")]
 transform = Transform3D(0.020048793, 0, 0, 0, 0.017564505, 0.009666551, 0, -0.009666551, 0.017564505, 2.3014078, 29.127623, 39.97867)
@@ -268,7 +268,7 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 1.0876501e-07, -
 light_energy = 40.0
 
 [node name="Dairy" type="StaticBody3D" parent="." unique_id=152944891]
-transform = Transform3D(0.2474894, 0, -0.9688906, 0, 1, 0, 0.9688906, 0, 0.2474894, 4.4447227, 1.2413182, 5.118193)
+transform = Transform3D(0.32398343, 0, -0.94606274, 0, 1, 0, 0.94606274, 0, 0.32398343, 4.8116016, 1.2413182, 5.2655396)
 script = ExtResource("29_omu4n")
 dairy_entry = "\"None of this make sense. 
 These endless locked doors...
@@ -277,14 +277,15 @@ Alex, I keep thinking about the the trip of europe.
 We laughed soo much.But when i close my eyes,
  this concrete turns into these woods.
 I didn't mean to push you! 
-I keep scrubbing,but i can still feel the blood on my hands.
+I keep scrubbing,scrubbing,
+but i can still feel the blood on my hands.
 ...Wait.The creature.It isn't a monster.
 I'm not trapped in a building, am I?
 I'm trapped inside what i did  to you.\""
 
 [node name="Sketchfab_Scene" parent="Dairy" unique_id=1600637183 instance=ExtResource("29_j3juu")]
-transform = Transform3D(1.3212729, 0, 0, 0, 1.3212729, 0, 0, 0, 1.3212729, 0, 0, 0)
+transform = Transform3D(1.3212115, 0, 0.012729231, 0, 1.3212729, 0, -0.012729231, 0, 1.3212115, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dairy" unique_id=1312796743]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0113220215, -0.00020754337, 0.15984735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0113220215, -0.00020754337, 0.14025378)
 shape = SubResource("BoxShape3D_b28fa")
