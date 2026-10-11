@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca4nt07ii15f7"
-path.s3tc="res://.godot/imported/generator_Image_5.png-5731d26c711ebfe165b2dfa84e689d24.s3tc.ctex"
+uid="uid://sffv6u041tq6"
+path.s3tc="res://.godot/imported/game_asset_generator_1.png-5dc577a91e341b9092e742e4db5667a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "76b0bfe7e65617aad4fe1296875ba5f8"
+"md5": "bb460b3ca3438f9ab0af10d8b70e23ed"
 }
 
 [deps]
 
-source_file="res://assets/Models/generator_Image_5.png"
-dest_files=["res://.godot/imported/generator_Image_5.png-5731d26c711ebfe165b2dfa84e689d24.s3tc.ctex"]
+source_file="res://assets/Models/game_asset_generator_1.png"
+dest_files=["res://.godot/imported/game_asset_generator_1.png-5dc577a91e341b9092e742e4db5667a8.s3tc.ctex"]
 
 [params]
 

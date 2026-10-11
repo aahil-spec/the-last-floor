@@ -2,12 +2,10 @@ extends Interactable
 
 @export var prompt_text:String="Press E to add Fuel (0/3)"
 
-@export var wheel_1:Node3D
-@export var wheel_2:Node3D
-@export var spin_speed:float=10.0
 @export var secret_path_box:CSGBox3D
 @export var monster:CharacterBody3D
 @export var run_label:Label
+@export var anim_player:AnimationPlayer
 var current_fuel:int=0
 var max_fuel:int=3
 var is_running:bool=false
@@ -35,14 +33,11 @@ func start_generator(player_node):
 	prompt_text="Generator is running."
 	if player_node.has_method("show_message"):
 		player_node.show_message("Power restored! But what was that noise...?")
+	if anim_player:
+		anim_player.play("Take 001")
 	trigger_chase_sequence()
+	
 
-func _process(delta):
-	if is_running:
-		if wheel_1:
-			wheel_1.rotation.y+=spin_speed*delta
-		if wheel_2:
-			wheel_2.rotation.y-=(spin_speed*1.5)*delta
 func trigger_chase_sequence():
 	await get_tree().create_timer(3.0).timeout
 	if run_label:

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5l040y3dodcu"
-path.s3tc="res://.godot/imported/generator_Image_1.png-dd70628627b7155ac1ad50871c81e4f5.s3tc.ctex"
+uid="uid://cy6flnlgfwllc"
+path.s3tc="res://.godot/imported/game_asset_generator_3.png-47966b6c4ff4826cfdd7ae5a1a67aaf8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "665886395da94e320667bcd6cd6525b9"
+"md5": "430fba0d3231eb9f56097e7faeab527a"
 }
 
 [deps]
 
-source_file="res://assets/Models/generator_Image_1.png"
-dest_files=["res://.godot/imported/generator_Image_1.png-dd70628627b7155ac1ad50871c81e4f5.s3tc.ctex"]
+source_file="res://assets/Models/game_asset_generator_3.png"
+dest_files=["res://.godot/imported/game_asset_generator_3.png-47966b6c4ff4826cfdd7ae5a1a67aaf8.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/Models/game_asset_generator_3.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://c7cb0i6v6gefx" path="res://assets/fonts/cmuntb.ttf" id="3_qlg0r"]
 [ext_resource type="FontFile" uid="uid://dg05jkc1sg8sm" path="res://assets/fonts/ArchitectsDaughter.ttf" id="4_dqkch"]
 [ext_resource type="FontFile" uid="uid://kkwa80isqdqb" path="res://assets/fonts/LinLibertine_DR.otf" id="5_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://d3b7lb346d5vu" path="res://assets/Images/Notebook.png" id="7_fjrip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -16,6 +17,9 @@ font_color = Color(0.5299875, 0, 0.06448232, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_fjrip"]
 font_size = 100
 font_color = Color(0.5898064, 1.540184e-06, 3.85046e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_smehm"]
+font_size = 30
 
 [node name="Player" type="CharacterBody3D" unique_id=613655871 node_paths=PackedStringArray("fade_screen", "death_screen") groups=["player"]]
 script = ExtResource("1_3vyb7")
@@ -226,6 +230,40 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="DiaryOverlay" type="ColorRect" parent="." unique_id=385254741]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9750026, 0.9749998)
+color = Color(0.14901961, 0.14901961, 0.14901961, 0.4627451)
+
+[node name="Diary" type="TextureRect" parent="DiaryOverlay" unique_id=86988487]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 143.5893
+offset_top = 90.25641
+offset_right = 1552.5894
+offset_bottom = 897.25635
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.31999934, 0.32000044)
+texture = ExtResource("7_fjrip")
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="DiaryOverlay" unique_id=268828784]
+layout_mode = 0
+offset_left = 415.3835
+offset_top = 31.794878
+offset_right = 726.38354
+offset_bottom = 73.794876
+text = "Press E to Close Diary"
+label_settings = SubResource("LabelSettings_smehm")
 
 [connection signal="pressed" from="HUD/DeathScreen/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 

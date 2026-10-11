@@ -6,6 +6,10 @@ extends CharacterBody3D
 @export var stand_shape:CollisionShape3D
 @export var crawl_shape:CollisionShape3D
 
+@export var is_throne_event:bool=false
+@export var charge_speed:float=25.0
+@export var home_scene_path:String="res://scenes/players_home.tscn"
+var throne_state:String="sitting_idle"
 @onready var anim_player=$Model/AnimationPlayer
 var player_node:Node3D
 var step_timer:float=0.0
@@ -15,7 +19,10 @@ func _ready():
 	set_physics_process(false)
 	add_to_group("monster")
 	if anim_player:
-		anim_player.play("standing")
+		if is_throne_event:
+			anim_player.play("sitting_idle")
+		else:
+			anim_player.play("standing")
 	if stand_shape and crawl_shape:
 		stand_shape.set_deferred("disabled",false)
 		crawl_shape.set_deferred("disabled",true)
@@ -26,6 +33,16 @@ func _physics_process(delta):
 		return
 	if not is_on_floor():
 		velocity.y-=9.8*delta
+	if is_throne_event:
+		if throne_state=="charging":
+			var direction=global_position.direction_to(player_node.global_position)
+			direction.y=0
+			direction=direction.normalized()
+			velocity.x=direction.x*charge_speed
+			velocity.z=direction.z*charge_speed
+			look_at(Vector3(player_node.global_position.x,global_position.y,player_node.global_position.z),Vector3.UP)
+			move_and_slide()
+		return
 	nav_agent.target_position=player_node.global_position
 	var current_location=global_position
 	var next_location=nav_agent.get_next_path_position()
@@ -69,7 +86,32 @@ func reset_position():
 	await get_tree().create_timer(3.0).timeout
 	is_resetting=false
 func _on_kill_box_body_entered(body):
-	if anim_player and anim_player.current_animation=="standing":
-		return
 	if body==player_node:
-		catch_player()
+		if is_throne_event and throne_state=="charging":
+			trigger_wakeup()
+		elif not is_throne_event:
+			if anim_player and anim_player.current_animation=="standing":
+				return 
+			catch_player()
+func wait_for_note_close():
+	if is_throne_event:
+		throne_state="waiting"
+		
+func _process(_delta):
+	if is_throne_event and throne_state=="waiting" and player_node and not player_node.is_reading:
+		throne_state="laughing"
+		if anim_player:
+			anim_player.play("sitting_laughing")
+			await anim_player.animation_finished
+			throne_state="charging"
+			if stand_shape and crawl_shape:
+				stand_shape.set_deferred("disabled",true)
+				crawl_shape.set_deferred("disabled",false)
+			global_position.y+=1.5
+			anim_player.play("running_crawl")
+			set_physics_process(true)
+func trigger_wakeup():
+	if player_node and player_node.fade_screen:
+		player_node.fade_screen.modulate.a=1.0
+		player_node.fade_screen.visible=true
+	get_tree().call_deferred("change_scene_to_file",home_scene_path)
