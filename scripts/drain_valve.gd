@@ -37,6 +37,8 @@ func finish_draining(player_node):
 		water_trigger.queue_free()
 	player_node.is_in_water=false
 	player_node.walk_speed=3.0
+	if player_node.has_method("fix_flashlight"):
+		player_node.fix_flashlight()
 	if player_node.has_method("show_message"):
 		player_node.show_message("The water drained. The elevator should open now.")
 	if connected_elevator_door and connected_elevator_door.has_method("open_door"):

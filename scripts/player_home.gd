@@ -16,6 +16,9 @@ extends CharacterBody3D
 var is_reading_diary:bool=false
 var is_reading:bool=false
 func _ready():
+	if has_node("/root/Bgm"):
+		@warning_ignore("standalone_expression")
+		get_node("/root/Bgm").stop
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if fade_screen:
 		fade_screen.visible=true

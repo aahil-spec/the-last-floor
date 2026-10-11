@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 ElevatorManager="*uid://d35ca1wggfsas"
+Bgm="*uid://ddanfk4qmj5uh"
 
 [editor_plugins]
 

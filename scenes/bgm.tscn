@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ddanfk4qmj5uh"]
+
+[ext_resource type="AudioStream" uid="uid://b1qbajw4025l3" path="res://assets/audio/universfield-horror-background-atmosphere-06-199279.mp3" id="1_q5y64"]
+
+[node name="BGM" type="AudioStreamPlayer" unique_id=121400992]
+stream = ExtResource("1_q5y64")
+autoplay = true

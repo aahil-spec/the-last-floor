@@ -22,7 +22,7 @@ extends CharacterBody3D
 var has_flashlight=false
 var is_reading=false
 
-var has_keycard=true
+var has_keycard=false
 var is_viewing_photo=false
 
 var has_cell_key:bool=false
@@ -80,7 +80,6 @@ func _physics_process(delta):
 	interact_label.visible=false
 	if interact_ray.is_colliding() and interact_ray.get_collider() is Interactable:
 		var target=interact_ray.get_collider()
-		print("RAYCAST IS HITTING: ", target.name)
 		interact_label.visible=true
 		if "prompt_text" in target:
 			interact_label.text=target.prompt_text
@@ -171,3 +170,13 @@ func level_transition(next_scene_path:String):
 		var tween=get_tree().create_tween()
 		tween.tween_property(fade_screen,"modulate:a",1.0,1.5)
 		tween.tween_callback(func(): get_tree().change_scene_to_file(next_scene_path))
+func fix_flashlight():
+	has_flashlight=true
+	show_message("The flashlight dried off. It's working again!")
+	var light_beam=flashlight.get_node_or_null("Spotlight3D")
+	if light_beam:
+		var tween=create_tween()
+		for i in range(4):
+			tween.tween_callback(func():light_beam.visible=not light_beam.visible)
+			tween.tween_interval(0.15)
+		tween.tween_callback(func():light_beam.visible=true)

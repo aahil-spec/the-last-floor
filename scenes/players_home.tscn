@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://coita40tivrav" path="res://assets/Models/miniature_open_window_model.glb" id="27_i7mva"]
 [ext_resource type="PackedScene" uid="uid://ckpunurn4kh1a" path="res://assets/Models/moon.glb" id="28_3yif4"]
 [ext_resource type="Script" uid="uid://byho7oq8hlly5" path="res://scripts/diary.gd" id="32_b8sax"]
+[ext_resource type="AudioStream" uid="uid://bgruuqpjoccnr" path="res://assets/audio/universfield-mysterious-depths-179447.mp3" id="32_ftk05"]
 [ext_resource type="PackedScene" uid="uid://dpwocxx0o6unb" path="res://assets/Models/psx_-_old_notebook.glb" id="33_gkhv4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_th68v"]
@@ -464,6 +465,10 @@ transform = Transform3D(9.659258, 0, -2.5881906, 0, 10, 0, 2.5881906, 0, 9.65925
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Diary" unique_id=931792712]
 transform = Transform3D(0.096592575, -5.7469374e-18, -0.025881905, 0, 0.099999994, -2.2204459e-17, 0.025881905, 2.144786e-17, 0.096592575, 0.46847892, -0.58244145, 0.19584274)
 shape = SubResource("BoxShape3D_mecsm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=649439281]
+stream = ExtResource("32_ftk05")
+autoplay = true
 
 [editable path="Player"]
 [editable path="Player/Head/Camera3D/FlashLight"]
