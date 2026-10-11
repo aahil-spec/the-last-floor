@@ -29,8 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://cjqjlr4s5p144" path="res://assets/Models/extracted_minecraft_java_editions_stars.glb" id="26_4iyxi"]
 [ext_resource type="PackedScene" uid="uid://coita40tivrav" path="res://assets/Models/miniature_open_window_model.glb" id="27_i7mva"]
 [ext_resource type="PackedScene" uid="uid://ckpunurn4kh1a" path="res://assets/Models/moon.glb" id="28_3yif4"]
-[ext_resource type="Script" uid="uid://yne6mi5ehnmx" path="res://dairy.gd" id="29_nrrj6"]
-[ext_resource type="PackedScene" uid="uid://ceglbuv7kc360" path="res://assets/Models/single_spiral_notepad.glb" id="30_7sp6d"]
 [ext_resource type="Script" uid="uid://byho7oq8hlly5" path="res://scripts/diary.gd" id="32_b8sax"]
 [ext_resource type="PackedScene" uid="uid://dpwocxx0o6unb" path="res://assets/Models/psx_-_old_notebook.glb" id="33_gkhv4"]
 
@@ -112,9 +110,6 @@ fog_density = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bgo07"]
 size = Vector3(1.8813586, 0.433067, 1.6891372)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_b28fa"]
-size = Vector3(0.41937256, 0.033203125, 0.303833)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mecsm"]
 size = Vector3(4.057676, 0.23895526, 2.8594422)
@@ -459,41 +454,9 @@ transform = Transform3D(0.020048793, 0, 0, 0, 0.017564505, 0.009666551, 0, -0.00
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 1.0876501e-07, -9.508539e-15, 1.0876501e-07, 1, -3.9032297, -15.094619, -298.0302)
 light_energy = 40.0
 
-[node name="Dairy" type="StaticBody3D" parent="." unique_id=152944891]
-transform = Transform3D(0.32398343, 0, -0.94606274, 0, 1, 0, 0.94606274, 0, 0.32398343, 4.8116016, 1.2413182, 5.2655396)
-script = ExtResource("29_nrrj6")
-dairy_entry = "\"None of this make sense. 
-These endless locked doors...
-The creature just watching me.
-Alex, I keep thinking about the the trip of europe.
-We laughed soo much.But when i close my eyes,
- this concrete turns into these woods.
-I didn't mean to push you! 
-I keep scrubbing,scrubbing,
-but i can still feel the blood on my hands.
-...Wait.The creature.It isn't a monster.
-I'm not trapped in a building, am I?
-I'm trapped inside what i did  to you.\""
-
-[node name="Sketchfab_Scene" parent="Dairy" unique_id=1600637183 instance=ExtResource("30_7sp6d")]
-transform = Transform3D(1.3212115, 0, 0.012729231, 0, 1.3212729, 0, -0.012729231, 0, 1.3212115, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Dairy" unique_id=1312796743]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0113220215, -0.00020754337, 0.14025378)
-shape = SubResource("BoxShape3D_b28fa")
-
 [node name="Diary" type="StaticBody3D" parent="." unique_id=573619437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.685325, 1.8009636, 4.9207573)
 script = ExtResource("32_b8sax")
-story_text = "I can't sleep. Every time I close my eyes, I am right back in those woods.
-
-It was just a stupid argument. A shove. We were laughing five minutes before it happened. But he tripped. The sound his head made against that stone... it replays in my head on an endless, deafening loop. I dropped to my knees, shaking him, begging him to wake up, but his eyes were just staring empty at the canopy.
-
-I should have called for help. Why didn't I call for help?
-
-Instead, I panicked. I dragged him off the trail, my hands blistering, his blood staining my sleeves. The dirt under my fingernails still won't wash out, no matter how hard I scrub. I buried my best friend in the dark, packing the damp earth down so nobody would ever know. I told the police he wandered off. I told his mother I didn't know where he went.
-
-But the guilt is rotting me from the inside out. I keep hearing Alex's voice in the static of the TV. I keep seeing his distorted shadow at the end of the hallway. I am building this twisted, endless purgatory in my own mind, floor by floor, monster by monster. And the worst part is... I know I deserve to be trapped in it."
 
 [node name="Sketchfab_Scene32" parent="Diary" unique_id=55808888 instance=ExtResource("33_gkhv4")]
 transform = Transform3D(9.659258, 0, -2.5881906, 0, 10, 0, 2.5881906, 0, 9.659258, -0.82939696, -0.72433496, 1.2875805)

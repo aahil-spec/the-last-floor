@@ -11,7 +11,9 @@ extends CharacterBody3D
 @onready var interact_label=$HUD/InteractPrompt
 @onready var note_overlay=$HUD/NoteOverlay
 @onready var note_text=$HUD/NoteOverlay/NotePaper/NoteText
+@onready var diary_overlay=$DiaryOverlay
 
+var is_reading_diary:bool=false
 var is_reading:bool=false
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -36,6 +38,12 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y*mouse_sensitivity)
 		camera.rotation.x=clamp(camera.rotation.x,deg_to_rad(-80),deg_to_rad(80))
 	if event.is_action_pressed("interact"):
+		if is_reading_diary:
+			diary_overlay.visible=false
+			is_reading_diary=false
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			get_viewport().set_input_as_handled()
+			return
 		if is_reading:
 			note_overlay.visible=false
 			is_reading=false
@@ -58,14 +66,16 @@ func _physics_process(delta):
 		velocity.z=move_toward(velocity.z,0,walk_speed)
 	move_and_slide()
 	interact_label.visible=false
-	if interact_ray and interact_ray.is_colliding():
-		var target=interact_ray.get_collider()
-		if target is Interactable:
-			interact_label.visible=true
-			if "prompt_text" in target:
-				interact_label.text=target.prompt_text
-			else:
-				interact_label.text="Press E to interact"
+	if not is_reading and not is_reading_diary:
+		
+		if interact_ray and interact_ray.is_colliding():
+			var target=interact_ray.get_collider()
+			if target is Interactable:
+				interact_label.visible=true
+				if "prompt_text" in target:
+					interact_label.text=target.prompt_text
+				else:
+					interact_label.text="Press E to interact"
 func show_message(text_to_show:String,duration:float=3.0):
 	if message_label:
 		message_label.text=text_to_show
@@ -79,3 +89,9 @@ func show_note(content:String):
 		note_overlay.visible=true
 		is_reading=true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+func show_diary():
+	if diary_overlay:
+		diary_overlay.visible=true
+		is_reading_diary=true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		

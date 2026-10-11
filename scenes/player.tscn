@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://c7cb0i6v6gefx" path="res://assets/fonts/cmuntb.ttf" id="3_qlg0r"]
 [ext_resource type="FontFile" uid="uid://dg05jkc1sg8sm" path="res://assets/fonts/ArchitectsDaughter.ttf" id="4_dqkch"]
 [ext_resource type="FontFile" uid="uid://kkwa80isqdqb" path="res://assets/fonts/LinLibertine_DR.otf" id="5_tuyoq"]
-[ext_resource type="Texture2D" uid="uid://d3b7lb346d5vu" path="res://assets/Images/Notebook.png" id="7_fjrip"]
+[ext_resource type="Texture2D" uid="uid://b7nb05wblx41f" path="res://assets/Images/Notebook.png" id="7_fjrip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -246,10 +246,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 143.5893
-offset_top = 90.25641
-offset_right = 1552.5894
-offset_bottom = 897.25635
+offset_left = 141.53809
+offset_top = 90.25643
+offset_right = 1741.5381
+offset_bottom = 978.2565
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.31999934, 0.32000044)

@@ -6,6 +6,8 @@ extends Interactable
 @export var monster:CharacterBody3D
 @export var run_label:Label
 @export var anim_player:AnimationPlayer
+@export var generator_sound:AudioStreamPlayer3D
+
 var current_fuel:int=0
 var max_fuel:int=3
 var is_running:bool=false
@@ -35,6 +37,8 @@ func start_generator(player_node):
 		player_node.show_message("Power restored! But what was that noise...?")
 	if anim_player:
 		anim_player.play("Take 001")
+	if generator_sound:
+		generator_sound.play()
 	trigger_chase_sequence()
 	
 

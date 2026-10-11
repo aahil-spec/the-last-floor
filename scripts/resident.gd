@@ -14,6 +14,10 @@ var throne_state:String="sitting_idle"
 var player_node:Node3D
 var step_timer:float=0.0
 var is_resetting:bool=false
+
+@export var sound_laugh:AudioStreamPlayer3D
+@export var sound_crawl: AudioStreamPlayer3D
+@export var sound_jumpscare: AudioStreamPlayer3D
 func _ready():
 	player_node=get_tree().get_first_node_in_group("player")
 	set_physics_process(false)
@@ -28,6 +32,8 @@ func _ready():
 		crawl_shape.set_deferred("disabled",true)
 	if has_node("KillBox"):
 		$KillBox.body_entered.connect(_on_kill_box_body_entered)
+		if has_node("KillBox/CollisionShape3D"):
+			$KillBox/CollisionShape3D.set_deferred("disabled", true)
 func _physics_process(delta):
 	if is_resetting or not player_node:
 		return
@@ -56,14 +62,21 @@ func _physics_process(delta):
 			if stand_shape and crawl_shape:
 				stand_shape.set_deferred("disabled",true)
 				crawl_shape.set_deferred("disabled",false)
+			if has_node("KillBox/CollisionShape3D"):
+				$KillBox/CollisionShape3D.set_deferred("disabled",false)
+			if sound_crawl and not sound_crawl.playing:
+				sound_crawl.play()
 	else:
 		if anim_player and anim_player.current_animation!="standing":
 			anim_player.play('standing')
 			if stand_shape and crawl_shape:
 				stand_shape.set_deferred("disabled",false)
 				crawl_shape.set_deferred("disabled",true)
+			if has_node("KillBox/CollisionShape3D"):
+				$KillBox/CollisionShape3D.set_deferred("disabled",true)
+			if sound_crawl:
+				sound_crawl.stop()
 	move_and_slide()
-	
 	
 func catch_player():
 	if is_resetting:
@@ -100,6 +113,8 @@ func wait_for_note_close():
 func _process(_delta):
 	if is_throne_event and throne_state=="waiting" and player_node and not player_node.is_reading:
 		throne_state="laughing"
+		if sound_laugh:
+			sound_laugh.play()
 		if anim_player:
 			anim_player.play("sitting_laughing")
 			await anim_player.animation_finished
@@ -107,11 +122,18 @@ func _process(_delta):
 			if stand_shape and crawl_shape:
 				stand_shape.set_deferred("disabled",true)
 				crawl_shape.set_deferred("disabled",false)
+			if has_node("KillBox/CollisionShape3D"):
+				$KillBox/CollisionShape3D.set_deferred("disabled",false)
 			global_position.y+=1.5
 			anim_player.play("running_crawl")
+			if sound_crawl:
+				sound_crawl.play()
 			set_physics_process(true)
 func trigger_wakeup():
 	if player_node and player_node.fade_screen:
 		player_node.fade_screen.modulate.a=1.0
 		player_node.fade_screen.visible=true
+	if sound_jumpscare:
+		sound_jumpscare.play()
+		await sound_jumpscare.finished
 	get_tree().call_deferred("change_scene_to_file",home_scene_path)

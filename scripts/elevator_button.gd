@@ -31,6 +31,11 @@ func interact(player_node):
 	player_node.show_message("Access Granted:Traveling...")
 	if elevator_door:
 		elevator_door.is_moving=true
+	if "fade_screen" in player_node and player_node.fade_screen:
+		player_node.fade_screen.visible=true
+		var fade_out=create_tween()
+		fade_out.tween_property(player_node.fade_screen,"modulate:a",1.0,1.0)
+		await fade_out.finished
 	var world=get_tree().current_scene
 	if load_chunk_path!="":
 		var new_chunk_scene=load(load_chunk_path)
@@ -48,3 +53,8 @@ func interact(player_node):
 	await tween.finished
 	if elevator_door:
 		elevator_door.is_moving=false
+	if "fade_screen" in player_node and player_node.fade_screen:
+		var fade_in=create_tween()
+		fade_in.tween_property(player_node.fade_screen,"modulate:a",0.0,1.0)
+		await fade_in.finished
+		player_node.fade_screen.visible=false
