@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfsgu57uhglck"
-path.s3tc="res://.godot/imported/factory_machine_3.png-e55a910167eb34f4592c54a7d6fde094.s3tc.ctex"
+uid="uid://b62c1y58ns4t4"
+path.s3tc="res://.godot/imported/generator_Image_3.png-b11fffbe1b6a00546db257ef63f5fdb1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/Models/factory_machine_3.png"
-dest_files=["res://.godot/imported/factory_machine_3.png-e55a910167eb34f4592c54a7d6fde094.s3tc.ctex"]
+source_file="res://assets/Models/generator_Image_3.png"
+dest_files=["res://.godot/imported/generator_Image_3.png-b11fffbe1b6a00546db257ef63f5fdb1.s3tc.ctex"]
 
 [params]
 

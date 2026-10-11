@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c558ir3rgkmgn"
-path.s3tc="res://.godot/imported/factory_machine_1.png-b15046c1b83383ebfc5cf767f0b9dc27.s3tc.ctex"
+uid="uid://d1qsto3nv47u5"
+path.s3tc="res://.godot/imported/generator_Image_0.png-47b5cd59833306d1216426dcaef0ba3b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "665886395da94e320667bcd6cd6525b9"
+"md5": "3448b5c37b1c358ead0e2cf749495829"
 }
 
 [deps]
 
-source_file="res://assets/Models/factory_machine_1.png"
-dest_files=["res://.godot/imported/factory_machine_1.png-b15046c1b83383ebfc5cf767f0b9dc27.s3tc.ctex"]
+source_file="res://assets/Models/generator_Image_0.png"
+dest_files=["res://.godot/imported/generator_Image_0.png-47b5cd59833306d1216426dcaef0ba3b.s3tc.ctex"]
 
 [params]
 

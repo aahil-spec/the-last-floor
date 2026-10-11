@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://inf3hyijt57"
-path.s3tc="res://.godot/imported/factory_machine_0.png-e0067b98835c56c4034f8914883c4682.s3tc.ctex"
+uid="uid://ca4nt07ii15f7"
+path.s3tc="res://.godot/imported/generator_Image_5.png-5731d26c711ebfe165b2dfa84e689d24.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3448b5c37b1c358ead0e2cf749495829"
+"md5": "76b0bfe7e65617aad4fe1296875ba5f8"
 }
 
 [deps]
 
-source_file="res://assets/Models/factory_machine_0.png"
-dest_files=["res://.godot/imported/factory_machine_0.png-e0067b98835c56c4034f8914883c4682.s3tc.ctex"]
+source_file="res://assets/Models/generator_Image_5.png"
+dest_files=["res://.godot/imported/generator_Image_5.png-5731d26c711ebfe165b2dfa84e689d24.s3tc.ctex"]
 
 [params]
 
@@ -29,8 +29,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=-5
-roughness/src_normal="res://assets/Models/factory_machine_4.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
