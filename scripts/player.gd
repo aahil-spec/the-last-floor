@@ -42,8 +42,10 @@ var has_seen_intro:bool=false
 @export var death_screen:ColorRect
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	await get_tree().create_timer(1.0).timeout
-	show_message("I need to find Alex. Their last signal came from this building...")
+	if not has_seen_intro:
+		has_seen_intro=true
+		await get_tree().create_timer(1.0).timeout
+		show_message("I need to find Alex. Their last signal came from this building...")
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -66,6 +68,8 @@ func _unhandled_input(event):
 			return
 		if interact_ray.is_colliding() and interact_ray.get_collider() is Interactable:
 			var target=interact_ray.get_collider()
+			
+		
 			target.interact(self)
 		elif has_flashlight:
 			var light_beam=flashlight.get_node_or_null("SpotLight3D")
@@ -74,9 +78,9 @@ func _unhandled_input(event):
 		
 func _physics_process(delta):
 	interact_label.visible=false
-	
 	if interact_ray.is_colliding() and interact_ray.get_collider() is Interactable:
 		var target=interact_ray.get_collider()
+		print("RAYCAST IS HITTING: ", target.name)
 		interact_label.visible=true
 		if "prompt_text" in target:
 			interact_label.text=target.prompt_text
